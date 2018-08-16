@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引用mui -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- 引用zepo.min.js -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 引入font-awesome字体图标 -->
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+
+    <!-- 引入公共js和css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/common.js"></script>
+
+
+    <link rel="stylesheet" href="./css/index.css">
+    
+    <script src="./js/index.js"></script>
+
+</head>
+<body>
+    <!-- mui常用模块 -->
+    <!-- mui-区域滚动 -->
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!--mui-轮播图-->
+            <div class="mui-slider">
+                <!-- 每一屏的内容 -->
+                <!-- 若要支持循环，则需要在.mui-slider-group节点上增加.mui-slider-loop类 -->
+                <div class="mui-slider-group mui-slider-loop">
+                     <!--支持循环，需要重复图片节点-->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="./images/banner3.png" />
+                        </a>
+                    </div>
+                    <div class="mui-slider-item">
+                        <a href="">
+                            <img src="./images/banner1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="mui-slider-item">
+                        <a href="">
+                            <img src="./images/banner2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="mui-slider-item">
+                        <a href="">
+                            <img src="./images/banner3.png" alt="">
+                        </a>
+                    </div>
+                    <!--支持循环，需要重复图片节点-->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="./images/banner1.png" />
+                        </a>
+                    </div>
+                </div>
+                <!-- 小点点 -->
+                <div class="mui-slider-indicator">
+                    <div class="mui-indicator mui-active"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                </div>
+            </div>  <!-- 轮播图 -->
+        </div>
+    </div><!-- 滚轮区域 -->
+    <script>
+        //让区域滚动生效
+        mui('.mui-scroll-wrapper').scroll();
+        //获得slider插件对象  自动轮播的script代码
+
+        mui('.mui-slider').slider({ 
+            interval:5000
+        //自动轮播周期，若为0则不自动播放，默认为0；
+        });
+    </script>
+</body>
+</html>

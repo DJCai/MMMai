@@ -13,7 +13,4 @@ $(function(){
         })
     }
     renderBrand();
-
-    
-     
 })

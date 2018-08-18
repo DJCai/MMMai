@@ -52,6 +52,10 @@ body{
                     
                     li{
                         padding: 5px;
+
+                        .mui-icon{
+                            font-size: 14px !important;
+                        }
                     }
                 }
                 .search{
@@ -83,9 +87,16 @@ body{
                     align-items: center;
                     justify-content: space-between;
                     
-                    .fa.fa-check{
+                    .fa{
                         color: orange;
+                        opacity: 0;
                         font-size: 16px;
+                    }
+
+                    &.active{
+                        .fa{
+                            opacity: 1;
+                        }
                     }
                 }
             }

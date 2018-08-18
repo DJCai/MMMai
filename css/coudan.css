@@ -107,6 +107,9 @@ body {
 .container .main .screenBar .change .left li {
   padding: 5px;
 }
+.container .main .screenBar .change .left li .mui-icon {
+  font-size: 14px !important;
+}
 .container .main .screenBar .change .search {
   flex-basis: 45px;
   height: 100%;
@@ -132,9 +135,13 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.container .main .screenBar .changeList li .fa.fa-check {
+.container .main .screenBar .changeList li .fa {
   color: orange;
+  opacity: 0;
   font-size: 16px;
+}
+.container .main .screenBar .changeList li.active .fa {
+  opacity: 1;
 }
 .container .main .products {
   display: flex;

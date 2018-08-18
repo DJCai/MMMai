@@ -13,6 +13,9 @@
     <script src="lib/mui/js/mui.min.js"></script>
     <!-- fontIcon -->
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <!-- template -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/coudan.js"></script>
     <link rel="stylesheet" href="css/coudan.css">
 </head>
@@ -33,17 +36,14 @@
             <div class="screenBar">
                 <div class="change">
                     <ul class="left">
-                        <li>
-                            <span class="shop">京东</span>
-                            <span class="fa fa-sort-down"></span>
+                        <li class="shop" data-link="shop">
+                            <span>京东</span><span class="mui-icon mui-icon-arrowdown"></span>
                         </li>
-                        <li>
-                            <span class="addr">华北</span>
-                            <span class="fa fa-sort-down"></span>
+                        <li class="addr" data-link="addr">
+                            <span>华北</span><span class="mui-icon mui-icon-arrowdown"></span>
                         </li>
-                        <li>
-                            <span class="allPrice">全部价格</span>
-                            <span class="fa fa-sort-down"></span>
+                        <li class="allPrice" data-link="allPrice">
+                            <span>全部价格</span><span class="mui-icon mui-icon-arrowdown"></span>
                             <!-- fa-sort-up -->
                         </li>
                     </ul>
@@ -53,10 +53,7 @@
                 </div>
 
                 <ul class="changeList">
-                    <li><span class="text">华南</span><span class="fa fa-check"></span></li>
-                    <li><span class="text">花呗</span><span class="fa"></span></li>
-                    <li><span class="text">花呗</span><span class="fa"></span></li>
-                    <li><span class="text">花呗</span><span class="fa"></span></li>
+                    
                 </ul>
             </div>
 
@@ -94,6 +91,13 @@
         </div>
 
     </div>
+
+    <!-- 筛选列表模板 -->
+    <script type="text/html" id="tplchangeList">
+        {{each result v i}}
+        <li class="{{if i==0}}active{{/if}}"><span class="text">{{v.shopName}}</span><span class="fa fa-check"></span></li>
+        {{/each}}
+    </script>
 
 </body>
 

@@ -1,0 +1,209 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+select {
+  border: 0px;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container header {
+  height: 50px;
+  background: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container header a {
+  height: 25px;
+  padding: 0px 12px;
+  padding-top: 5px;
+}
+.container header a.xiazai {
+  height: 34px;
+}
+.container header a img {
+  height: 100%;
+}
+.container main {
+  flex: 1;
+  position: relative;
+}
+.container main .searchbar {
+  padding: 15px;
+  position: relative;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+}
+.container main .searchbar .search {
+  height: 30px;
+  position: relative;
+  padding: 0px;
+}
+.container main .searchbar input {
+  height: 30px;
+  border-radius: 15px;
+  margin-bottom: 0px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: 0 none;
+  border: 0 none;
+  background-color: #eee;
+}
+.container main .searchbar button {
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+  right: 0;
+  height: 30px;
+  background: #ff841d;
+  outline: 0 none;
+  border: 0 none;
+}
+.container footer {
+  height: 94px;
+  background: #efefef;
+  border-bottom: 1px solid #c4c4c4;
+  border-top: 1px solid #c4c4c4;
+}
+.container footer .foottop {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #c4c4c4;
+}
+.container footer .foottop a {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+}
+.container footer .foottop .backtop {
+  border-right: 0 none;
+}
+.container footer .foottop .backtop img {
+  width: 15px;
+  height: 15px;
+}
+.container footer .footbottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0px;
+}
+.container footer .footbottom a {
+  font-size: 12px;
+  padding: 0 2px;
+  color: #666;
+}
+.container footer .footbottom .app {
+  color: red;
+}
+
+main {
+  background-color: #ebebeb;
+}
+main .searchbar {
+  padding: 15px;
+  position: relative;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+}
+main .searchbar .search {
+  height: 30px;
+  position: relative;
+  padding: 0px;
+}
+main .searchbar input {
+  height: 30px;
+  border-radius: 15px;
+  margin-bottom: 0px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: 0 none;
+  border: 0 none;
+  background-color: #eee;
+}
+main .searchbar button {
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+  right: 0;
+  height: 30px;
+  background: #ff841d;
+  outline: 0 none;
+  border: 0 none;
+}
+main .mui-content {
+  padding: 10px;
+}
+main .mui-content .mui-card:first-child {
+  margin: 0px;
+  padding: 0px;
+}
+main .mui-content .mui-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+main .mui-content .mui-card .mui-collapse {
+  background-color: #ebebeb;
+}
+main .mui-content .mui-card .mui-collapse .itemList .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .mui-content .mui-card .mui-collapse .itemList .list a {
+  border-radius: 0px;
+  width: 33.333%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0 none;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+}
+
+/*# sourceMappingURL=bijiaosearch.css.map */

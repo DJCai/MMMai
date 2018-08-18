@@ -62,7 +62,7 @@ p {
 }
 
 html, body {
-  height: 100%;
+  height: 990px;
 }
 
 .container {
@@ -151,29 +151,148 @@ html, body {
   font-size: 14px;
   border-bottom: 1px solid #ccc;
 }
-.container .main .brandlist .title {
+.container .main .brand-category-list .title {
   height: 40px;
   font-size: 16px;
   margin-bottom: 2px;
   border-bottom: 1px solid #bbb;
 }
-.container .main .brandlist .title a {
+.container .main .brand-category-list .title a {
   display: block;
   height: 100%;
   padding-left: 10px;
   line-height: 40px;
   color: #874604;
 }
-.container .main .brandlist .brand-title-list li {
-  padding-left: 10px;
-  line-height: 40px;
+.container .main .brand-category-list .brand-title-list li {
+  padding: 10px;
   border-bottom: 1px solid #e6e6e6;
 }
-.container .main .brandlist .brand-title-list li a {
+.container .main .brand-category-list .brand-title-list li a {
   height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.container .main .brand-category-list .brand-title-list li a .left {
+  display: flex;
+}
+.container .main .brand-category-list .brand-title-list li a .left .index {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  margin-right: 10px;
+  background: #ccc;
+  color: #fff;
+}
+.container .main .brand-category-list .brand-title-list li a .left .index.red {
+  background: red;
+}
+.container .main .brand-category-list .brand-title-list li a .left .index.yellow {
+  background: #ff9314;
+}
+.container .main .brand-category-list .brand-title-list li a .left .index.green {
+  background: #8adf5b;
+}
+.container .main .brand-category-list .brand-title-list li a .left .brandName {
+  font-size: 18px;
+  color: #000;
+}
+.container .main .brand-product-list .title {
+  height: 40px;
+  font-size: 16px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid #bbb;
+  border-top: 1px solid #bbb;
+}
+.container .main .brand-product-list .title a {
+  display: block;
+  height: 100%;
+  padding-left: 10px;
+  line-height: 40px;
+  color: #874604;
+  font-weight: 700;
+  background: #f3f3f3;
+}
+.container .main .brand-product-list .product-list li {
+  padding: 10px;
+  border-bottom: 1px solid #aaa;
+}
+.container .main .brand-product-list .product-list li a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.container .main .brand-product-list .product-list li a img {
+  margin-right: 10px;
+  width: 100px;
+}
+.container .main .brand-product-list .product-list li a .product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.container .main .brand-product-list .product-list li a .product-info .productName {
+  color: #333;
+}
+.container .main .brand-product-list .product-list li a .product-info .productPrice {
+  color: #ff841d;
+  font-size: 18px;
+  margin-top: 5px;
+}
+.container .main .brand-product-list .product-list li a .product-info .desc {
+  font-size: 12px;
+}
+.container .main .product-commentlist {
+  background: #f2f2f2;
+}
+.container .main .product-commentlist .title {
+  height: 40px;
+  font-size: 16px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid #bbb;
+}
+.container .main .product-commentlist .title a {
+  display: block;
+  height: 100%;
+  padding-left: 10px;
+  line-height: 40px;
+  color: #874604;
+  font-weight: 700;
+  background: #f3f3f3;
+}
+.container .main .product-commentlist li {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+.container .main .product-commentlist li a {
+  display: flex;
+  margin-bottom: 10px;
+}
+.container .main .product-commentlist li a img {
+  margin-right: 10px;
+}
+.container .main .product-commentlist li .commenttext {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  position: relative;
+  padding: 10px;
+}
+.container .main .product-commentlist li .commenttext .Content {
+  margin-top: 5px;
+  color: #333;
+}
+.container .main .product-commentlist li .commenttext::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: -12px;
+  border-bottom: 6px solid #fff;
+  border-top: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
 }
 .container .footer {
   height: 36px;
@@ -207,6 +326,7 @@ html, body {
   align-items: center;
   background: #fff;
   padding: 10px;
+  display: none;
 }
 .banner .left {
   flex: 1;
@@ -247,4 +367,4 @@ html, body {
   font-size: 12px;
 }
 
-/*# sourceMappingURL=brand_all.css.map */
+/*# sourceMappingURL=brand_categroy.css.map */

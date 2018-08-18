@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0px;
   padding: 0px;
@@ -138,6 +139,73 @@ html, body {
 }
 .container footer .footbottom .app {
   color: red;
+=======
+@charset "UTF-8";
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 12px”宋体”, ”Arial Narrow”, HELVETICA;
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: #2d374b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #cd0200;
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+i {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p {
+  word-wrap: break-word;
+>>>>>>> e28d38ff60a2e7b8410d4007efbac4d4deaf7ad2
 }
 
 /*# sourceMappingURL=common.css.map */

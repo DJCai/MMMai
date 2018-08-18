@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 * {
   margin: 0px;
   padding: 0px;
@@ -139,73 +138,72 @@ html, body {
 }
 .container footer .footbottom .app {
   color: red;
-=======
-@charset "UTF-8";
-body,
-ol,
-ul,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-th,
-td,
-dl,
-dd,
-form,
-fieldset,
-legend,
-input,
-textarea,
-select {
-  margin: 0;
-  padding: 0;
 }
 
-body {
-  font: 12px”宋体”, ”Arial Narrow”, HELVETICA;
-  background: #fff;
-  -webkit-text-size-adjust: 100%;
+main {
+  background-color: #ebebeb;
+}
+main .searchbar {
+  padding: 15px;
+  position: relative;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+}
+main .searchbar .search {
+  height: 30px;
+  position: relative;
+  padding: 0px;
+}
+main .searchbar input {
+  height: 30px;
+  border-radius: 15px;
+  margin-bottom: 0px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: 0 none;
+  border: 0 none;
+  background-color: #eee;
+}
+main .searchbar button {
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+  right: 0;
+  height: 30px;
+  background: #ff841d;
+  outline: 0 none;
+  border: 0 none;
+}
+main .mui-content {
+  padding: 10px;
+}
+main .mui-content .mui-card:first-child {
+  margin: 0px;
+  padding: 0px;
+}
+main .mui-content .mui-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+main .mui-content .mui-card .mui-collapse {
+  background-color: #ebebeb;
+}
+main .mui-content .mui-card .mui-collapse .itemList .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .mui-content .mui-card .mui-collapse .itemList .list a {
+  border-radius: 0px;
+  width: 33.333%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0 none;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
 }
 
-a {
-  color: #2d374b;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #cd0200;
-  text-decoration: none;
-}
-
-em {
-  font-style: normal;
-}
-
-i {
-  font-style: normal;
-}
-
-li {
-  list-style: none;
-}
-
-img {
-  border: 0;
-  vertical-align: middle;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-p {
-  word-wrap: break-word;
->>>>>>> e28d38ff60a2e7b8410d4007efbac4d4deaf7ad2
-}
-
-/*# sourceMappingURL=common.css.map */
+/*# sourceMappingURL=bijiaosearch.css.map */

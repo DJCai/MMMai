@@ -85,7 +85,7 @@ function getKeysArr() {
 
     return arr;
 }
-
+//浏览器本地保存数据
 function saveHistory(arr) {
     localStorage.setItem("searchKeywords", JSON.stringify(arr));
 }
@@ -101,7 +101,7 @@ function checkLogin(res) {
         return true;
     }
 }
-
+//返回上一页
 function back() {
     window.history.back();
 }

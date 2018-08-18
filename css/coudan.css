@@ -1,30 +1,68 @@
-* {
+@charset "UTF-8";
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-input {
-  outline: none;
-}
-
-img {
-  display: block;
-  border: none;
-  vertical-align: middle;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul,
-ol {
-  list-style: none;
 }
 
 body {
-  font-size: 14px;
+  font: 12px”宋体”, ”Arial Narrow”, HELVETICA;
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: #2d374b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #cd0200;
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+i {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p {
+  word-wrap: break-word;
 }
 
 body {
@@ -45,12 +83,9 @@ body {
   font-size: 20px;
 }
 .container .header .share {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.container .header .share .sharing {
-  font-size: 12px;
+  height: 35px;
+  width: 35px;
+  background: url(../images/icon/header_app.png) 0px 0px/35px 35px;
 }
 .container .main .screenBar {
   height: 43px;
@@ -73,6 +108,9 @@ body {
 .container .main .screenBar .change .left li {
   padding: 5px;
 }
+.container .main .screenBar .change .left li .mui-icon {
+  font-size: 14px !important;
+}
 .container .main .screenBar .change .search {
   flex-basis: 45px;
   height: 100%;
@@ -84,7 +122,6 @@ body {
   color: #666;
 }
 .container .main .screenBar .changeList {
-  display: none;
   width: 100%;
   position: absolute;
   top: 43px;
@@ -98,9 +135,92 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.container .main .screenBar .changeList li .fa.fa-check {
+.container .main .screenBar .changeList li .fa {
   color: orange;
+  opacity: 0;
   font-size: 16px;
+}
+.container .main .screenBar .changeList li.active .fa {
+  opacity: 1;
+}
+.container .main .screenBar .changeList .searchPage {
+  background-color: #f7f7f7;
+}
+.container .main .screenBar .changeList .searchPage .searchBar {
+  display: flex;
+  padding: 10px 10px;
+  align-items: center;
+}
+.container .main .screenBar .changeList .searchPage .searchBar input {
+  flex: 1;
+  height: 30px;
+  margin: 0;
+  border-radius: 0px;
+  font-size: 14px;
+}
+.container .main .screenBar .changeList .searchPage .searchBar span {
+  height: 30px;
+  flex-basis: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .main .screenBar .changeList .searchPage .sort {
+  margin-bottom: 10px;
+}
+.container .main .screenBar .changeList .searchPage .sort p {
+  padding-left: 10px;
+  color: #000;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.container .main .screenBar .changeList .searchPage .sort .content {
+  display: flex;
+}
+.container .main .screenBar .changeList .searchPage .sort .content span {
+  width: 20%;
+  margin-left: 10px;
+  font-size: 12px;
+  color: #555;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0px;
+}
+.container .main .screenBar .changeList .searchPage .sort .content span.active {
+  color: #f1f1f1;
+  border: 0px solid #000;
+  background-color: #ff841d;
+}
+.container .main .screenBar .changeList .searchPage .classList p {
+  color: #000;
+  padding: 0px 10px;
+}
+.container .main .screenBar .changeList .searchPage .classList .content {
+  font-size: 12px;
+  padding: 0px 10px 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .main .screenBar .changeList .searchPage .classList .content a {
+  padding: 10px 0px 0px 10px;
+  width: 25%;
+}
+.container .main .screenBar .changeList .searchPage .classList .content a span {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  height: 30px;
+  border-radius: 3px;
+}
+.container .main .screenBar .changeList .searchPage .classList .content a span.active {
+  background-color: #ff841d;
+  border: none;
+  color: #f1f1f1;
 }
 .container .main .products {
   display: flex;

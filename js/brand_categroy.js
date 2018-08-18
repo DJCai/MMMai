@@ -66,7 +66,7 @@ $(function(){
             dataType:"json",
             success:function(res){
                 var htmlStr = template("product-commentlist",{list:res.result});
-                $(".product-commentlist .commentlist").html(htmlStr);
+                $(".product-commentlist .commentlist").append(htmlStr);
             }
         })
     }

@@ -149,7 +149,6 @@ $(function(){
             type:'GET',
             data:{shopid:sid,areaid:aid},
             success:function(res){
-                console.log(res);
                 var html=template('tplProducts',res);
                 $('.products').html(html);
             }

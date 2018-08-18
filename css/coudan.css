@@ -83,12 +83,9 @@ body {
   font-size: 20px;
 }
 .container .header .share {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.container .header .share .sharing {
-  font-size: 12px;
+  height: 35px;
+  width: 35px;
+  background: url(../images/icon/header_app.png) 0px 0px/35px 35px;
 }
 .container .main .screenBar {
   height: 43px;

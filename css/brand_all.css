@@ -67,8 +67,6 @@ html, body {
 
 .container {
   height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 .container .header {
   height: 50px;
@@ -87,32 +85,60 @@ html, body {
   justify-content: center;
 }
 .container .header a img {
-  width: 50%;
-}
-.container .main {
-  flex: 1;
+  width: 70%;
 }
 .container .main .searchbox {
   padding: 10px;
   border-bottom: 2px solid #e6e6e6;
-}
-.container .main .searchbox div {
-  height: 30px;
-  border-radius: 15px;
-  background: #f1f1f1;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.container .main .searchbox div {
+  position: relative;
+  height: 30px;
+  flex: 1;
+  border-radius: 15px;
+  background: #f1f1f1;
 }
 .container .main .searchbox div .search-text {
   height: 100%;
   flex: 1;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-radius: 15px;
+  border-radius: 15px;
   border: none;
   background: #f1f1f1;
   font-size: 16px;
+  margin-bottom: 0;
 }
-.container .main .searchbox div .search {
+.container .main .searchbox div .historywordBox {
+  position: absolute;
+  top: 31px;
+  background: #fff;
+  width: 100%;
+  padding: 0;
+}
+.container .main .searchbox div .historywordBox li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  border-bottom: 1px solid #ccc;
+}
+.container .main .searchbox div .historywordBox li span {
+  font-size: 16px;
+}
+.container .main .searchbox div .historywordBox li span.delete-keyword {
+  width: 30px;
+}
+.container .main .searchbox div .historywordBox li span.keywords {
+  flex: 1;
+}
+.container .main .searchbox div .historywordBox li.active {
+  background: #ccc;
+}
+.container .main .searchbox .search {
   width: 64px;
   height: 100%;
   border-radius: 15px;
@@ -122,31 +148,48 @@ html, body {
 }
 .container .main .navbar {
   padding: 10px;
-  font-size: 12px;
+  font-size: 14px;
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: 10px;
 }
 .container .main .brandlist {
-  padding: 0 5px;
+  padding: 0 10px;
+}
+.container .main .brandlist li {
+  line-height: 40px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.container .main .brandlist li a {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .container .main .brandlist .title {
   height: 40px;
   font-size: 16px;
+  margin-bottom: 2px;
 }
 .container .main .brandlist .title a {
   display: block;
   height: 100%;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #bbb;
   padding-left: 10px;
   line-height: 40px;
   color: #874604;
 }
+.container .main .brandlist .brand-title-list .mui-navigate-right {
+  padding-left: 8px;
+}
 .container .footer {
-  height: 100px;
-  background: green;
+  height: 36px;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  bottom: 0;
 }
 .container .footer .logininfo {
-  height: 36px;
+  height: 100%;
   display: flex;
 }
 .container .footer .logininfo a {
@@ -156,10 +199,60 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #e5e5e5;
+  color: #333;
 }
 .container .footer .logininfo a:nth-child(n+2) {
   border-left: 1px solid #e6e6e6;
+}
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+}
+.banner .left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.banner .left .close-banner {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: #fff;
+  background: #ccc;
+  line-height: 20px;
+  text-align: center;
+}
+.banner .left img {
+  width: 40px;
+  height: 40px;
+  margin: 0 12px;
+}
+.banner .left div p {
+  color: #999;
+}
+.banner .left div p:nth-child(1) {
+  font-size: 16px;
+}
+.banner .left div p:nth-child(2) {
+  font-size: 12px;
+}
+.banner .opennow {
+  height: 32px;
+  width: 74px;
+  text-align: center;
+  line-height: 32px;
+  background: #ff841d;
+  color: #fff;
+  box-shadow: 0px -1px 1px 0 red inset;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=brand_all.css.map */

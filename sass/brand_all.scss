@@ -3,9 +3,7 @@ html,body{
     height:100%;
 }
 .container{
-    height:100%;
-    display:flex;
-    flex-direction:column;
+    height: 100%;
     .header{
         height:50px;
         background: $itemColor;
@@ -21,30 +19,65 @@ html,body{
                 justify-content: center;
             }
             img{
-                width:50%;
+                width:70%;
             }
         }
     }
     .main{
-        flex:1;
+       
         .searchbox{
+            
             padding:10px;
             border-bottom:2px solid #e6e6e6;
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
             div{
+                position: relative;
                 height: 30px;
+                flex:1;
                 border-radius:15px;
                 background:#f1f1f1;
-                display:flex;
-                justify-content:space-between;
                 .search-text{
                     height: 100%;
                     flex:1;
-                    border-top-left-radius: 15px;
-                    border-bottom-left-radius: 15px;
+                    border-radius: 15px;
+                    border-radius: 15px;
                     border:none;
                     background:#f1f1f1;
                     font-size: 16px;
+                    margin-bottom: 0;
                 }
+                .historywordBox{
+                    position: absolute;
+                    top:31px;
+                    background: #fff;
+                    width: 100%;
+                    padding:0;
+                    li {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding-left:30px;
+                        border-bottom:1px solid #ccc;
+                        // background: #fff;
+                        span {
+                            font-size: 16px;
+                            &.delete-keyword{
+                                width: 30px;
+                            }
+                            &.keywords{
+                                flex:1;
+                            }
+                        }
+                        &.active{
+                            background: #ccc;
+                        }
+                    }
+                    // display:none;
+                }
+            }
                 .search{
                     width: 64px;
                     height: 100%;
@@ -53,58 +86,64 @@ html,body{
                     color:#fff;
                     border:none;
                 }
-            }
+                
+           
         }
         .navbar{
             padding:10px;
-            font-size: 12px;
+            font-size: 14px;
             border-bottom:1px solid #e6e6e6;
             margin-bottom:10px;
         }
         .brandlist{
-            padding: 0 5px;
+            padding: 0 10px;
+            li{
+                line-height: 40px;
+                border-bottom:1px solid #e6e6e6;
+                a{
+                    height: 100%;
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+                }
+            }
             .title{
                 height: 40px;
                 font-size: 16px;
-                // padding:10px 0;s
+                margin-bottom: 2px;
                 a {
                     display:block;
                     height: 100%;
-                    border:1px solid #e6e6e6;
+                    border:1px solid #bbb;
                     padding-left:10px;
                     line-height:40px;
                     color: #874604;
-                    
+                }
+            }
+            .brand-title-list{
+                .mui-navigate-right{
+                    padding-left:8px;
                 }
             }
         }
-
-
-
     }
-
-
-
-
-
-
-
-
-
     .footer{
-        height:100px;
-        background: green;
+        height:36px;
+        width: 100%;
+        position: fixed;
+        background: #fff;
+        bottom:0;
         .logininfo{
-            height: 36px;
+            height: 100%;
             display:flex;
             a{
                 flex:1;
                 border-top:1px solid #e6e6e6;
-                border-bottom:1px solid #e6e6e6;
+                border-bottom:1px solid#e6e6e6;
                 display:flex;
                 justify-content: center;
                 align-items:center;
-                color:#e5e5e5;
+                color:#333;
                 &:nth-child(n+2){
                     border-left:1px solid #e6e6e6;
                 }
@@ -112,6 +151,55 @@ html,body{
         }
 
     }
-
+}
+.banner{
+    position:fixed;
+    bottom:0;
+    width: 100%;
+    height:60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background: #fff;
+    padding:10px;
+    .left{
+        flex:1;
+        display:flex;
+        align-items:center;
+        .close-banner{
+            height:20px;
+            width:20px;
+            border-radius:50%;
+            color:#fff;
+            background:#ccc;
+            line-height: 20px;
+            text-align: center;
+        }
+        img{
+            width:40px;
+            height:40px;
+            margin:0 12px;
+        }
+        div p {
+            color:#999;
+            &:nth-child(1){
+                font-size:16px;
+            }
+            &:nth-child(2){
+                font-size:12px;
+            }
+        }
+    }
+    .opennow{
+        height: 32px;
+        width: 74px;
+        text-align: center;
+        line-height: 32px;
+        background:$itemColor;
+        color:#fff;
+        box-shadow: 0px -1px 1px 0 red inset;
+        font-size: 12px;
+    }
+    
 }
 

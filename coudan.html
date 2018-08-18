@@ -59,7 +59,7 @@
 
             <!-- products -->
             <div class="products">
-                <div class="product">
+                <!-- <div class="product">
                     <div class="box">
                         <img src="http://img10.360buyimg.com/n7/jfs/t19249/136/1326656480/58167/e60034f4/5ac33204N85fb466f.jpg" alt="">
                         <div class="title mui-ellipsis">上味源 飞天锁骨 18g 鸭锁骨香辣味</div>
@@ -67,25 +67,7 @@
                             <div class="price"><span>¥</span><span class="money">232</span></div>
                         </div>
                     </div>
-                </div>
-                <div class="product">
-                    <div class="box">
-                        <img src="http://img10.360buyimg.com/n7/jfs/t19249/136/1326656480/58167/e60034f4/5ac33204N85fb466f.jpg" alt="">
-                        <div class="title mui-ellipsis">上味源 飞天锁骨 18g 鸭锁骨香辣味</div>
-                        <div class="other">
-                            <div class="price"><span>¥</span><span class="money">232</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="box">
-                        <img src="http://img10.360buyimg.com/n7/jfs/t19249/136/1326656480/58167/e60034f4/5ac33204N85fb466f.jpg" alt="">
-                        <div class="title mui-ellipsis">上味源 飞天锁骨 18g 鸭锁骨香辣味</div>
-                        <div class="other">
-                            <div class="price"><span>¥</span><span class="money">232</span></div>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -96,11 +78,11 @@
     <script type="text/html" id="tplchangeList">
         {{each result v i}}
             {{if v.shopName}}
-            <li class="{{if i==0}}active{{/if}}"><span class="text">{{v.shopName}}</span><span class="fa fa-check"></span></li>
+            <li data-type='shop' data-id="{{v.shopId}}" class="{{if i==0}}active{{/if}}"><span class="text">{{v.shopName}}</span><span class="fa fa-check"></span></li>
             {{else if v.areaName}}
-            <li class="{{if i==0}}active{{/if}}"><span class="text">{{v.areaName}}</span><span class="fa fa-check"></span></li>
+            <li data-type='area' data-id="{{v.areaId}}" class="{{if i==0}}active{{/if}}"><span class="text">{{v.areaName}}</span><span class="fa fa-check"></span></li>
             {{else}}
-            <li class="{{if i==0}}active{{/if}}"><span class="text">{{v}}</span><span class="fa fa-check"></span></li>
+            <li data-type='price' data-id="{{v.id}}" class="{{if i==0}}active{{/if}}"><span class="text">{{v}}</span><span class="fa fa-check"></span></li>
             {{/if}}
         {{/each}}
     </script>
@@ -135,6 +117,21 @@
                     </div>
                 </div>
             </div>
+    </script>
+
+    <!-- 产品页面的渲染模板 -->
+    <script type="text/html" id="tplProducts">
+        {{each result v i}}
+        <div class="product">
+            <div class="box" data-id="{{v.productId}}">
+                <img src="{{v.productImg}}" alt="">
+                <div class="title mui-ellipsis">{{v.productName}}</div>
+                <div class="other">
+                    <div class="price"><span>¥</span><span class="money">{{v.productPrice}}</span></div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
     </script>
 
 </body>

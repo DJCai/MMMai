@@ -14,7 +14,7 @@
     <!-- 引入模板引擎 -->
     <script src="./lib/artTemplate/template-web.js"></script>
     <!-- 引入font-awesome字体图标 -->
-    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css"> -->
 
     <!-- 引入公共js和css -->
     <link rel="stylesheet" href="./css/common.css">
@@ -30,69 +30,39 @@
 <body>
     <div class="container">
         <div class="header">
-            <a href="#" class="logo">
-                <img src="./images/logo.png" alt="">
+            <a href="./index.html" class="logo">
+                <img src="./images/icon/header_logo.png" alt="">
             </a>
             <a href="#" class="download">
-                <img src="./images/xiazai.png" alt="">
+                <img src="./images/icon/header_app.png" alt="">
             </a>
         </div>
         <div class="main">
-
             <div class="searchbox">
                 <div>
                     <input type="text" name="" class="search-text" placeholder="请输入您想比价的商品">
-                    <button class="search">搜索</button>
+                    <ul class="historywordBox">
+                        <!-- <li>
+                            <span>电视</span>
+                            <span class="mui-icon mui-icon-trash mui-pull-right">
+                            </span>
+                        </li> -->
+                    </ul>
                 </div>
+                <button class="search">搜索</button>
             </div>
             <div class="navbar">
-                <a href="#">首页</a>
+                <a href="./index/html">首页</a>
                 <span>&gt;</span>
-                <a href="">品牌大全</a>
+                <a href="./brand_all.html">品牌大全</a>
             </div>
             <div class="brandlist">
                 <div class="title">
                     <a href="#"> 热门品牌排行</a>
                 </div>
-                <ul class="mui-table-view mui-table-view-chevron">
-                    <li class="mui-table-view-cell mui-collapse">
-                        <a class="mui-navigate-right" href="#">产品</a>
-                        <ul class="mui-table-view mui-table-view-chevron">
-                            <li class="mui-table-view-cell">
-                                <a class="mui-navigate-right" href="#">iOS</a>
-                            </li>
-                            <li class="mui-table-view-cell">
-                                <a class="mui-navigate-right" href="#">Android</a>
-                            </li>
-                            <li class="mui-table-view-cell">
-                                <a class="mui-navigate-right" href="#">HTML5</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="mui-table-view-cell mui-collapse">
-                        <a class="mui-navigate-right" href="#">方案</a>
-                        <ul class="mui-table-view mui-table-view-chevron">
-                            <li class="mui-table-view-cell">
-                                <a class="mui-navigate-right" href="#">PC方案</a>
-                            </li>
-                            <li class="mui-table-view-cell">
-                                <a class="mui-navigate-right" href="#">手机方案</a>
-                            </li>
-                            <li class="mui-table-view-cell">
-                                <a class="mui-navigate-right" href="#">TV方案</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="mui-table-view-cell mui-collapse">
-                        <a class="mui-navigate-right" href="#">新闻</a>
-                        <ul class="mui-table-view mui-table-view-chevron">
-                            <li class="mui-table-view-cell">
-                                <a class="mui-navigate-right" href="#">公司新闻</a>
-                            </li>
-                            <li class="mui-table-view-cell">
-                                <a class="mui-navigate-right" href="#">行业新闻</a>
-                            </li>
-                        </ul>
+                <ul class="brand-title-list ">
+                    <li >
+                        <a href="#">平板电视十大品牌</a>
                     </li>
                 </ul>
             </div>
@@ -105,6 +75,35 @@
             </div>
         </div>
     </div>
+    <div class="banner">
+        <div class="left">
+            <a href="#" class="close-banner">X</a>
+            <img src="./images/icon/man.jpg" alt="">
+            <div>
+                <p>慢慢买</p>
+                <p>全网比价,查历史价格</p>
+            </div>
+        </div>
+        <a href="#" class="opennow ">立即打开</a>
+    </div>
+    <!-- <div class="gotop">
+        s
+    </div> -->
 </body>
-
 </html>
+<script type="text/html" id="brand-title-list">
+    {{each list v i}}
+        <li>
+            <a href="./brand_categroy.html?brandTitlId={{v.brandTitleId}}"><span>{{v.brandTitle}}</span><i class="mui-icon mui-icon-forward mui-pull-right"></i></a>
+        </li>
+    {{/each}}
+</script>
+<script type="text/html" id="historyWords">
+    {{each list v i}}
+        <li>
+            <span class="keywords">{{v}}</span>
+            <span data-index={{i}} class="mui-icon mui-icon-trash  delete-keyword">
+            </span>
+        </li>
+    {{/each}}
+</script>

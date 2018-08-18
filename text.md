@@ -24,3 +24,18 @@
             </div>
         </div>
     </div>
+
+
+    //渲染完成页面后调用函数默认加载第一个数据（并渲染对应产品)
+                if(type=='shop'){
+                    var text=res.result[0].shopName;
+                    text=changeListWord(text);
+                    $('.left li.'+type).children(".text").text(text);
+                }else if(type=='addr'){
+                    var text=res.result[0].areaName;
+                    text=changeListWord(text);
+                    $('.left li.'+type).children(".text").text(text);
+                }else{
+                    $('.left li.'+type).children(".text").text(arr[0]);
+                    console.log(arr[0]);
+                }

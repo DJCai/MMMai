@@ -1,0 +1,165 @@
+@charset "UTF-8";
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 12px”宋体”, ”Arial Narrow”, HELVETICA;
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: #2d374b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #cd0200;
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  height: 50px;
+  background: #ff841d;
+  display: flex;
+  justify-content: space-between;
+}
+.container .header a {
+  display: flex;
+  align-items: center;
+}
+.container .header a.logo {
+  padding-left: 12px;
+}
+.container .header a.download {
+  justify-content: center;
+}
+.container .header a img {
+  width: 50%;
+}
+.container .main {
+  flex: 1;
+}
+.container .main .searchbox {
+  padding: 10px;
+  border-bottom: 2px solid #e6e6e6;
+}
+.container .main .searchbox div {
+  height: 30px;
+  border-radius: 15px;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+}
+.container .main .searchbox div .search-text {
+  height: 100%;
+  flex: 1;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: none;
+  background: #f1f1f1;
+  font-size: 16px;
+}
+.container .main .searchbox div .search {
+  width: 64px;
+  height: 100%;
+  border-radius: 15px;
+  background: #ff841d;
+  color: #fff;
+  border: none;
+}
+.container .main .navbar {
+  padding: 10px;
+  font-size: 12px;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 10px;
+}
+.container .main .brandlist {
+  padding: 0 5px;
+}
+.container .main .brandlist .title {
+  height: 40px;
+  font-size: 16px;
+}
+.container .main .brandlist .title a {
+  display: block;
+  height: 100%;
+  border: 1px solid #e6e6e6;
+  padding-left: 10px;
+  line-height: 40px;
+  color: #874604;
+}
+.container .footer {
+  height: 100px;
+  background: green;
+}
+.container .footer .logininfo {
+  height: 36px;
+  display: flex;
+}
+.container .footer .logininfo a {
+  flex: 1;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e5e5e5;
+}
+.container .footer .logininfo a:nth-child(n+2) {
+  border-left: 1px solid #e6e6e6;
+}
+
+/*# sourceMappingURL=brand_all.css.map */

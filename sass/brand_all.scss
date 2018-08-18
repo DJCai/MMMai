@@ -1,0 +1,117 @@
+@import "./common.scss";
+html,body{
+    height:100%;
+}
+.container{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    .header{
+        height:50px;
+        background: $itemColor;
+        display:flex;
+        justify-content:space-between;
+        a{
+            display:flex;
+            align-items: center;
+            &.logo{
+                padding-left:12px;
+            }
+            &.download{
+                justify-content: center;
+            }
+            img{
+                width:50%;
+            }
+        }
+    }
+    .main{
+        flex:1;
+        .searchbox{
+            padding:10px;
+            border-bottom:2px solid #e6e6e6;
+            div{
+                height: 30px;
+                border-radius:15px;
+                background:#f1f1f1;
+                display:flex;
+                justify-content:space-between;
+                .search-text{
+                    height: 100%;
+                    flex:1;
+                    border-top-left-radius: 15px;
+                    border-bottom-left-radius: 15px;
+                    border:none;
+                    background:#f1f1f1;
+                    font-size: 16px;
+                }
+                .search{
+                    width: 64px;
+                    height: 100%;
+                    border-radius:15px;
+                    background: $itemColor;
+                    color:#fff;
+                    border:none;
+                }
+            }
+        }
+        .navbar{
+            padding:10px;
+            font-size: 12px;
+            border-bottom:1px solid #e6e6e6;
+            margin-bottom:10px;
+        }
+        .brandlist{
+            padding: 0 5px;
+            .title{
+                height: 40px;
+                font-size: 16px;
+                // padding:10px 0;s
+                a {
+                    display:block;
+                    height: 100%;
+                    border:1px solid #e6e6e6;
+                    padding-left:10px;
+                    line-height:40px;
+                    color: #874604;
+                    
+                }
+            }
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+    .footer{
+        height:100px;
+        background: green;
+        .logininfo{
+            height: 36px;
+            display:flex;
+            a{
+                flex:1;
+                border-top:1px solid #e6e6e6;
+                border-bottom:1px solid #e6e6e6;
+                display:flex;
+                justify-content: center;
+                align-items:center;
+                color:#e5e5e5;
+                &:nth-child(n+2){
+                    border-left:1px solid #e6e6e6;
+                }
+            }
+        }
+
+    }
+
+}
+

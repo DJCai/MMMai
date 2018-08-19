@@ -31,26 +31,6 @@ body {
 
 a {
   color: #2d374b;
-<<<<<<< HEAD
-  text-decoration: none;
-}
-
-a:hover {
-  color: #cd0200;
-  text-decoration: none;
-}
-
-em {
-  font-style: normal;
-}
-
-i {
-  font-style: normal;
-}
-
-li {
-  list-style: none;
-=======
   text-decoration: none;
 }
 
@@ -83,23 +63,12 @@ table {
 
 p {
   word-wrap: break-word;
->>>>>>> 2a2e6c422af3027a9f03dffb17b769edb544140c
 }
 
-img {
-  border: 0;
-  vertical-align: middle;
+html, body {
+  height: 100%;
 }
 
-<<<<<<< HEAD
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-p {
-  word-wrap: break-word;
-=======
 .container {
   height: 100%;
 }
@@ -273,7 +242,6 @@ p {
   color: #fff;
   box-shadow: 0px -1px 1px 0 red inset;
   font-size: 12px;
->>>>>>> 2a2e6c422af3027a9f03dffb17b769edb544140c
 }
 
 main .nav {

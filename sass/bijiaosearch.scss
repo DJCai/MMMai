@@ -1,47 +1,51 @@
 @import "common.scss";
-main{
-    background-color: #ebebeb;
+.container{
+   display: flex;
+   flex-direction: column;
+}
+.main{
+    flex: 1;
+    position: relative;
+    // background-color: #ebebeb;
+    // .searchbar{
+    //     // display:flex;
+    //     // justify-content: center;
+    //     padding: 15px;
+    //     // margin: 15px;
+    //      position: relative;
+    //      background-color: #fff;
+    //      border-bottom: 1px solid #e6e6e6;
+    //      .search{
+    //         height: 30px;
+    //         position: relative;
+    //         padding: 0px;
 
-    .searchbar{
-        // display:flex;
-        // justify-content: center;
-     
-        padding: 15px;
-        // margin: 15px;
-         position: relative;
-         background-color: #fff;
-         border-bottom: 1px solid #e6e6e6;
-         .search{
-            height: 30px;
-            position: relative;
-            padding: 0px;
-
-         }
+    //      }
   
-         input{          
-             height: 30px;
-             border-radius: 15px;
-             margin-bottom: 0px;
-             display: block;
-             position: absolute;
-             top: 0;
-             left: 0;
-             outline: 0 none;
-             border: 0 none;
-             background-color: #eee;
+    //      input{          
+    //          height: 30px;
+    //          border-radius: 15px;
+    //          margin-bottom: 0px;
+    //          display: block;
+    //          position: absolute;
+    //          top: 0;
+    //          left: 0;
+    //          outline: 0 none;
+    //          border: 0 none;
+    //          background-color: #eee;
 
-         }
-         button{
-            position: absolute;
-            border-radius: 15px;
-            top: 0;
-            right: 0;
-            height: 30px;
-            background: #ff841d;
-            outline: 0 none;
-            border: 0 none;
-         }
-    }
+    //      }
+    //      button{
+    //         position: absolute;
+    //         border-radius: 15px;
+    //         top: 0;
+    //         right: 0;
+    //         height: 30px;
+    //         background: #ff841d;
+    //         outline: 0 none;
+    //         border: 0 none;
+    //      }
+    // }
 
 
     .tab-content{
@@ -112,5 +116,19 @@ main{
 
     }
 }
+
+.footer{
+    height:94px;
+    width: 100%;
+    background: #fff;
+    padding-top:10px;
+    position: relative;
+    z-index: 1000;
+
+}
+.banner{
+    z-index: 1000;
+}
+
 
 

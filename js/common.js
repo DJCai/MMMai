@@ -1,3 +1,4 @@
+
 // 自适应不同屏幕尺寸
 //本项目为2倍图
 $("html")[0].style.fontSize = window.screen.width / 10 + "px";

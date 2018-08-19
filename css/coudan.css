@@ -249,6 +249,7 @@ body {
 }
 
 .container .header {
+  width: 100%;
   background-color: #ff841d;
   height: 44px;
   display: flex;
@@ -257,6 +258,7 @@ body {
   justify-content: space-between;
   color: #fff;
   font-size: 20px;
+  transition: all 1s;
 }
 .container .header .title {
   font-size: 20px;
@@ -265,6 +267,12 @@ body {
   height: 35px;
   width: 35px;
   background: url(../images/icon/header_app.png) 0px 0px/35px 35px;
+}
+.container .header.on {
+  position: fixed;
+  z-index: 60;
+  top: 0;
+  left: 0;
 }
 .container .main .screenBar {
   height: 43px;
@@ -333,9 +341,11 @@ body {
 .container .main .screenBar .changeList .searchPage .searchBar input {
   flex: 1;
   height: 30px;
+  padding-left: 24px;
   margin: 0;
   border-radius: 0px;
   font-size: 14px;
+  background: url("../images/icon/glass.png") 3px 6px/17px 17px no-repeat;
 }
 .container .main .screenBar .changeList .searchPage .searchBar span {
   height: 30px;
@@ -432,6 +442,27 @@ body {
 }
 .container .main .products .product:nth-child(even) {
   padding: 10px 10px 0px 5px;
+}
+.container .backTop {
+  display: none;
+  position: fixed;
+  height: 40px;
+  width: 40px;
+  right: 5px;
+  bottom: 40px;
+  z-index: 50;
+}
+.container .backTop a {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  color: #ddd;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=coudan.css.map */

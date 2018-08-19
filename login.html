@@ -20,10 +20,9 @@
     <link rel="stylesheet" href="./css/common.css">
     <script src="./js/common.js"></script>
 
+    <link rel="stylesheet" href="./css/login.css">
 
-    <link rel="stylesheet" href="./css/brand_all.css">
-
-    <script src="./js/brand_all.js"></script>
+    <script src="./js/login.js"></script>
 
 </head>
 
@@ -51,15 +50,20 @@
                 </div>
                 <button class="search">搜索</button>
             </div>
-            
-            <!-- 登录部分内容 -->
-
-
+            <form action="">
+                <input type="text"  name="username" class="mui-input-clear username" placeholder="用户名/手机号">
+                <input type="password" name="password"   class="mui-input-clear mui-input-password" placeholder="请输入密码">
+                <button type="button" class="mui-btn mui-btn-warning loginbutton">登录</button>
+                <label class="loginTime">
+                    <input type="checkbox" name="loginTime" >一个月内自动登录
+                </label>
+                <p>忘记密码：请电脑登录www.manmanbuy.com找回</p> 
+            </form>   
         </div>
         <div class="footer">
             <div class="logininfo">
-                <a href="#" class="login">注册</a>
-                <a href="#" class="register">登录</a>
+                <a href="./register.html" class="login">注册</a>
+                <a href="./login.html" class="register">登录</a>
                 <a href="#" class="return-top">返回顶部</a>
             </div>
             <div class="footerinfo">

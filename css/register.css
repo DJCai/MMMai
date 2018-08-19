@@ -249,23 +249,27 @@ html, body {
   padding: 0 20px;
 }
 .main form input {
-  font-size: 16px;
-}
-.main form .loginbutton {
-  width: 100%;
-  font-size: 16px;
+  height: 35px;
+  font-size: 14px;
   margin-bottom: 10px;
 }
-.main form .loginTime {
+.main form .yangzhengma {
+  display: flex;
+}
+.main form .yangzhengma .getyzm {
+  width: 120px;
+  height: 35px;
+  margin-bottom: 15px;
   font-size: 14px;
 }
-.main form .loginTime input {
-  vertical-align: middle;
+.main form .yangzhengma .yangzhengma-text {
+  flex: 1;
 }
-.main form p {
-  text-align: center;
-  font-size: 12px;
-  margin-top: 30px;
+.main form .registerbutton {
+  width: 100%;
+}
+.main .footer {
+  position: static;
 }
 
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=register.css.map */

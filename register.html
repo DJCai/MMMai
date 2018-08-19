@@ -20,16 +20,15 @@
     <link rel="stylesheet" href="./css/common.css">
     <script src="./js/common.js"></script>
 
+    <link rel="stylesheet" href="./css/register.css">
 
-    <link rel="stylesheet" href="./css/brand_all.css">
-
-    <script src="./js/brand_all.js"></script>
+    <script src="./js/register.js"></script>
 
 </head>
 
 <body>
     <div class="container">
-        <div class="header ">
+        <div class="header">
             <a href="./index.html" class="logo">
                 <img src="./images/icon/header_logo.png" alt="">
             </a>
@@ -51,21 +50,17 @@
                 </div>
                 <button class="search">搜索</button>
             </div>
-            <div class="navbar">
-                <a href="./index/html">首页</a>
-                <span>&gt;</span>
-                <a href="./brand_all.html">品牌大全</a>
-            </div>
-            <div class="brandlist">
-                <div class="title">
-                    <a href="#"> 热门品牌排行</a>
+            <form action="">
+                <input type="text" name="username" class="mui-input-clear username" placeholder="请输入用户名">
+                <input type="password" name="password" class="mui-input-clear mui-input-password" placeholder="密码(6-20个字符)">
+                <input type="tel" name="telephone" class="mui-input-clear mui-input-tel" placeholder="请输入手机号">
+                <div class="yangzhengma">
+                    <input type="text" name="yanzhengma" class="mui-input-clear yangzhengma-text" placeholder="请输入手机验证码">
+                    <button type="button" class="getyzm">获取验证码</button>
                 </div>
-                <ul class="brand-title-list ">
-                    <li>
-                        <a href="./brand_categroy.html">平板电视十大品牌</a>
-                    </li>
-                </ul>
-            </div>
+                <input type="email" name="email" class="mui-input-clear mui-input-email" placeholder="请输入邮箱">
+                 <button type="button" class="mui-btn mui-btn-warning registerbutton">注册</button> 
+            </form>
         </div>
         <div class="footer">
             <div class="logininfo">
@@ -93,11 +88,7 @@
         </div>
         <a href="#" class="opennow ">立即打开</a>
     </div>
-    <!-- <div class="gotop">
-        s
-    </div> -->
 </body>
-
 </html>
 <script type="text/html" id="brand-title-list">
     {{each list v i}}

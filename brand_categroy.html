@@ -129,12 +129,15 @@
         </div>
         <div class="footer">
             <div class="logininfo">
-                <a href="#" class="login">注册</a>
-                <a href="#" class="register">登录</a>
+                <a href="./register.html" class="login">注册</a>
+                <a href="./login.html" class="register">登录</a>
                 <a href="#" class="return-top">返回顶部</a>
             </div>
             <div class="footerinfo">
-                <div><a class="appLogin" href="#">手机APP下载</a><span>慢慢买手机版--掌上比价平台</span></div>
+                <div>
+                    <a class="appLogin" href="#">手机APP下载</a>
+                    <span>慢慢买手机版--掌上比价平台</span>
+                </div>
                 <a href="./index.html">m.manmanbuy.com</a>
             </div>
         </div>
@@ -201,20 +204,20 @@
 <!-- 商品的评论信息 -->
 <script type="text/html" id="product-commentlist">
     {{each list v i}}
-        <li>
-            <a class="productcoment{{v.productId}}" href="{{v.productId}}">
-                <!-- <div><img src="./images/img/产品评论.jpg" alt=""></div>
+    <li>
+        <a class="productcoment{{v.productId}}" href="{{v.productId}}">
+            <!-- <div><img src="./images/img/产品评论.jpg" alt=""></div>
                 <p class="productName">客户撒覅第三季度首付款很放得开</p> -->
-            </a>
-            <div class="commenttext">
-                <p class="commentAuthor">
-                    <span class="comName">{{v.comName}}</span>
-                    <span class="comTime mui-pull-right">{{v.comTime}}</span>
-                </p>
-                <p class="Content">{{v.comContent}}</p>
+        </a>
+        <div class="commenttext">
+            <p class="commentAuthor">
+                <span class="comName">{{v.comName}}</span>
+                <span class="comTime mui-pull-right">{{v.comTime}}</span>
+            </p>
+            <p class="Content">{{v.comContent}}</p>
 
-            </div>
-        </li>
+        </div>
+    </li>
     {{/each}}
 
 </script>

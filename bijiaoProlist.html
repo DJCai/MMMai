@@ -52,13 +52,7 @@
                 </div>
                     <!-- 你的内容 -->
                     <div class="nav">
-                        <a href="">首页
-                            <span>&gt</span>
-                        </a>
-                        <a href="">电视
-                            <span>&gt</span>
-                        </a>
-                        <a href="">乐视</a>
+                     <!-- 模板 -->
                     </div>
                     <ul class="listitem">
                         <li class="item ui-border-b">
@@ -123,9 +117,21 @@
     </div>
 </body>
 </html>
+<script type="text/html" id="categorynav">
+    {{each result v i}}
+    <a href="">首页
+            <span>&gt</span>
+        </a>
+        <a href="brand_all.html">全部分类
+            <span>&gt</span>
+        </a>
+        <a href="">{{v.category}}</a>
+        {{/each}}
+</script> 
+
 <script type="text/html" id="goodlist">
     {{each result v i }}
-    <li class="item ui-border-b">      
+    <li data-name="{{v.brandName}}" data-productId="{{v.productId}}" class="item ui-border-b">      
             <div class="pic">
             {{#v.productImg}}
             </div>

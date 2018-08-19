@@ -1,6 +1,12 @@
 @import "common.scss";
- main{
-     .nav{
+.container{
+    display: flex;
+    flex-direction: column;
+ }
+ .main{
+    flex: 1;
+    position: relative;
+     .navbar{
         height: 36px;
         background-color: #ebebeb;
         border-top: solid 1px #ebebeb;
@@ -117,18 +123,68 @@
          }
          .bottom{
             padding: 10px;
-            .checkmore{
-                margin:10px  auto;
-              
-                width:100%;
-             
-                display: block;
-                height: 32px;
-                background-color: #d4d4d4;
-            }
-
+ 
+           .text{
+            color: #000;
+            font-size: 14px;
+            line-height: 22px;
+            padding-top: 5px;
+           }
          }
-       
+         .checkmore{
+            margin:10px  auto;
+          
+            width:100%;
+         
+            display: block;
+            height: 32px;
+            background-color: #d4d4d4;
+        }
      }
  }
 
+
+.banner{
+    z-index: 1000;
+}
+
+.footer22{
+    height:110px;
+    width: 100%;
+    background: #fff;
+    padding-top:10px;
+    .logininfo{
+        height: 34px;
+        display:flex;
+        a{
+            flex:1;
+            border-top:1px solid #e6e6e6;
+            border-bottom:1px solid#e6e6e6;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            color:#333;
+            font-size: 14px;
+            &:nth-child(n+2){
+                border-left:1px solid #e6e6e6;
+            }
+        }
+    }
+    .footerinfo{
+        height: 64px;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        border-bottom: 1px solid #ccc;
+        font-size: 12px;
+        a{
+            color:#333;
+        }
+        .appLogin{
+            color:$itemColor;
+            margin-right:5px;
+        }
+    }
+
+}

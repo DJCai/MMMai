@@ -244,7 +244,16 @@ html, body {
   font-size: 12px;
 }
 
-main .nav {
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  position: relative;
+}
+.main .navbar {
   height: 36px;
   background-color: #ebebeb;
   border-top: solid 1px #ebebeb;
@@ -253,23 +262,23 @@ main .nav {
   padding-left: 8px;
   font-size: 14px;
 }
-main .nav a {
+.main .navbar a {
   color: #5a5a5a;
 }
-main .goodinfo .product {
+.main .goodinfo .product {
   background-color: #fff;
   margin: 0 auto;
   text-align: center;
   padding: 10px 10px 0px 10px;
 }
-main .goodinfo .product .title {
+.main .goodinfo .product .title {
   font-size: 16px;
   color: #000;
 }
-main .goodinfo .product .pic {
+.main .goodinfo .product .pic {
   padding: 10px 0;
 }
-main .goodinfo .do {
+.main .goodinfo .do {
   margin: 0px;
   margin-top: 20px;
   display: flex;
@@ -280,7 +289,7 @@ main .goodinfo .do {
   border-top: 1px solid orangered;
   height: 34px;
 }
-main .goodinfo .do a {
+.main .goodinfo .do a {
   flex: 1;
   height: 100%;
   display: flex;
@@ -289,13 +298,13 @@ main .goodinfo .do a {
   border-right: 1px solid orangered;
   color: #fff;
 }
-main .goodinfo .do a:last-child {
+.main .goodinfo .do a:last-child {
   border-right: none;
 }
-main .goodinfo .do a.active {
+.main .goodinfo .do a.active {
   background-color: orangered;
 }
-main .goodinfo .buyinfo .gobuy {
+.main .goodinfo .buyinfo .gobuy {
   margin: 10px 0px;
   display: flex;
   justify-content: space-between;
@@ -303,33 +312,33 @@ main .goodinfo .buyinfo .gobuy {
   height: 34px;
   line-height: 34px;
 }
-main .goodinfo .buyinfo .gobuy a {
+.main .goodinfo .buyinfo .gobuy a {
   color: #000;
   font-size: 16px;
 }
-main .goodinfo .buyinfo .gobuy .logo {
+.main .goodinfo .buyinfo .gobuy .logo {
   display: inline-block;
   width: 10px;
   height: 10px;
   background: url("../images/icon/1.png") no-repeat center center/15px 15px;
 }
-main .goodinfo .buyinfo .gobuy .price {
+.main .goodinfo .buyinfo .gobuy .price {
   color: red;
   font-size: 16px;
   line-height: 34px;
 }
-main .goodinfo .buyinfo .gobuy .buynow {
+.main .goodinfo .buyinfo .gobuy .buynow {
   background-color: orangered;
   height: 34px;
 }
-main .goodinfo .buyinfo .notice {
+.main .goodinfo .buyinfo .notice {
   border-top: 1px solid #5a5a5a;
   font-size: 12px;
   color: #888;
   padding: 8px 10px;
   line-height: 18px;
 }
-main .comment .title {
+.main .comment .title {
   height: 34px;
   line-height: 34px;
   background-color: #ccc;
@@ -338,22 +347,72 @@ main .comment .title {
   font-size: 16px;
   font-weight: bold;
 }
-main .comment .top {
+.main .comment .top {
   padding: 10px;
 }
-main .comment .top .usermessage {
+.main .comment .top .usermessage {
   display: flex;
   justify-content: space-between;
 }
-main .comment .bottom {
+.main .comment .bottom {
   padding: 10px;
 }
-main .comment .bottom .checkmore {
+.main .comment .bottom .text {
+  color: #000;
+  font-size: 14px;
+  line-height: 22px;
+  padding-top: 5px;
+}
+.main .comment .checkmore {
   margin: 10px  auto;
   width: 100%;
   display: block;
   height: 32px;
   background-color: #d4d4d4;
+}
+
+.banner {
+  z-index: 1000;
+}
+
+.footer22 {
+  height: 110px;
+  width: 100%;
+  background: #fff;
+  padding-top: 10px;
+}
+.footer22 .logininfo {
+  height: 34px;
+  display: flex;
+}
+.footer22 .logininfo a {
+  flex: 1;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+}
+.footer22 .logininfo a:nth-child(n+2) {
+  border-left: 1px solid #e6e6e6;
+}
+.footer22 .footerinfo {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.footer22 .footerinfo a {
+  color: #333;
+}
+.footer22 .footerinfo .appLogin {
+  color: #ff841d;
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=bijiaolist.css.map */

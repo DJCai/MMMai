@@ -105,6 +105,6 @@
 </script>
 <script type="text/html" id="getcategory">
    {{each result v i}}
-  <a href="./biaojiaoProlist.html?categoryid="+{{v.categoryId}} class="item">{{v.category}}</a>
+  <a data-categoryId="{{v.categoryId}}" class="item">{{v.category}}</a>
    {{/each}}
 </script>

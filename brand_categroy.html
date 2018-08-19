@@ -184,7 +184,7 @@
     {{each list v i}}
     <li>
         <a href="./productdetail.html?productId={{v.productId}}">
-            <div>{{#v.productImg}}</div>
+            <div class="productImg">{{#v.productImg}}</div>
             <div class="product-info">
                 <p class="productName">{{v.productName}}</p>
                 <p class="productPrice">{{v.productPrice}}</p>
@@ -202,9 +202,9 @@
 <script type="text/html" id="product-commentlist">
     {{each list v i}}
         <li>
-            <a href="{{v.productId}}">
-                <img src="./images/img/产品评论.jpg" alt="">
-                <p class="productName">客户撒覅第三季度首付款很放得开</p>
+            <a class="productcoment{{v.productId}}" href="{{v.productId}}">
+                <!-- <div><img src="./images/img/产品评论.jpg" alt=""></div>
+                <p class="productName">客户撒覅第三季度首付款很放得开</p> -->
             </a>
             <div class="commenttext">
                 <p class="commentAuthor">

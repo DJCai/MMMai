@@ -73,19 +73,21 @@ html, body {
   height: 100%;
 }
 .container .header {
-  height: 50px;
   background: #ff841d;
   display: flex;
   justify-content: space-between;
 }
 .container .header a {
+  height: 50px;
   display: flex;
   align-items: center;
 }
 .container .header a.logo {
+  height: 50px;
   padding-left: 12px;
 }
 .container .header a.download {
+  height: 50px;
   justify-content: center;
 }
 .container .header a img {
@@ -150,36 +152,8 @@ html, body {
   color: #fff;
   border: none;
 }
-.container .main .navbar {
-  padding: 10px;
-  font-size: 14px;
-  border-bottom: 1px solid #ccc;
-}
-.container .main .brandlist .title {
-  height: 40px;
-  font-size: 16px;
-  margin-bottom: 2px;
-  border-bottom: 1px solid #bbb;
-}
-.container .main .brandlist .title a {
-  display: block;
-  height: 100%;
-  padding-left: 10px;
-  line-height: 40px;
-  color: #874604;
-}
-.container .main .brandlist .brand-title-list li {
-  padding-left: 10px;
-  line-height: 40px;
-  border-bottom: 1px solid #e6e6e6;
-}
-.container .main .brandlist .brand-title-list li a {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .container .footer {
+  height: 110px;
   width: 100%;
   position: fixed;
   background: #fff;
@@ -268,6 +242,36 @@ html, body {
   color: #fff;
   box-shadow: 0px -1px 1px 0 red inset;
   font-size: 12px;
+}
+
+.container .main .navbar {
+  padding: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+}
+.container .main .brandlist .title {
+  height: 40px;
+  font-size: 16px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid #bbb;
+}
+.container .main .brandlist .title a {
+  display: block;
+  height: 100%;
+  padding-left: 10px;
+  line-height: 40px;
+  color: #874604;
+}
+.container .main .brandlist .brand-title-list li {
+  padding-left: 10px;
+  line-height: 40px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.container .main .brandlist .brand-title-list li a {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*# sourceMappingURL=brand_all.css.map */

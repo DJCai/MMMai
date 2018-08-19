@@ -59,9 +59,9 @@ function urlTool(urlStr) {
 //
 /**
  * url?key=value 
- * 将url中出现的中文重新编码,使得可以在跨页面传递中文数据时不会论码
+ * 将url中出现的中文重新编码,使得可以在跨页面传递中文数据时不会乱码
  * @param  key   //浏览器地址上的key值
- *  使用 http://www.163.com?name="小明",  跨页面传递时会轮码,在js中     getParams("name")就可获得"小明"
+ *  使用 http://www.163.com?name="小明",  跨页面传递时会乱码,在js中  getParams("name")就可获得"小明"
  */
 function getParams(key) {
     var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)"); 
@@ -83,7 +83,6 @@ function getKeysArr() {
     if (keysStr) {
         arr = JSON.parse(keysStr);
     }
-
     return arr;
 }
 //浏览器本地保存数据

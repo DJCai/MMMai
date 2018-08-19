@@ -29,22 +29,22 @@
            <a href="" class="xiazai" > <img src="./images/icon/header_app.png" alt=""> </a> 
           </header>
           <main>
-                <div class="mui-scroll-wrapper">
-                        <div class="mui-scroll">
+<div class="mui-scroll-wrapper">
+<div class="mui-scroll">
           <div class="searchbar">
-             
               <div class="search">
                     <input type="text" placeholder="请输入你想比价的商品">
                     <button class="searchbutton">搜索</button>
               </div>
            </div>    
-           <div class="mui-content">
-                <div class="mui-card">
-                  <!-- 模板 -->
-                </div>
-            </div>   
-            </div>  
-            </div>  
+            <div class="tab-content">
+                <ul class="table-view">
+                   <!-- 模板 -->
+                </ul>
+            </div>
+                      
+</div>  
+</div>  
           </main>
           <footer>
              <div class="foottop">
@@ -63,19 +63,20 @@
 </html> 
 
 <script type="text/html" id="categorytitle">
-    <ul class="mui-table-view mui-table-view-chevron clearfix">
-           {{each result v i}}  
-            <li   data-id="{{v._id}}" data-titleId="{{v.titleId}}"  class="mui-table-view-cell mui-collapse">
-                <a class="mui-navigate-right" href="">{{v.title}}</a>
-                <div class="mui-table-view mui-table-view-chevron itemList" >
-                    <div class="list" >
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis mollitia quas saepe, beatae, quos dolorum, est provident soluta laboriosam obcaecati in a facere. Dicta optio voluptatibus doloremque quia quaerat esse ducimus fuga. Possimus impedit ipsum deleniti ratione amet sed quaerat quis et earum cum, eligendi quae iusto magni maiores delectus adipisci vel blanditiis rerum laudantium neque omnis eum officia inventore? Dolore fugiat soluta, quod doloremque id praesentium nihil reprehenderit iure repudiandae! Accusantium maxime non laboriosam distinctio consectetur repudiandae iure sit! Porro exercitationem doloribus ab, corrupti cum, molestias, incidunt reprehenderit ratione asperiores illo perspiciatis laborum? Quibusdam esse dolores animi impedit rerum officiis fuga, ad illum consequatur vitae beatae nihil odit commodi numquam ipsam doloribus perspiciatis blanditiis id laborum suscipit. Veniam quia nesciunt natus officiis ea enim eos minima iusto voluptatum nostrum assumenda fugit dolores tenetur ratione id, qui inventore accusamus culpa minus ipsam repudiandae commodi, provident voluptatibus pariatur? Illo, unde, voluptatum odio quam itaque doloremque vero tempore quia accusantium labore ex facere fuga? Voluptatibus quo molestias, nam possimus hic libero unde optio numquam corporis obcaecati maiores nemo a aspernatur exercitationem illum accusantium. Placeat natus impedit, inventore vel alias necessitatibus itaque repellat! Dicta asperiores vitae labore repellendus recusandae dolorum explicabo voluptates doloremque.
-                    <a class="mui-table-view-cell " href="#">1111{{v.category}}</a>
-
-                </div>
-                </div>
-            </li>
-            {{/each}}
-        </ul>
-
+    {{each result v i}}
+    <li class="titleli">
+            <div class="atitle" data-id="v._id" data-titleid="v.titleId">
+             <a>{{v.title}}</a>
+             <span class="fa fa-angle-down"></span>
+            </div>
+             <div class="itemlist">
+                 
+             </div>
+     </li>
+     {{/each}}
+</script>
+<script type="text/html" id="getcategory">
+   {{each result v i}}
+  <a class="item" href="#" data-categoryId="{{v.categoryId}}">{{v.category}}</a>
+   {{/each}}
 </script>

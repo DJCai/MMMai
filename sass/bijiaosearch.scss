@@ -1,6 +1,7 @@
 @import "common.scss";
 main{
     background-color: #ebebeb;
+
     .searchbar{
         // display:flex;
         // justify-content: center;
@@ -41,41 +42,75 @@ main{
             border: 0 none;
          }
     }
-    .mui-content{   
-        padding: 10px;
-      
-        .mui-card:first-child{       
-            margin: 0px;
-            padding: 0px;
-        }
-        .mui-card{
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            .mui-collapse{
-                background-color: #ebebeb;
-                .itemList{   
-                     .list{   
-                      display:flex;
-                      flex-wrap: wrap;
-                   
-                        a{
-                            border-radius: 0px;
-                            width: 33.333%;  
-                            height: 50px;
-                            display:flex;
-                            justify-content: center;
-                            align-items: center;
-                            border: 0 none;
-                            background-color: #f9f9f9;
-                            border: 1px solid #ccc;
 
+
+    .tab-content{
+        margin: 5px;
+        .table-view{
+            border-radius:5px;
+            border:1px solid #ccc;
+            font-size:14px;
+            color:#666;
+            .titleli{
+                border-bottom: 1px solid #888;       
+                .atitle{
+                    background:#ededed;
+                    height: 40px;
+                    line-height: 40px;
+                    color: #000;
+                    font-size: 16px;
+                    display: block;
+                    padding-left: 16px;
+                    padding-right: 16px;
+                    border-bottom: 1px solid #ccc;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .fa-angle-down,
+                    .fa-angle-up,
+                    {
+                        font-size:24px;
+                        color:#666;
+                    }
+
+                }
+                .itemlist{
+                    position: relative;
+                    display: flex;
+                    flex-wrap: wrap; 
+                    
+                    &.active{
+                     display: none;  
+                    }
+                    .item{
+                        box-sizing: border-box;
+                        width: 33.333%;  
+                        height: 50px;
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 0 none;
+                        background-color: #f9f9f9;
+                        border-bottom: 1px solid #ccc;
+                        border-right: 1px solid #ccc;
+                        &:nth-last-child(1),
+                        &:nth-last-child(2),
+                        &:nth-last-child(3)
+                        {
+                            border-bottom:none;   
+                        }
+                        &:nth-child(3n){
+                         border-right:none;  
                         }
                     }
-                        
-                    }
                 }
-            }
+        
+            }  
+    
         }
+
     }
+}
 
 

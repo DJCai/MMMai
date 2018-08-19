@@ -155,9 +155,13 @@ $(function(){
         })
     }
 
-    
+    //每次进入页面让列表隐藏
     $('.changeList').hide();
     $(".left li").children('.mui-icon').addClass('mui-icon-arrowdown').removeClass("mui-icon-arrowup");
 
 
+    // 点击返回（返回上一页）
+    $(".back").click(function(){
+        back();
+    })
 })

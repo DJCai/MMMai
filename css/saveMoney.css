@@ -1,0 +1,481 @@
+@charset "UTF-8";
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 12px”宋体”, ”Arial Narrow”, HELVETICA;
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: #2d374b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #cd0200;
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+i {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+}
+.container .header {
+  background: #ff841d;
+  display: flex;
+  justify-content: space-between;
+}
+.container .header a {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.container .header a.logo {
+  height: 50px;
+  padding-left: 12px;
+}
+.container .header a.download {
+  height: 50px;
+  justify-content: center;
+}
+.container .header a img {
+  width: 70%;
+}
+.container .main .searchbox {
+  padding: 10px;
+  border-bottom: 2px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main .searchbox div {
+  position: relative;
+  height: 30px;
+  flex: 1;
+  border-radius: 15px;
+  background: #f1f1f1;
+}
+.container .main .searchbox div .search-text {
+  height: 100%;
+  flex: 1;
+  border-radius: 15px;
+  border-radius: 15px;
+  border: none;
+  background: #f1f1f1;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.container .main .searchbox div .historywordBox {
+  position: absolute;
+  top: 31px;
+  background: #fff;
+  width: 100%;
+  padding: 0;
+}
+.container .main .searchbox div .historywordBox li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  border-bottom: 1px solid #ccc;
+}
+.container .main .searchbox div .historywordBox li span {
+  font-size: 16px;
+}
+.container .main .searchbox div .historywordBox li span.delete-keyword {
+  width: 30px;
+}
+.container .main .searchbox div .historywordBox li span.keywords {
+  flex: 1;
+}
+.container .main .searchbox div .historywordBox li.active {
+  background: #ccc;
+}
+.container .main .searchbox .search {
+  width: 64px;
+  height: 100%;
+  border-radius: 15px;
+  background: #ff841d;
+  color: #fff;
+  border: none;
+}
+.container .footer {
+  height: 110px;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  bottom: 0;
+  padding-top: 10px;
+}
+.container .footer .logininfo {
+  height: 34px;
+  display: flex;
+}
+.container .footer .logininfo a {
+  flex: 1;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+}
+.container .footer .logininfo a:nth-child(n+2) {
+  border-left: 1px solid #e6e6e6;
+}
+.container .footer .footerinfo {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.container .footer .footerinfo a {
+  color: #333;
+}
+.container .footer .footerinfo .appLogin {
+  color: #ff841d;
+  margin-right: 5px;
+}
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+}
+.banner .left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.banner .left .close-banner {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: #fff;
+  background: #ccc;
+  line-height: 20px;
+  text-align: center;
+}
+.banner .left img {
+  width: 40px;
+  height: 40px;
+  margin: 0 12px;
+}
+.banner .left div p {
+  color: #999;
+}
+.banner .left div p:nth-child(1) {
+  font-size: 16px;
+}
+.banner .left div p:nth-child(2) {
+  font-size: 12px;
+}
+.banner .opennow {
+  height: 32px;
+  width: 74px;
+  text-align: center;
+  line-height: 32px;
+  background: #ff841d;
+  color: #fff;
+  box-shadow: 0px -1px 1px 0 red inset;
+  font-size: 12px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+}
+.container .header {
+  height: 50px;
+  background: #ff841d;
+  display: flex;
+  justify-content: space-between;
+}
+.container .header a {
+  display: flex;
+  align-items: center;
+}
+.container .header a.logo {
+  padding-left: 12px;
+}
+.container .header a.download {
+  justify-content: center;
+}
+.container .header a img {
+  width: 70%;
+}
+.container .main .searchbox {
+  padding: 10px;
+  border-bottom: 2px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main .searchbox div {
+  position: relative;
+  height: 30px;
+  flex: 1;
+  border-radius: 15px;
+  background: #f1f1f1;
+}
+.container .main .searchbox div .search-text {
+  height: 100%;
+  flex: 1;
+  border-radius: 15px;
+  border-radius: 15px;
+  border: none;
+  background: #f1f1f1;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.container .main .searchbox div .historywordBox {
+  position: absolute;
+  top: 31px;
+  background: #fff;
+  width: 100%;
+  padding: 0;
+}
+.container .main .searchbox div .historywordBox li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  border-bottom: 1px solid #ccc;
+}
+.container .main .searchbox div .historywordBox li span {
+  font-size: 16px;
+}
+.container .main .searchbox div .historywordBox li span.delete-keyword {
+  width: 30px;
+}
+.container .main .searchbox div .historywordBox li span.keywords {
+  flex: 1;
+}
+.container .main .searchbox div .historywordBox li.active {
+  background: #ccc;
+}
+.container .main .searchbox .search {
+  width: 64px;
+  height: 100%;
+  border-radius: 15px;
+  background: #ff841d;
+  color: #fff;
+  border: none;
+}
+.container .main .nav .mui-table-view-cell a {
+  display: flex;
+  height: 100%;
+}
+.container .main .nav .mui-table-view-cell a .left {
+  margin-right: 20px;
+  flex-basis: 110px;
+}
+.container .main .nav .mui-table-view-cell a .left img {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+.container .main .nav .mui-table-view-cell a .right {
+  flex: 1;
+}
+.container .main .nav .mui-table-view-cell a .right p {
+  margin: 0px;
+}
+.container .main .nav .mui-table-view-cell a .right .name {
+  color: #000;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.container .main .nav .mui-table-view-cell a .right .name .price {
+  color: #ff6c00;
+}
+.container .main .nav .mui-table-view-cell a .right .ly .ad {
+  font-size: 12px;
+}
+.container .main .nav .mui-table-view-cell a .right .ly .mui-icon-chat {
+  font-size: 10px;
+}
+.container .main .nav .page {
+  margin-bottom: 150px;
+  height: 80px;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+.container .main .nav .page tr {
+  display: flex;
+  justify-content: space-around;
+}
+.container .main .nav .page tr button {
+  height: 40px;
+  width: 100px;
+  background-color: #ddd;
+  border-radius: 5px;
+  border-style: none;
+}
+.container .main .nav .page tr #selectPage {
+  height: 32px;
+  padding: 16px 15px;
+  font-size: 16px;
+  border: 1px solid #bababa;
+  outline: none;
+}
+.container .footer {
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  bottom: 0;
+  padding-top: 10px;
+}
+.container .footer .logininfo {
+  height: 34px;
+  display: flex;
+}
+.container .footer .logininfo a {
+  flex: 1;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+}
+.container .footer .logininfo a:nth-child(n+2) {
+  border-left: 1px solid #e6e6e6;
+}
+.container .footer .footerinfo {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.container .footer .footerinfo a {
+  color: #333;
+}
+.container .footer .footerinfo .appLogin {
+  color: #ff841d;
+  margin-right: 5px;
+}
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+}
+.banner .left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.banner .left .close-banner {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: #fff;
+  background: #ccc;
+  line-height: 20px;
+  text-align: center;
+}
+.banner .left img {
+  width: 40px;
+  height: 40px;
+  margin: 0 12px;
+}
+.banner .left div p {
+  color: #999;
+}
+.banner .left div p:nth-child(1) {
+  font-size: 16px;
+}
+.banner .left div p:nth-child(2) {
+  font-size: 12px;
+}
+.banner .opennow {
+  height: 32px;
+  width: 74px;
+  text-align: center;
+  line-height: 32px;
+  background: #ff841d;
+  color: #fff;
+  box-shadow: 0px -1px 1px 0 red inset;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=saveMoney.css.map */

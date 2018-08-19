@@ -193,7 +193,9 @@ $(function () {
     }());
 
     //关闭底部广告栏
-    $(".banner .close-banner").click(function(){
+    $(".banner .close-banner").click(function(e){
+        e=e||widow.event;
+        e.preventDefault();
         // alert("a");
         $(".banner").remove();
     });

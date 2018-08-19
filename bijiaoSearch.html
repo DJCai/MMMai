@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入固定图标 -->
+    <link rel="shortcut icon" href="./images/icon/home.png" />
+    <!-- 字体 -->
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css">
+    <!-- zepto -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- mui    -->
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <!-- 模板 -->
+    <script src="./lib/artTemplate/template-web.js"></script>    
+   <!-- 自己写的 -->
+   <link rel="stylesheet" href="./css/bijiaoSearch.css">
+   <script src="./js/common.js"></script>
+   <script src="./js/bijiaoSearch.js"></script>
+
+</head>
+<body>
+      <div class="container">
+          <header>
+           <a href="index.html" class="logo"><img  src="./images/icon/header_logo.png" alt=""></a>
+           <a href="" class="xiazai" > <img src="./images/icon/header_app.png" alt=""> </a> 
+          </header>
+          <main>
+                <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll">
+          <div class="searchbar">
+             
+              <div class="search">
+                    <input type="text" placeholder="请输入你想比价的商品">
+                    <button class="searchbutton">搜索</button>
+              </div>
+           </div>    
+           <div class="mui-content">
+                <div class="mui-card">
+                  <!-- 模板 -->
+                </div>
+            </div>   
+            </div>  
+            </div>  
+          </main>
+          <footer>
+             <div class="foottop">
+                <a href="">登录</a>
+                <a href="">注册</a>
+                <a class="backtop" href=""> <img src="./images/icon/top.jpg" alt=""> <span>返回顶部</span></a>
+             </div> 
+             <div class="footbottom">
+                 <a href="" class="app">手机app下载</a>
+                 <a href="" class="shouji">慢慢买手机下载</a>
+                 <a href="" class="zhangshang">--掌上比价平台</a>
+             </div> 
+          </footer>
+      </div>
+</body>
+</html> 
+
+<script type="text/html" id="categorytitle">
+    <ul class="mui-table-view mui-table-view-chevron clearfix">
+           {{each result v i}}  
+            <li   data-id="{{v._id}}" data-titleId="{{v.titleId}}"  class="mui-table-view-cell mui-collapse">
+                <a class="mui-navigate-right" href="">{{v.title}}</a>
+                <div class="mui-table-view mui-table-view-chevron itemList" >
+                    <div class="list" >
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis mollitia quas saepe, beatae, quos dolorum, est provident soluta laboriosam obcaecati in a facere. Dicta optio voluptatibus doloremque quia quaerat esse ducimus fuga. Possimus impedit ipsum deleniti ratione amet sed quaerat quis et earum cum, eligendi quae iusto magni maiores delectus adipisci vel blanditiis rerum laudantium neque omnis eum officia inventore? Dolore fugiat soluta, quod doloremque id praesentium nihil reprehenderit iure repudiandae! Accusantium maxime non laboriosam distinctio consectetur repudiandae iure sit! Porro exercitationem doloribus ab, corrupti cum, molestias, incidunt reprehenderit ratione asperiores illo perspiciatis laborum? Quibusdam esse dolores animi impedit rerum officiis fuga, ad illum consequatur vitae beatae nihil odit commodi numquam ipsam doloribus perspiciatis blanditiis id laborum suscipit. Veniam quia nesciunt natus officiis ea enim eos minima iusto voluptatum nostrum assumenda fugit dolores tenetur ratione id, qui inventore accusamus culpa minus ipsam repudiandae commodi, provident voluptatibus pariatur? Illo, unde, voluptatum odio quam itaque doloremque vero tempore quia accusantium labore ex facere fuga? Voluptatibus quo molestias, nam possimus hic libero unde optio numquam corporis obcaecati maiores nemo a aspernatur exercitationem illum accusantium. Placeat natus impedit, inventore vel alias necessitatibus itaque repellat! Dicta asperiores vitae labore repellendus recusandae dolorum explicabo voluptates doloremque.
+                    <a class="mui-table-view-cell " href="#">1111{{v.category}}</a>
+
+                </div>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+
+</script>

@@ -1,0 +1,255 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+select {
+  border: 0px;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container header {
+  height: 50px;
+  background: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container header a {
+  height: 25px;
+  padding: 0px 12px;
+  padding-top: 5px;
+}
+.container header a.xiazai {
+  height: 34px;
+}
+.container header a img {
+  height: 100%;
+}
+.container main {
+  flex: 1;
+  position: relative;
+}
+.container main .searchbar {
+  padding: 15px;
+  position: relative;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+}
+.container main .searchbar .search {
+  height: 30px;
+  position: relative;
+  padding: 0px;
+}
+.container main .searchbar input {
+  height: 30px;
+  border-radius: 15px;
+  margin-bottom: 0px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: 0 none;
+  border: 0 none;
+  background-color: #eee;
+}
+.container main .searchbar button {
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+  right: 0;
+  height: 30px;
+  background: #ff841d;
+  outline: 0 none;
+  border: 0 none;
+}
+.container footer {
+  height: 94px;
+  background: #efefef;
+  border-bottom: 1px solid #c4c4c4;
+  border-top: 1px solid #c4c4c4;
+}
+.container footer .foottop {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #c4c4c4;
+}
+.container footer .foottop a {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+}
+.container footer .foottop .backtop {
+  border-right: 0 none;
+}
+.container footer .foottop .backtop img {
+  width: 15px;
+  height: 15px;
+}
+.container footer .footbottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0px;
+}
+.container footer .footbottom a {
+  font-size: 12px;
+  padding: 0 2px;
+  color: #666;
+}
+.container footer .footbottom .app {
+  color: red;
+}
+
+main .nav {
+  height: 36px;
+  background-color: #ebebeb;
+  border-top: solid 1px #ebebeb;
+  border-bottom: 1px solid #ccc;
+  line-height: 36px;
+  padding-left: 8px;
+  font-size: 14px;
+}
+main .nav a {
+  color: #5a5a5a;
+}
+main .goodinfo .product {
+  background-color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 10px 0px 10px;
+}
+main .goodinfo .product .title {
+  font-size: 16px;
+  color: #000;
+}
+main .goodinfo .product .pic {
+  padding: 10px 0;
+}
+main .goodinfo .do {
+  margin: 0px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: orange;
+  border-bottom: 1px solid orangered;
+  border-top: 1px solid orangered;
+  height: 34px;
+}
+main .goodinfo .do a {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid orangered;
+  color: #fff;
+}
+main .goodinfo .do a:last-child {
+  border-right: none;
+}
+main .goodinfo .do a.active {
+  background-color: orangered;
+}
+main .goodinfo .buyinfo .gobuy {
+  margin: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 34px;
+  line-height: 34px;
+}
+main .goodinfo .buyinfo .gobuy a {
+  color: #000;
+  font-size: 16px;
+}
+main .goodinfo .buyinfo .gobuy .logo {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url("../images/icon/1.png") no-repeat center center/15px 15px;
+}
+main .goodinfo .buyinfo .gobuy .price {
+  color: red;
+  font-size: 16px;
+  line-height: 34px;
+}
+main .goodinfo .buyinfo .gobuy .buynow {
+  background-color: orangered;
+  height: 34px;
+}
+main .goodinfo .buyinfo .notice {
+  border-top: 1px solid #5a5a5a;
+  font-size: 12px;
+  color: #888;
+  padding: 8px 10px;
+  line-height: 18px;
+}
+main .comment .title {
+  height: 34px;
+  line-height: 34px;
+  background-color: #ccc;
+  text-align: center;
+  color: #888;
+  font-size: 16px;
+  font-weight: bold;
+}
+main .comment .top {
+  padding: 10px;
+}
+main .comment .top .usermessage {
+  display: flex;
+  justify-content: space-between;
+}
+main .comment .bottom {
+  padding: 10px;
+}
+main .comment .bottom .checkmore {
+  margin: 10px  auto;
+  width: 100%;
+  display: block;
+  height: 32px;
+  background-color: #d4d4d4;
+}
+
+/*# sourceMappingURL=bijiaolist.css.map */

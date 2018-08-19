@@ -1,3 +1,4 @@
+
 $(function(){
     var arr=['全部价格','1-3元','3-5元','5-10元','10-15元','15元以上'];
    //flag作为第一次进入页面标志
@@ -18,7 +19,16 @@ $(function(){
         var html=template("tplchangeList",res);
         $('.changeList').html(html);
     }
+
+    // 记录被选中的筛选
+    var shopChanged;//店铺
+    var areaChanged;//区域
+    var priceChanged;
+
+
     var linkone='';//点击的分类
+
+//-----------渲染列表中内容----------------------------
     $(".left li").click(function(){
         // 点击了排序就把搜索按钮还原为搜索样子
         $('.search').find('.fa').addClass('fa-search').removeClass('fa-close');
@@ -66,6 +76,10 @@ $(function(){
                 var html=template("tplchangeList",res);
                 $('.changeList').html(html);//请求筛选列表的渲染
                 console.log(flag);
+
+                //当再次点击下拉列表的时（没有刷新页面前提）把之前选中放在上面
+                
+
                 // 首次加载页面
                 if(flag){
                     if(type=='shop'){
@@ -104,18 +118,24 @@ $(function(){
     })
 
 
+// -----------------------------------------
     // 点击列表外面的区域让列表消失
     $(".products").click(function(){
         $('.changeList').hide();
         $(".left li").children('.mui-icon').addClass('mui-icon-arrowdown').removeClass("mui-icon-arrowup");
+        // 搜索图标修改为搜索的状态
+        $(".search .fa").addClass("fa-search").removeClass("fa-close");
     })
     $(".header").click(function(){
         $('.changeList').hide();
         $(".left li").children('.mui-icon').addClass('mui-icon-arrowdown').removeClass("mui-icon-arrowup");
+        $(".search .fa").addClass("fa-search").removeClass("fa-close");
     })
+// -------------------------------------------
+
 
     // 获得数据(我们把点击的数据显示在上面),判断type是什么类型的放到对应的
-    $('.changeList').on('click','li',function(){
+    $('.changeList').on('click','li',function(){        
         //拿到下面span中文字放到上面中//并且要给它添加选中
         $(this).addClass("active").siblings().removeClass("active");//选中打钩
         var text=$(this).find('.text').text();//点击的选中文字
@@ -127,8 +147,14 @@ $(function(){
         var type=$(this).data('type');
         if(type=='shop'){
             shopId=$(this).data('id');
+            // shopChanged=shopId;//记录选中的是那个id
+            var shopIndex=$(this).index();
+            console.log(shopIndex);
         }else if(type=='area'){
             areaId=$(this).data('id');
+            // areaChanged=areaId;
+            var areaIndex=$(this).index();
+            console.log(areaIndex);
         }else{
             //是价格就不管
         }
@@ -136,11 +162,15 @@ $(function(){
         renderProducts(shopId,areaId);//请求产品数据
     })
 
+
+
     // 筛选列表文字的处理
     function changeListWord(str){
         return str.split("（")[0];
     }
 
+
+// --------------------------------------------------
     // 渲染产品的列表(sid:店铺id   aid：区域的id)
     renderProducts(shopId,areaId);
     function renderProducts(sid,aid){
@@ -154,6 +184,8 @@ $(function(){
             }
         })
     }
+//---------------------------------------------------
+
 
     //每次进入页面让列表隐藏
     $('.changeList').hide();
@@ -164,4 +196,26 @@ $(function(){
     $(".back").click(function(){
         back();
     })
+    
+    //滚动监听事件
+    $(window).scroll(function(){
+        // 当滚动超过header高度的时候就固定定位起来
+
+
+        //返回顶部悬浮框
+        if(pageYOffset>620){
+            $(".backTop").show();
+        }
+        
+        if(pageYOffset<100){
+            $(".backTop").hide();
+        }
+    })
+    // 点击返回顶部
+    document.querySelector(".backTop").ontouchend=function(){
+        document.documentElement.scrollTop=0+'px';
+    }
+    
+
+    
 })

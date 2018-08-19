@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- 引用zepo.min.js -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引用mui -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <script src="./lib/mui/js/mui.min.js"></script>
+
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 引入font-awesome字体图标 -->
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css">
+
+    <!-- 引入公共js和css -->
+    <link rel="stylesheet" href="./css/common1.css">
+    <script src="./js/common.js"></script>
+
+
+    <link rel="stylesheet" href="./css/discountdetail.css">
+
+    <script src="./js/discountdetail.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="javascript:back();" class="homebutton"><span class="mui-icon mui-icon-back"></span></a>
+            <h4 class="title">国内折扣</h4>
+            <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile" class="download"></a>
+        </header>
+        <main>
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="details">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foottop">
+                <a href="login.html">登录</a>
+                <a href="register.html">注册</a>
+                <a class="scrollto"><img src="images/top.jpg" alt=""> 返回顶部</a>
+            </div>
+            <div class="footbottom">
+                <p class="start">
+                    <span class="app">手机APP下载</span>
+                    <span class="shouji">慢慢买手机版</span>
+                    <span class="zhangshang">-掌上比价平台</span>
+                </p>
+                <p class="finnal">
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </footer>
+</body>
+
+</html>
+<script id="detail" type="text/html">
+    {{each result v i}}
+    <p class="title">{{v.productName}}</p>
+    <p class="price">{{v.productPrice}}</p>
+    <p class="from">
+        <span>{{v.productFrom}}</span>
+        <span>{{v.productTime}}</span>
+        <span>{{v.productTips}}</span>
+    </p>
+    <p class="around">
+        {{#v.productImg}}{{v.productInfo}}
+    </p>
+    <p class="img">{{#v.productImg}}</p>
+    <button type="button" class="mui-btn mui-btn-warning gobuy">前往购买</button>
+    <p class="vcode">
+        <img src="./images/img/mmbweixin2.png" alt="">
+    </p>
+    {{#v.productComment}}
+    {{/each}} 
+</script>

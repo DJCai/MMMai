@@ -1,126 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <!-- 字体 -->
-    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css">
-    <!-- zepto -->
-    <script src="./lib/zepto/zepto.min.js"></script>
-    <!-- mui    -->
-    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- 引用mui -->
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
-    <!-- 模板 -->
-    <!-- <script src="./lib/artTemplate/template-web.js"></script>     -->
-   <!-- 自己写的 -->
-   <link rel="stylesheet" href="./css/bijiaolist.css">
-   <script src="./js/common.js"></script>
-   <script src="./js/bijiaolist.js"></script>
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- 引用zepo.min.js -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 引入font-awesome字体图标 -->
+    <!-- <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css"> -->
 
+    <!-- 引入公共js和css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/common.js"></script>
+    <!-- 自己写的 -->
+    <script src="./js/bijiaolist.js"></script>
+    <link rel="stylesheet" href="./css/bijiaolist.css">
+ 
 </head>
 <body>
     <div class="container">
-        <header>
-            <a href="index.html" class="logo">
+        <div class="header">
+            <a href="./index.html" class="logo">
                 <img src="./images/icon/header_logo.png" alt="">
             </a>
-            <a href="" class="xiazai">
-                <img src="./images/icon/header_app.png" alt=""> </a>
-        </header>
-        <main>
-            <!-- mui-区域滚动 -->
+            <a href="#" class="download">
+                <img src="./images/icon/header_app.png" alt="">
+            </a>
+        </div>
+        <div class="main">
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
-                    <!-- 正文内容 -->
-                    <div class="searchbar">
-                        <div class="search">
-                            <input type="text" placeholder="请输入你想比价的商品">
-                            <button class="searchbutton">搜索</button>
-                        </div>
-                    </div>
-                    <div class="nav">
-                        <a href="">首页 <span>&gt</span></a>
-                        <a href="">电视 <span>&gt</span></a>
-                        <a href="">乐视</a>
-                    </div>
-                    <div class="goodinfo">
-                        <div class="product">
-                            <p class="title">
-                                乐视电视 乐视电视 乐视电视 乐视电视 乐视电视 乐视电视
-                            </p>
-                            <div class="pic">
-                                <img src="./images/img/2016040016521576785.jpg" alt="">
-                            </div>
-                        
-                        </div>    
-                        <p class="do">
-                            <a class="active" href="">比价购买</a>
-                            <a href="">比价购买产品参数</a>
-                            <a href="">评价</a>
-                        </p>
-                        <div class="buyinfo">
-                            <p class="gobuy">
-                                <a href="">
-                                    <span class="logo"></span>
-                                    <span>京东商城</span>
-                                </a>
-                                <a href="">
-                                    <span class="price">￥1999.0</span>
-                                    <button type="button" class="mui-btn mui-btn-danger buynow">去购买</button>
-                                </a>
-                            </p>
-                            <p class="notice">
-                                实际价格以网络列出的实际价格为准实际价格以网络列出的实际价格为准 实际价格以网络列出的实际价格为准
-                            </p>
-                    
-                        </div>
-                    </div>
-                    <div class="comment">
-                        <div class="title">网友评价</div>
-                        <div class="content">
-                            <div class="top">
-                                <p class="usermessage">
-                                    <span class="name mui-pull-left">zppp</span>
-                                    <span class="time mui-pull-right">2016/1/1</span>
-                                </p>
-                                <p class="whereshop">京东商城</p>
-                            </div>
-                            <div class="bottom">
-                                <div class="text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptatibus, magnam est earum illum, consequatur quis
-                                    quos ex rerum optio voluptas iusto fugit magni quae! Repellat doloribus veritatis nobis ipsum! Animi harum, incidunt
-                                    perspiciatis nihil numquam unde impedit suscipit error, libero eveniet inventore quidem itaque, explicabo magni! Tempora
-                                    quo ipsam pariatur suscipit ducimus, voluptate aperiam maxime eveniet hic velit voluptatem!
+                            <!-- 搜索栏 可以看情况删除 -->
+                            <div class="searchbox">
+                                    <div>
+                                        <input type="text" name="" class="search-text" placeholder="请输入您想比价的商品">
+                                        <ul class="historywordBox">
+                                            <!-- <li>
+                                        <span>电视</span>
+                                        <span class="mui-icon mui-icon-trash mui-pull-right">
+                                        </span>
+                                    </li> -->
+                                        </ul>
+                                    </div>
+                                    <button class="search">搜索</button>
                                 </div>
-                                <button class="checkmore">
-                                        点击查看更多
-                                 </button>
-                            </div>
-                           
-                        </div>
-                      
+                    <!-- 你的内容 -->
+                    <div class="navbar">
+                        <a href="">首页
+                            <span>&gt</span>
+                        </a>
+                        <a href="">电视111
+                            <span>&gt</span>
+                        </a>
+                        <a href="">乐视1111</a>
                     </div>
+                        <div class="goodinfo">
+                            <div class="product">
+                                <!-- <p class="title">
+                                    乐视电视 乐视电视 乐视电视 乐视电视 乐视电视 乐视电视
+                                </p>
+                                <div class="pic">
+                                    <img src="./images/img/2016040016521576785.jpg" alt="">
+                                </div> -->
+                            
+                            </div>    
+                            <p class="do">
+                                <a class="active" href="">比价购买</a>
+                                <a href="">比价购买产品参数</a>
+                                <a href="">评价</a>
+                            </p>
+                            <div class="buyinfo">
+                                <p class="gobuy">
+                                    <a href="">
+                                        <span class="logo"></span>
+                                        <span>京东商城</span>
+                                    </a>
+                                    <a href="">
+                                        <span class="price">￥1999.0</span>
+                                        <button type="button" class="mui-btn mui-btn-danger buynow">去购买</button>
+                                    </a>
+                                </p>
+                                <p class="notice">
+                                    实际价格以网络列出的实际价格为准实际价格以网络列出的实际价格为准 实际价格以网络列出的实际价格为准
+                                </p>
+                        
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <div class="title">网友评价</div>
+                            <div class="content">
+                             <!-- 模板   -->
+                            
+                            </div>
+                            <button class="checkmore">
+                                    点击查看更多
+                                </button>
+                        </div>
+                        <div class="footer22">
+                                <div class="logininfo">
+                                    <a href="#" class="login">注册</a>
+                                    <a href="#" class="register">登录</a>
+                                    <a href="#" class="return-top">返回顶部</a>
+                                </div>
+                                <div class="footerinfo">
+                                    <div>
+                                        <a class="appLogin" href="#">手机APP下载</a>
+                                        <span>慢慢买手机版--掌上比价平台</span>
+                                    </div>
+                                    <a href="./index.html">m.manmanbuy.com</a>
+                                </div>
+                        </div>
                 </div>
             </div>
-        </main>
-        <footer>
-            <div class="foottop">
-                <a href="">登录</a>
-                <a href="">注册</a>
-                <a class="backtop" href="">
-                    <img src="./images/icon/top.jpg" alt="">
-                    <span>返回顶部</span>
-                </a>
+        </div>
+
+    </div>
+    <div class="banner">
+        <div class="left">
+            <a href="#" class="close-banner">X</a>
+            <img src="./images/icon/man.jpg" alt="">
+            <div>
+                <p>慢慢买</p>
+                <p>全网比价,查历史价格</p>
             </div>
-            <div class="footbottom">
-                <a href="" class="app">手机app下载</a>
-                <a href="" class="shouji">慢慢买手机下载</a>
-                <a href="" class="zhangshang">--掌上比价平台</a>
-            </div>
-        </footer>
+        </div>
+        <a href="#" class="opennow ">立即打开</a>
     </div>
 </body>
-</html> 
+</html>
+<script type="text/html" id="categorynav">
+    {{each list v i}}
+    <a href="">首页
+            <span>&gt;</span>
+        </a>
+        <a href="#">{{v.cname}}
+            <span>&gt;</span>
+        </a>
+        <a href="">{{v.brandname}}</a>
+        {{/each}}
+</script> 
+
+<script type="text/html" id="goodinfo">
+    {{each result v i }}
+    <p class="title">
+          {{v.productName}}
+        </p>
+        <div class="pic">
+          {{#v.productImg}}
+        </div>
+
+    {{/each}}
+</script>
+
+<script type="text/html" id="usercomment">
+    {{each result v i}}
+     <div class="top">
+       <p class="usermessage">
+           <span class="name mui-pull-left">{{v.comName}}</span>
+           <span class="time mui-pull-right">{{v.comTime}}</span>
+       </p>
+       <p class="whereshop">{{v.comFrom}}</p>
+   </div>
+   <div class="bottom">
+       <div class="text">
+          {{v.comContent}}
+       </div>
+  </div>
+   {{/each}}
+</script>
+
+
 

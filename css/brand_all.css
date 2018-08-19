@@ -180,12 +180,14 @@ html, body {
   align-items: center;
 }
 .container .footer {
-  height: 36px;
   width: 100%;
+  position: fixed;
   background: #fff;
+  bottom: 0;
+  padding-top: 10px;
 }
 .container .footer .logininfo {
-  height: 100%;
+  height: 34px;
   display: flex;
 }
 .container .footer .logininfo a {
@@ -196,9 +198,26 @@ html, body {
   justify-content: center;
   align-items: center;
   color: #333;
+  font-size: 14px;
 }
 .container .footer .logininfo a:nth-child(n+2) {
   border-left: 1px solid #e6e6e6;
+}
+.container .footer .footerinfo {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.container .footer .footerinfo a {
+  color: #333;
+}
+.container .footer .footerinfo .appLogin {
+  color: #ff841d;
+  margin-right: 5px;
 }
 
 .banner {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 * {
   margin: 0px;
   padding: 0px;
@@ -139,73 +138,67 @@ html, body {
 }
 .container footer .footbottom .app {
   color: red;
-=======
-@charset "UTF-8";
-body,
-ol,
-ul,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-th,
-td,
-dl,
-dd,
-form,
-fieldset,
-legend,
-input,
-textarea,
-select {
-  margin: 0;
-  padding: 0;
 }
 
-body {
-  font: 12px”宋体”, ”Arial Narrow”, HELVETICA;
-  background: #fff;
-  -webkit-text-size-adjust: 100%;
+main .listitem .item {
+  padding: 10px 8px;
+  font-size: 12px;
+  background-color: #FFFFFF;
+  position: relative;
+  display: flex;
+}
+main .listitem .item .pic {
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+main .listitem .item .pic img {
+  width: 100%;
+  height: 100%;
+}
+main .listitem .item .info .tit {
+  color: #333333;
+  word-break: break-all;
+  font-size: 15px;
+  line-height: 28px;
+  height: 56px;
+  overflow: hidden;
+}
+main .listitem .item .info .price {
+  color: #ed0000;
+  font-size: 18px;
+  margin-top: 6px;
+}
+main .listitem .item .info .other {
+  margin-top: 5px;
+}
+main .listitem .item .info .other .mall {
+  color: #a1a1a1;
+  line-height: 21px;
+}
+main .listitem .item .info .other .sales {
+  text-align: right;
+  color: #a1a1a1;
+  line-height: 21px;
+}
+main .page {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 36px;
+  margin-top: 20px;
+}
+main .page .fenye {
+  height: 34px;
+  width: 40px;
+  position: relative;
+}
+main .page .fenye select {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
-a {
-  color: #2d374b;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #cd0200;
-  text-decoration: none;
-}
-
-em {
-  font-style: normal;
-}
-
-i {
-  font-style: normal;
-}
-
-li {
-  list-style: none;
-}
-
-img {
-  border: 0;
-  vertical-align: middle;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-p {
-  word-wrap: break-word;
->>>>>>> e28d38ff60a2e7b8410d4007efbac4d4deaf7ad2
-}
-
-/*# sourceMappingURL=common.css.map */
+/*# sourceMappingURL=prolist.css.map */

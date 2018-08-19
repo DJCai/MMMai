@@ -2,11 +2,13 @@ $(function(){
     //获取网址传递过来的数据,修改标题
     var urlStr=location.href;
     var brandTitleId=urlTool(urlStr).brandTitlId;
-    var brandTitle =getParams("brandTitle")
-    var index=brandTitle.indexOf("十大品牌");
-    brandTitle=brandTitle.substring(0,index);
-    $(".brandTitle").html(brandTitle);
-
+    var brandTitle =getParams("brandTitle");
+    // 若传参数过来,利用模板渲染数据
+    if(brandTitle && brandTitle.length != 0 ){
+        var index=brandTitle.indexOf("十大品牌");
+        brandTitle=brandTitle.substring(0,index);
+        $(".brandTitle").html(brandTitle);
+    }
     //获取分类的十大品牌数据
     function renderCategory(){
         $.ajax({

@@ -1,0 +1,22 @@
+@import "./common.scss";
+$itemColor:#f4483e;
+.container_lower_price{
+    height:100%;
+    .header_lower_price{
+        height:40px;
+        background:$itemColor;
+        display:flex;
+        align-items:center;
+        a{
+            flex:1;
+            display:flex;
+            img{
+                width: 70%;
+            }
+        }
+        input{
+            flex:5;
+        }
+
+    }
+}

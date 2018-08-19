@@ -1,4 +1,3 @@
-
 // 自适应不同屏幕尺寸
 //本项目为2倍图
 $("html")[0].style.fontSize = window.screen.width / 10 + "px";
@@ -64,14 +63,14 @@ function urlTool(urlStr) {
  *  使用 http://www.163.com?name="小明",  跨页面传递时会乱码,在js中  getParams("name")就可获得"小明"
  */
 function getParams(key) {
-    var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)"); 
-   //如果地址栏中出现中文则进行编码    
-    var r = encodeURI(window.location.search).substr(1).match(reg);  
-    if (r != null) {  
+    var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+    //如果地址栏中出现中文则进行编码    
+    var r = encodeURI(window.location.search).substr(1).match(reg);
+    if (r != null) {
         //将中文编码的字符重新变成中文
-        return decodeURI(unescape(r[2]));  
-    }  
-    return null;  
+        return decodeURI(unescape(r[2]));
+    }
+    return null;
 };
 
 
@@ -116,10 +115,11 @@ $(function () {
     });
 
 
-    // 搜索框的功能模块
-    ;(function () {
-        //搜索文本框事件,值变化事件
-        $(".search-text")[0].oninput = function () {
+    // 搜索框的功能模块 
+    // searchfunction();
+    function searchfunction(){
+         //搜索文本框事件,值输入事件
+         $(".search-text")[0].oninput = function () {
             $(".historywordBox").show();
             var arr = getKeysArr();
             var keyword = $(".searchbox .search-text").val().trim();
@@ -127,7 +127,7 @@ $(function () {
                 $(".historywordBox").hide();
                 return;
             };
-            //遍历arr,看是是否包含关键字,若有,就显示出来
+            //遍历arr,看是否包含关键字,若有,就显示出来
             var newArr = [];
             arr.forEach(function (v, index) {
                 if (v.indexOf(keyword) != -1) {
@@ -137,7 +137,6 @@ $(function () {
             //渲染数据
             renderHistory(newArr);
         };
-
         // 渲染搜索历史数据
         function renderHistory(arr) {
             var htmlStr = template("historyWords", {
@@ -170,7 +169,7 @@ $(function () {
             // 去除该数据
             arr.splice(index, 1);
             // 存储新的数组
-            saveHistory(arr)
+            saveHistory(arr);
             //调用文本框值变化事件,动态渲染数据
             $(".search-text")[0].oninput();
 
@@ -190,15 +189,15 @@ $(function () {
             $(".searchbox .search-text").val(word);
             $(".historywordBox").hide();
         })
-    }());
+    }
+    
 
     //关闭底部广告栏
-    $(".banner .close-banner").click(function(e){
-        e=e||widow.event;
+    $(".banner .close-banner").click(function (e) {
+        e = e || widow.event;
         e.preventDefault();
         // alert("a");
         $(".banner").remove();
     });
 
 });
-

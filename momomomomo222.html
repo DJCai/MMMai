@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引用mui -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- 引用zepo.min.js -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 引入font-awesome字体图标 -->
+    <!-- <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css"> -->
+
+    <!-- 引入公共js和css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/common.js"></script>
+    <!-- 自己写的 -->
+    <link rel="stylesheet" href="./css/prolist.css">
+    <script src="./js/prolist.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="./index.html" class="logo">
+                <img src="./images/icon/header_logo.png" alt="">
+            </a>
+            <a href="#" class="download">
+                <img src="./images/icon/header_app.png" alt="">
+            </a>
+        </div>
+        <div class="main">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+        
+                    <!-- 你的内容 -->
+                    <ul class="listitem">
+                        <li class="item ui-border-b">
+        
+                            <div class="pic">
+                                <img src="http://pro-img.zuyushop.com/ProPic/20175/small80/Thumb_2017050008004798967.jpg" alt="">
+                            </div>
+                            <div class="clearfix info">
+                                <div class="tit">三星(SAMSUNG) UA55MUF30ZJXXZ 55英寸 4K超高清 智能网络液晶电视</div>
+                                <div class="price">
+                                    <em>¥</em>2288</div>
+                                <div class="other">
+                                    <div class="mall">4商城报价</div>
+                                    <div class="sales">有1471人评论</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item ui-border-b">
+        
+                            <div class="pic">
+                                <img src="http://pro-img.zuyushop.com/ProPic/20175/small80/Thumb_2017050008004798967.jpg" alt="">
+                            </div>
+                            <div class="clearfix info">
+                                <div class="tit">三星(SAMSUNG) UA55MUF30ZJXXZ 55英寸 4K超高清 智能网络液晶电视</div>
+                                <div class="price">
+                                    <em>¥</em>2288</div>
+                                <div class="other">
+                                    <div class="mall">4商城报价</div>
+                                    <div class="sales">有1471人评论</div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+        
+                    <div class="page">
+                        <button>上一页</button>
+                        <div class="fenye">
+                            <select id="selectPage">
+                                <option value="1">1/12</option>
+                                <option value="1">2/12</option>
+                                <option value="1">3/12</option>
+                                <option value="1">4/12</option>
+                            </select>
+                        </div>
+                        <button>下一页</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="logininfo">
+                <a href="#" class="login">注册</a>
+                <a href="#" class="register">登录</a>
+                <a href="#" class="return-top">返回顶部</a>
+            </div>
+            <div class="footerinfo">
+                <div>
+                    <a class="appLogin" href="#">手机APP下载</a>
+                    <span>慢慢买手机版--掌上比价平台</span>
+                </div>
+                <a href="./index.html">m.manmanbuy.com</a>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="left">
+            <a href="#" class="close-banner">X</a>
+            <img src="./images/icon/man.jpg" alt="">
+            <div>
+                <p>慢慢买</p>
+                <p>全网比价,查历史价格</p>
+            </div>
+        </div>
+        <a href="#" class="opennow ">立即打开</a>
+    </div>
+</body>
+</html>
+<script type="text/html" id="goodlist">
+    {{each result v i }}
+    <li class="item ui-border-b">      
+            <div class="pic">
+                <img src="{{v.productImg}}" alt="">
+            </div>
+            <div class="clearfix info">
+                <div class="tit">{{v.productName}}</div>
+                <div class="price">
+                    {{v.productPrice}}</div>
+                <div class="other">
+                    <div class="mall">{{v.productQuote}}商城报价</div>
+                    <div class="sales">有{{v.productCom}}</div>
+                </div>
+           </div>
+    </li>
+    {{/each}}
+</script>
+
+

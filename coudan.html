@@ -8,6 +8,7 @@
     <title>Document</title>
     <!-- zepto -->
     <script src="lib/zepto/zepto.min.js"></script>
+    <!--  -->
     <!-- mui -->
     <link rel="stylesheet" href="lib/mui/css/mui.min.css">
     <script src="lib/mui/js/mui.min.js"></script>
@@ -51,7 +52,7 @@
                 </div>
 
                 <ul class="changeList">
-                    
+
                 </ul>
             </div>
 
@@ -70,17 +71,24 @@
             </div>
         </div>
 
+        <!-- 返回顶部悬浮框 -->
+        <div class="backTop">
+            <a >
+                <span class="fa fa-arrow-up"></span>
+                <span>顶部</span>
+            </a>
+        </div>
     </div>
 
     <!-- 筛选列表模板 -->
     <script type="text/html" id="tplchangeList">
         {{each result v i}}
             {{if v.shopName}}
-            <li data-type='shop' data-id="{{v.shopId}}" class="{{if i==0}}active{{/if}}"><span class="text">{{v.shopName}}</span><span class="fa fa-check"></span></li>
+            <li data-type='shop' data-id="{{v.shopId}}" class="{{if i==0}}active{{/if}} shop"><span class="text">{{v.shopName}}</span><span class="fa fa-check"></span></li>
             {{else if v.areaName}}
-            <li data-type='area' data-id="{{v.areaId}}" class="{{if i==0}}active{{/if}}"><span class="text">{{v.areaName}}</span><span class="fa fa-check"></span></li>
+            <li data-type='addr' data-id="{{v.areaId}}" class="{{if i==0}}active{{/if}} area"><span class="text">{{v.areaName}}</span><span class="fa fa-check"></span></li>
             {{else}}
-            <li data-type='price' data-id="{{v.id}}" class="{{if i==0}}active{{/if}}"><span class="text">{{v}}</span><span class="fa fa-check"></span></li>
+            <li data-type='price' data-id="{{v.id}}" class="{{if i==0}}active{{/if}} price"><span class="text">{{v}}</span><span class="fa fa-check"></span></li>
             {{/if}}
         {{/each}}
     </script>

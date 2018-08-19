@@ -29,7 +29,7 @@
 
 <body>
     <div class="container">
-        <div class="header">
+        <div class="header ">
             <a href="./index.html" class="logo">
                 <img src="./images/icon/header_logo.png" alt="">
             </a>
@@ -61,7 +61,7 @@
                     <a href="#"> 热门品牌排行</a>
                 </div>
                 <ul class="brand-title-list ">
-                    <li >
+                    <li>
                         <a href="./brand_categroy.html">平板电视十大品牌</a>
                     </li>
                 </ul>
@@ -69,12 +69,15 @@
         </div>
         <div class="footer">
             <div class="logininfo">
-                <a href="#" class="login">注册</a>
-                <a href="#" class="register">登录</a>
+                <a href="./register.html" class="login">注册</a>
+                <a href="./login.html" class="register">登录</a>
                 <a href="#" class="return-top">返回顶部</a>
             </div>
             <div class="footerinfo">
-                <div><a class="appLogin" href="#">手机APP下载</a><span>慢慢买手机版--掌上比价平台</span></div>
+                <div>
+                    <a class="appLogin" href="#">手机APP下载</a>
+                    <span>慢慢买手机版--掌上比价平台</span>
+                </div>
                 <a href="./index.html">m.manmanbuy.com</a>
             </div>
         </div>
@@ -94,20 +97,24 @@
         s
     </div> -->
 </body>
+
 </html>
 <script type="text/html" id="brand-title-list">
     {{each list v i}}
-        <li>
-            <a href="./brand_categroy.html?brandTitlId={{v.brandTitleId}}&brandTitle={{v.brandTitle}}"><span>{{v.brandTitle}}</span><i class="mui-icon mui-icon-forward mui-pull-right"></i></a>
-        </li>
+    <li>
+        <a href="./brand_categroy.html?brandTitlId={{v.brandTitleId}}&brandTitle={{v.brandTitle}}">
+            <span>{{v.brandTitle}}</span>
+            <i class="mui-icon mui-icon-forward mui-pull-right"></i>
+        </a>
+    </li>
     {{/each}}
 </script>
 <script type="text/html" id="historyWords">
     {{each list v i}}
-        <li>
-            <span class="keywords">{{v}}</span>
-            <span data-index={{i}} class="mui-icon mui-icon-trash  delete-keyword">
-            </span>
-        </li>
+    <li>
+        <span class="keywords">{{v}}</span>
+        <span data-index={{i}} class="mui-icon mui-icon-trash  delete-keyword">
+        </span>
+    </li>
     {{/each}}
 </script>

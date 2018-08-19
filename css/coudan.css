@@ -65,11 +65,191 @@ p {
   word-wrap: break-word;
 }
 
+html, body {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+}
+.container .header {
+  background: #ff841d;
+  display: flex;
+  justify-content: space-between;
+}
+.container .header a {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.container .header a.logo {
+  height: 50px;
+  padding-left: 12px;
+}
+.container .header a.download {
+  height: 50px;
+  justify-content: center;
+}
+.container .header a img {
+  width: 70%;
+}
+.container .main .searchbox {
+  padding: 10px;
+  border-bottom: 2px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main .searchbox div {
+  position: relative;
+  height: 30px;
+  flex: 1;
+  border-radius: 15px;
+  background: #f1f1f1;
+}
+.container .main .searchbox div .search-text {
+  height: 100%;
+  flex: 1;
+  border-radius: 15px;
+  border-radius: 15px;
+  border: none;
+  background: #f1f1f1;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.container .main .searchbox div .historywordBox {
+  position: absolute;
+  top: 31px;
+  background: #fff;
+  width: 100%;
+  padding: 0;
+}
+.container .main .searchbox div .historywordBox li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  border-bottom: 1px solid #ccc;
+}
+.container .main .searchbox div .historywordBox li span {
+  font-size: 16px;
+}
+.container .main .searchbox div .historywordBox li span.delete-keyword {
+  width: 30px;
+}
+.container .main .searchbox div .historywordBox li span.keywords {
+  flex: 1;
+}
+.container .main .searchbox div .historywordBox li.active {
+  background: #ccc;
+}
+.container .main .searchbox .search {
+  width: 64px;
+  height: 100%;
+  border-radius: 15px;
+  background: #ff841d;
+  color: #fff;
+  border: none;
+}
+.container .footer {
+  height: 110px;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  bottom: 0;
+  padding-top: 10px;
+}
+.container .footer .logininfo {
+  height: 34px;
+  display: flex;
+}
+.container .footer .logininfo a {
+  flex: 1;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+}
+.container .footer .logininfo a:nth-child(n+2) {
+  border-left: 1px solid #e6e6e6;
+}
+.container .footer .footerinfo {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.container .footer .footerinfo a {
+  color: #333;
+}
+.container .footer .footerinfo .appLogin {
+  color: #ff841d;
+  margin-right: 5px;
+}
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+}
+.banner .left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.banner .left .close-banner {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: #fff;
+  background: #ccc;
+  line-height: 20px;
+  text-align: center;
+}
+.banner .left img {
+  width: 40px;
+  height: 40px;
+  margin: 0 12px;
+}
+.banner .left div p {
+  color: #999;
+}
+.banner .left div p:nth-child(1) {
+  font-size: 16px;
+}
+.banner .left div p:nth-child(2) {
+  font-size: 12px;
+}
+.banner .opennow {
+  height: 32px;
+  width: 74px;
+  text-align: center;
+  line-height: 32px;
+  background: #ff841d;
+  color: #fff;
+  box-shadow: 0px -1px 1px 0 red inset;
+  font-size: 12px;
+}
+
 body {
   background-color: #f1f1f1;
 }
 
 .container .header {
+  width: 100%;
   background-color: #ff841d;
   height: 44px;
   display: flex;
@@ -78,6 +258,7 @@ body {
   justify-content: space-between;
   color: #fff;
   font-size: 20px;
+  transition: all 1s;
 }
 .container .header .title {
   font-size: 20px;
@@ -86,6 +267,12 @@ body {
   height: 35px;
   width: 35px;
   background: url(../images/icon/header_app.png) 0px 0px/35px 35px;
+}
+.container .header.on {
+  position: fixed;
+  z-index: 60;
+  top: 0;
+  left: 0;
 }
 .container .main .screenBar {
   height: 43px;
@@ -154,9 +341,11 @@ body {
 .container .main .screenBar .changeList .searchPage .searchBar input {
   flex: 1;
   height: 30px;
+  padding-left: 24px;
   margin: 0;
   border-radius: 0px;
   font-size: 14px;
+  background: url("../images/icon/glass.png") 3px 6px/17px 17px no-repeat;
 }
 .container .main .screenBar .changeList .searchPage .searchBar span {
   height: 30px;
@@ -253,6 +442,27 @@ body {
 }
 .container .main .products .product:nth-child(even) {
   padding: 10px 10px 0px 5px;
+}
+.container .backTop {
+  display: none;
+  position: fixed;
+  height: 40px;
+  width: 40px;
+  right: 5px;
+  bottom: 40px;
+  z-index: 50;
+}
+.container .backTop a {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  color: #ddd;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=coudan.css.map */

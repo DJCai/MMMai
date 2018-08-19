@@ -1,0 +1,10 @@
+{
+  "title": "Verify.js",
+  "name": "verify",
+  "version": "0.0.1",
+  "author": {
+    "name": "Jaime Pillora"
+  },
+  "homepage": "https://github.com/jpillora/verify",
+  "license": "MIT"
+}

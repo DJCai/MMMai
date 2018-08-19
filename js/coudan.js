@@ -212,7 +212,6 @@ $(function(){
     //滚动监听事件
     $(window).scroll(function(){
         // 当滚动超过header高度的时候就固定定位起来
-        console.log(pageYOffset);
         if(pageYOffset>0){
             $('.header').addClass('on');
             $('.main').css({paddingTop:44});

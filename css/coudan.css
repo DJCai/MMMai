@@ -341,9 +341,11 @@ body {
 .container .main .screenBar .changeList .searchPage .searchBar input {
   flex: 1;
   height: 30px;
+  padding-left: 24px;
   margin: 0;
   border-radius: 0px;
   font-size: 14px;
+  background: url("../images/icon/glass.png") 3px 6px/17px 17px no-repeat;
 }
 .container .main .screenBar .changeList .searchPage .searchBar span {
   height: 30px;

@@ -53,24 +53,7 @@
             </div>
             <div class="nav">
                 <ul class="mui-table-view">
-
-                    <a href="">
-                        <div class="left">
-                            <img src="./images/img/j_sources_img_2016_10_22_190_190_0_575ab3bffff305c81740cbd6ce7aceb4.jpg" alt="">
-                        </div>
-                        <div class="right">
-                            <p class="name">移动端凑单品: 海天 鲜味 生抽 1.28L
-                                <span class="price">10.9元</span>
-                            </p>
-                            <p class="ly">
-                                <span class="ad">京东商城 &nbsp;|</span>
-                                <span class="time">10-25 14:10</span>
-                                <span class="mui-icon mui-icon-chat mui-pull-right">1</span>
-                            </p>
-                        </div>
-                    </a>
-                    </li>
-                    -->
+                    <!-- 模板渲染 -->
                 </ul>
                 <div class="page">
                     <table width="100%">
@@ -140,7 +123,7 @@
 <script type="text/html" id="productslist">
     {{each result v i}}
     <li class="mui-table-view-cell">
-        <a href="" data-id="{{productId}}">
+        <a href="./discountdetail.html?productid={{v.productId}}" data-id="{{productId}}">
             <div class="left">
                 {{#v.productImgSm}}
             </div>

@@ -21,8 +21,8 @@ $(function(){
     }
 
     // 记录被选中的筛选
-    var shopChanged;//店铺
-    var areaChanged;//区域
+    var shopIndex=0;//店铺
+    var areaIndex=0;//区域
     var priceChanged;
 
 
@@ -33,6 +33,7 @@ $(function(){
         // 点击了排序就把搜索按钮还原为搜索样子
         $('.search').find('.fa').addClass('fa-search').removeClass('fa-close');
         
+
         if($(this).find('.mui-icon').hasClass('mui-icon-arrowdown')){
             $(this).find('.mui-icon').addClass('mui-icon-arrowup').removeClass('mui-icon-arrowdown').parent().siblings('li').find('.mui-icon').removeClass('mui-icon-arrowup').addClass('mui-icon-arrowdown');
             linkone=$(this).data('link');//点击的是那个类型
@@ -43,14 +44,23 @@ $(function(){
         // 这样判断后只会有一个是向上的(或者全部不是),然后判断有没有向上,如果有就显示列表
         // 并 渲染数据出来
         if($(this).find('.mui-icon').hasClass('mui-icon-arrowdown')){
-            //如果向上就不做操作数据让列表隐藏
+            //如果向下就不做操作数据让列表隐藏
             $(".changeList").hide();
         }else{
-            //有就显示列表
+            //有就显示列表（箭头向上）
             $(".changeList").show();
             
             renderChange(linkone);//加载列表数据
-
+            //把之前选中的内容显示出来后继续选中（得到点击的内容然后通过index）
+            // console.log(linkone);
+            // if(linkone=='shop'){
+            //     $('.changeList li[data-type='+linkone+']').eq(shopIndex).addClass('active').siblings().removeClass('active');
+            //     // console.log(idx);
+            // }
+            // if(linkone=='area'){
+            //     $('.changeList li[data-type='+linkone+']').eq(shopIndex).addClass('active').siblings().removeClass('active');
+            // }
+            
         }
     });
 
@@ -76,8 +86,14 @@ $(function(){
                 var html=template("tplchangeList",res);
                 $('.changeList').html(html);//请求筛选列表的渲染
                 console.log(flag);
-
-                //当再次点击下拉列表的时（没有刷新页面前提）把之前选中放在上面
+                
+                if(type=='shop'){
+                    $('.changeList li[data-type='+type+']').eq(shopIndex).addClass('active').siblings().removeClass('active');
+                }
+                if(type=='addr'){
+                    console.log(areaIndex);
+                    $('.changeList li[data-type='+type+']').eq(areaIndex).addClass('active').siblings().removeClass('active');
+                }
                 
 
                 // 首次加载页面
@@ -147,14 +163,10 @@ $(function(){
         var type=$(this).data('type');
         if(type=='shop'){
             shopId=$(this).data('id');
-            // shopChanged=shopId;//记录选中的是那个id
-            var shopIndex=$(this).index();
-            console.log(shopIndex);
-        }else if(type=='area'){
+            shopIndex=$(this).index();//记录被选中的index
+        }else if(type=='addr'){
             areaId=$(this).data('id');
-            // areaChanged=areaId;
-            var areaIndex=$(this).index();
-            console.log(areaIndex);
+            areaIndex=$(this).index();//记录被选中的index
         }else{
             //是价格就不管
         }
@@ -200,7 +212,11 @@ $(function(){
     //滚动监听事件
     $(window).scroll(function(){
         // 当滚动超过header高度的时候就固定定位起来
-
+        console.log(pageYOffset);
+        if(pageYOffset>0){
+            $('.header').addClass('on');
+            $('.main').css({paddingTop:44});
+        }
 
         //返回顶部悬浮框
         if(pageYOffset>620){

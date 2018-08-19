@@ -70,6 +70,7 @@ body {
 }
 
 .container .header {
+  width: 100%;
   background-color: #ff841d;
   height: 44px;
   display: flex;
@@ -78,6 +79,7 @@ body {
   justify-content: space-between;
   color: #fff;
   font-size: 20px;
+  transition: all 1s;
 }
 .container .header .title {
   font-size: 20px;
@@ -86,6 +88,12 @@ body {
   height: 35px;
   width: 35px;
   background: url(../images/icon/header_app.png) 0px 0px/35px 35px;
+}
+.container .header.on {
+  position: fixed;
+  z-index: 60;
+  top: 0;
+  left: 0;
 }
 .container .main .screenBar {
   height: 43px;

@@ -23,7 +23,7 @@
 
 <body>
     <div class="container">
-        <div class="header" id="Top">
+        <div class="header">
             <span class="back fa fa-chevron-left"></span>
             <span class="title">凑单品</span>
             <div class="share">
@@ -84,11 +84,11 @@
     <script type="text/html" id="tplchangeList">
         {{each result v i}}
             {{if v.shopName}}
-            <li data-type='shop' data-id="{{v.shopId}}" class="{{if i==0}}active{{/if}}"><span class="text">{{v.shopName}}</span><span class="fa fa-check"></span></li>
+            <li data-type='shop' data-id="{{v.shopId}}" class="{{if i==0}}active{{/if}} shop"><span class="text">{{v.shopName}}</span><span class="fa fa-check"></span></li>
             {{else if v.areaName}}
-            <li data-type='area' data-id="{{v.areaId}}" class="{{if i==0}}active{{/if}}"><span class="text">{{v.areaName}}</span><span class="fa fa-check"></span></li>
+            <li data-type='addr' data-id="{{v.areaId}}" class="{{if i==0}}active{{/if}} area"><span class="text">{{v.areaName}}</span><span class="fa fa-check"></span></li>
             {{else}}
-            <li data-type='price' data-id="{{v.id}}" class="{{if i==0}}active{{/if}}"><span class="text">{{v}}</span><span class="fa fa-check"></span></li>
+            <li data-type='price' data-id="{{v.id}}" class="{{if i==0}}active{{/if}} price"><span class="text">{{v}}</span><span class="fa fa-check"></span></li>
             {{/if}}
         {{/each}}
     </script>

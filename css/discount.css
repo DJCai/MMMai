@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container header {
+  height: 48px;
+  background-color: #ff841d;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  justify-content: space-between;
+}
+.container header a {
+  font-size: 20px;
+  color: #fff;
+}
+.container header h4 {
+  color: #fff;
+}
+.container header a.download {
+  width: 34px;
+  height: 34px;
+  background: url("../images/header_app.png") 0 0/34px 34px;
+}
+.container main {
+  flex: 1;
+  position: relative;
+  background-color: #fff;
+}
+.container footer {
+  height: 90px;
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+}
+.container footer .foottop {
+  flex-basis: 30px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+}
+.container footer .foottop a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 16px;
+}
+.container footer .foottop a:nth-child(2) {
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+.container footer .foottop a img {
+  height: 16px;
+}
+.container footer .footbottom {
+  flex-basis: 60px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container footer .footbottom p {
+  margin: 0;
+}
+.container footer .footbottom .start {
+  display: flex;
+  align-items: flex-end;
+}
+.container footer .footbottom .start .app {
+  color: #f00;
+}
+.container footer .footbottom .start .shouji {
+  margin: 0 5px;
+  font-weight: bold;
+  color: #000;
+}
+.container footer .footbottom .start .zhangshang {
+  color: #aaa;
+}
+.container footer .footbottom .finnal {
+  color: #aaa;
+}
+
+main .products {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .products .product {
+  width: 50%;
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+main .products .product:nth-child(2n-1) {
+  border-right: 1px solid #eee;
+}
+main .products .product .box {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+main .products .product .box img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+main .products .product .box p {
+  margin: 0;
+}
+main .products .product .box p.price {
+  color: #ff6c00;
+}
+
+/*# sourceMappingURL=discount.css.map */

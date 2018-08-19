@@ -19,11 +19,12 @@
     <!-- 引入公共js和css -->
     <link rel="stylesheet" href="./css/common.css">
     <script src="./js/common.js"></script>
-    <!-- 自己写的 -->
-    <link rel="stylesheet" href="./css/bijiaoSearch.css">
-    <script src="./js/bijiaoSearch.js"></script>
-</head>
 
+     <!-- 自己写的 -->
+    <link rel="stylesheet" href="./css/brand_categroy.css">
+    <script src="./js/brand_categroy.js"></script>
+
+</head>
 <body>
     <div class="container">
         <div class="header">
@@ -52,11 +53,7 @@
                         <button class="search">搜索</button>
                     </div>
                     <!-- 你的内容 -->
-                    <div class="tab-content">
-                        <ul class="table-view">
-                            <!-- 模板 -->
-                        </ul>
-                    </div>
+
 
                 </div>
             </div>
@@ -90,21 +87,3 @@
 </body>
 
 </html>
-<script type="text/html" id="categorytitle">
-    {{each result v i}}
-    <li class="titleli">
-            <div class="atitle" data-id="v._id" data-titleid="v.titleId">
-             <a>{{v.title}}</a>
-             <span class="fa fa-angle-down"></span>
-            </div>
-             <div class="itemlist">
-                 
-             </div>
-     </li>
-     {{/each}}
-</script>
-<script type="text/html" id="getcategory">
-   {{each result v i}}
-  <a href="./biaojiaoProlist.html?categoryid="+{{v.categoryId}} class="item">{{v.category}}</a>
-   {{/each}}
-</script>

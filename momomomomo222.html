@@ -36,30 +36,8 @@
         <div class="main">
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
-                <!-- 搜索栏 可以看情况删除 -->
-                <div class="searchbox">
-                        <div>
-                            <input type="text" name="" class="search-text" placeholder="请输入您想比价的商品">
-                            <ul class="historywordBox">
-                                <!-- <li>
-                            <span>电视</span>
-                            <span class="mui-icon mui-icon-trash mui-pull-right">
-                            </span>
-                        </li> -->
-                            </ul>
-                        </div>
-                        <button class="search">搜索</button>
-                </div>
+        
                     <!-- 你的内容 -->
-                    <div class="nav">
-                        <a href="">首页
-                            <span>&gt</span>
-                        </a>
-                        <a href="">电视
-                            <span>&gt</span>
-                        </a>
-                        <a href="">乐视</a>
-                    </div>
                     <ul class="listitem">
                         <li class="item ui-border-b">
         
@@ -75,7 +53,23 @@
                                     <div class="sales">有1471人评论</div>
                                 </div>
                             </div>
-                        </li>  
+                        </li>
+                        <li class="item ui-border-b">
+        
+                            <div class="pic">
+                                <img src="http://pro-img.zuyushop.com/ProPic/20175/small80/Thumb_2017050008004798967.jpg" alt="">
+                            </div>
+                            <div class="clearfix info">
+                                <div class="tit">三星(SAMSUNG) UA55MUF30ZJXXZ 55英寸 4K超高清 智能网络液晶电视</div>
+                                <div class="price">
+                                    <em>¥</em>2288</div>
+                                <div class="other">
+                                    <div class="mall">4商城报价</div>
+                                    <div class="sales">有1471人评论</div>
+                                </div>
+                            </div>
+                        </li>
+                        
                     </ul>
         
                     <div class="page">
@@ -90,25 +84,23 @@
                         </div>
                         <button>下一页</button>
                     </div>
-                    <div class="footer22">
-                            <div class="logininfo">
-                                <a href="#" class="login">注册</a>
-                                <a href="#" class="register">登录</a>
-                                <a href="#" class="return-top">返回顶部</a>
-                            </div>
-                            <div class="footerinfo">
-                                <div>
-                                    <a class="appLogin" href="#">手机APP下载</a>
-                                    <span>慢慢买手机版--掌上比价平台</span>
-                                </div>
-                                <a href="./index.html">m.manmanbuy.com</a>
-                            </div>
-                    </div>
                 </div>
             </div>
-
         </div>
-      
+        <div class="footer">
+            <div class="logininfo">
+                <a href="#" class="login">注册</a>
+                <a href="#" class="register">登录</a>
+                <a href="#" class="return-top">返回顶部</a>
+            </div>
+            <div class="footerinfo">
+                <div>
+                    <a class="appLogin" href="#">手机APP下载</a>
+                    <span>慢慢买手机版--掌上比价平台</span>
+                </div>
+                <a href="./index.html">m.manmanbuy.com</a>
+            </div>
+        </div>
     </div>
     <div class="banner">
         <div class="left">
@@ -127,7 +119,7 @@
     {{each result v i }}
     <li class="item ui-border-b">      
             <div class="pic">
-            {{#v.productImg}}
+                <img src="{{v.productImg}}" alt="">
             </div>
             <div class="clearfix info">
                 <div class="tit">{{v.productName}}</div>

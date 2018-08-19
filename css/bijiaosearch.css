@@ -244,62 +244,57 @@ html, body {
   font-size: 12px;
 }
 
-main {
-  background-color: #ebebeb;
+.container {
+  display: flex;
+  flex-direction: column;
 }
-main .searchbar {
-  padding: 15px;
+
+.main {
+  flex: 1;
   position: relative;
-  background-color: #fff;
-  border-bottom: 1px solid #e6e6e6;
 }
-main .searchbar .search {
-  height: 30px;
-  position: relative;
-  padding: 0px;
+.main .tab-content {
+  margin: 5px;
 }
-main .searchbar input {
-  height: 30px;
-  border-radius: 15px;
-  margin-bottom: 0px;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  outline: 0 none;
-  border: 0 none;
-  background-color: #eee;
-}
-main .searchbar button {
-  position: absolute;
-  border-radius: 15px;
-  top: 0;
-  right: 0;
-  height: 30px;
-  background: #ff841d;
-  outline: 0 none;
-  border: 0 none;
-}
-main .mui-content {
-  padding: 10px;
-}
-main .mui-content .mui-card:first-child {
-  margin: 0px;
-  padding: 0px;
-}
-main .mui-content .mui-card {
-  border: 1px solid #ccc;
+.main .tab-content .table-view {
   border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #666;
 }
-main .mui-content .mui-card .mui-collapse {
-  background-color: #ebebeb;
+.main .tab-content .table-view .titleli {
+  border-bottom: 1px solid #888;
 }
-main .mui-content .mui-card .mui-collapse .itemList .list {
+.main .tab-content .table-view .titleli .atitle {
+  background: #ededed;
+  height: 40px;
+  line-height: 40px;
+  color: #000;
+  font-size: 16px;
+  display: block;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main .tab-content .table-view .titleli .atitle .fa-angle-down,
+.main .tab-content .table-view .titleli .atitle .fa-angle-up {
+  font-size: 24px;
+  color: #666;
+}
+.main .tab-content .table-view .titleli .itemlist {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
 }
-main .mui-content .mui-card .mui-collapse .itemList .list a {
-  border-radius: 0px;
+.main .tab-content .table-view .titleli .itemlist.active {
+  display: none;
+}
+.main .tab-content .table-view .titleli .itemlist .item {
+  box-sizing: border-box;
   width: 33.333%;
   height: 50px;
   display: flex;
@@ -307,7 +302,27 @@ main .mui-content .mui-card .mui-collapse .itemList .list a {
   align-items: center;
   border: 0 none;
   background-color: #f9f9f9;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.main .tab-content .table-view .titleli .itemlist .item:nth-last-child(1), .main .tab-content .table-view .titleli .itemlist .item:nth-last-child(2), .main .tab-content .table-view .titleli .itemlist .item:nth-last-child(3) {
+  border-bottom: none;
+}
+.main .tab-content .table-view .titleli .itemlist .item:nth-child(3n) {
+  border-right: none;
+}
+
+.footer {
+  height: 94px;
+  width: 100%;
+  background: #fff;
+  padding-top: 10px;
+  position: relative;
+  z-index: 1000;
+}
+
+.banner {
+  z-index: 1000;
 }
 
 /*# sourceMappingURL=bijiaosearch.css.map */

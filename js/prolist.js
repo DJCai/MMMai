@@ -23,7 +23,13 @@ $(function () {
     });
     // console.log(data["cname"]);
     // console.log(data[cname]);
+    var inputid=$(".inputvalue").val();
+         console.log(inputid);
+        //  pid=inputid.split("/")[0];
+         console.log();
+
     categorylist(cid, 0);
+            
     function categorylist(cid, pid) {
         $.ajax({
             url: "http://mmb.ittun.com/api/getproductlist",
@@ -51,51 +57,6 @@ $(function () {
                 var html1 = template("selectnav", obj);
                 $(".page").html(html1);
 
-              
-                //点击事件上下页
-                var clicknum = 0;
-
-                $(".inputvalue").val($(".livalue").eq(clicknum).text());
-
-                $(".page").on("click", ".rightbtn", function () {
-  
-                    if (clicknum >= num-1 ) {
-                        clicknum=num-1;
-                        return;
-                    }
-                    clicknum++;
-                    $(".inputvalue").val($(".livalue").eq(clicknum).text());
-                });
-
-                $(".page").on("click", ".leftbtn", function () {
-                    // console.log(clicknum);
-                    if (clicknum <=0) {
-                        clicknum=0;
-                        return;
-                    }
-                    clicknum--;
-  
-                    // categorylist(cid, clicknum);
-                    $(".inputvalue").val($(".livalue").eq(clicknum).text());
-                });
-
-                // 点击li事件
-                $(".page").on("click", ".livalue", function () {
-                    clicknum = $(this).index();
-                    //    console.log(clicknum); 
-                    categorylist(cid, clicknum);
-                    $(".inputvalue").val($(".livalue").eq(clicknum).text());
-                    $("#selectPage").hide();
-
-                });
-
-                //点击三角形
-                $(".page").on("click", ".sanjiao", function () {
-                    $("#selectPage").toggleClass("active1");
-
-                });
-
-
                 $(".item").click(function () {
                     var brandname = $(this).data("name");
                     var productId = $(this).data("productid");
@@ -106,5 +67,47 @@ $(function () {
             }
         });
     }
+
+         //点击事件上下页
+         var clicknum = 0;
+         $(".inputvalue").val($(".livalue").eq(clicknum).text());
+
+         $(".page").on("click", ".rightbtn", function () {
+
+             if (clicknum >= num-1) {
+                 clicknum=num-1;
+                 return;
+             }
+             clicknum++;
+             $(".inputvalue").val($(".livalue").eq(clicknum).text());
+             console.log( $(".inputvalue").val());
+         });
+
+         $(".page").on("click", ".leftbtn", function () {
+             // console.log(clicknum);
+             if (clicknum <=0) {
+                 clicknum=0;
+                 return;
+             }
+             clicknum--;
+             // categorylist(cid, clicknum);
+             $(".inputvalue").val($(".livalue").eq(clicknum).text());
+         });
+         // 点击li事件
+         $(".page").on("click", ".livalue", function () {
+             clicknum = $(this).index();
+             //    console.log(clicknum); 
+             $(".inputvalue").val($(".livalue").eq(clicknum).text());
+             $("#selectPage").hide();
+
+         });
+         //点击三角形
+         $(".page").on("click", ".pagenum", function () {
+             $("#selectPage").toggleClass("active1");
+
+         });
+
+
+   
 
 });

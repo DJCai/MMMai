@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- 引入jqery -->
+    <script src="./lib/jQuery/jquery-3.0.0.min.js"></script>
     <!-- 引用mui -->
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
     <script src="./lib/mui/js/mui.min.js"></script>
@@ -60,10 +62,10 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <button>上一页</button>
+                                    <button class="previous">上一页</button>
                                 </td>
                                 <td>
-                                    <select id="selectPage">▼
+                                    <select  id="selectPage">
                                         <option value="1">1/14</option>
                                         <option value="2">2/14</option>
                                         <option value="3">3/14</option>
@@ -80,7 +82,7 @@
                                         <option value="14">14/14</option>
                                 </td>
                                 <td>
-                                    <button>下一页</button>
+                                    <button class="next">下一页</button>
                                 </td>
                             </tr>
                         </tbody>

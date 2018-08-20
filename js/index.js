@@ -47,7 +47,10 @@ $(function ($) {
                 var pagesize = data.pagesize;
                 res.sum = page * pagesize;
                 console.log(res);
-
+                var result = res.result;
+                for(var i= 0;i<result.length;i++){
+                    result[i].productComCount = result[i].productComCount.replace(/[^0-9]/ig, "");         
+                }  
                 var html = template('productlist', res);
                 $('.products').html(html);
             }
@@ -62,7 +65,7 @@ $(function ($) {
 
     // 导航菜单栏的更多部分
     $('.main .nav').on('tap', '.moreNav', function (e) {
-        e.preventDefault();
+        // e.preventDefault();
         if (moreLength) {
             moreLength = false;
         } else {
@@ -70,12 +73,4 @@ $(function ($) {
         }
         getnavlist();
     });
-    
-        function renderHistory(arr) {
-            var htmlStr = template("historyWords", {
-                list: arr
-            });
-            $(".historywordBox").html(htmlStr);
-        }
-    
 });

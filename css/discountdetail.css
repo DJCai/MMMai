@@ -159,5 +159,25 @@ main .mui-scroll .details .tit {
 main .mui-scroll .details .reply {
   margin-bottom: 10px;
 }
+main .mui-scroll .details .list ul li {
+  border-bottom: 1px solid #eee;
+  padding: 5px;
+}
+main .mui-scroll .details .list ul li a {
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+main .mui-scroll .details .list ul li a p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+main .mui-scroll .details .list ul li a p img {
+  flex-basis: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
 
 /*# sourceMappingURL=discountdetail.css.map */

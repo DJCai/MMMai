@@ -1,7 +1,7 @@
 $(function(){
     var urlStr = location.href;
     var query = urlTool(urlStr);
-
+    var productid = query.productId?query.productId:0;
 
     var data={};
     var  arr=[];
@@ -22,14 +22,8 @@ $(function(){
     data.cname=getParams("canme");
     arr.push(data);
     // console.log(data.brandname); 
-    
-     if(query.productId){
-        var productid=query.productId;
-     }else{
-        var productid=0;
-     }
-     console.log(data); 
-     console.log(arr); 
+    //  console.log(data); 
+    //  console.log(arr); 
     
      
 

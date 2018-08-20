@@ -59,6 +59,31 @@ main{
             .reply{
                 margin-bottom: 10px;
             }
+
+            .list{
+                ul{
+                    li{
+                        border-bottom: 1px solid #eee;
+                        padding: 5px;
+                        a{
+                            display:flex;
+                            align-items: center;
+                            color:#333;
+                            p{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                img{
+                                    flex-basis: 60px;
+                                    height: 60px;
+                                    border-radius: 50%;
+                                }
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

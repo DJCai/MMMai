@@ -14,5 +14,8 @@ $(function(){
         })
     }
     getproductInfo();
- })
+ });
+
+ //分页功能
+
  

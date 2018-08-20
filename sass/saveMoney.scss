@@ -137,13 +137,16 @@ body {
                         background-color: #ddd;
                         border-radius: 5px;
                         border-style: none;
+                        
                     }
                     #selectPage {
-                        height: 32px;
-                        padding: 16px 15px;
-                        font-size: 16px;
-                        border: 1px solid #bababa;
+                        height: 40px;
+                        width: 100px;
+                        padding: 0 2%;
+                        margin: 0;
                         outline: none;
+                        padding-left: 30px ;
+                        background-color: #ddd;
                     }
                 }
             }

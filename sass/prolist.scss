@@ -1,5 +1,25 @@
 @import "common.scss";
-main{
+
+.container{
+    display: flex;
+    flex-direction: column;
+ }
+
+.main{
+    flex: 1;
+    position: relative;
+    .nav{
+        height: 36px;
+        background-color: #ebebeb;
+        border-top: solid 1px #ebebeb;
+        border-bottom: 1px solid #ccc;
+        line-height: 36px;
+        padding-left: 8px;
+        font-size: 14px;
+        a{
+           color: #5a5a5a;
+        }
+     }
    .listitem{
        .item{
         padding: 10px 8px;
@@ -53,20 +73,66 @@ main{
        align-items: center;
        height: 36px;
        margin-top: 20px;
-       .fenye{
-        // border: 1px solid #bababa;
-        // font-size: 16px;
-        height: 34px;
-        width: 40px;
-        position: relative;
-        // overflow: hidden;  
+      .fenye{
+        border: 1px solid #bababa;
+        border-radius: 3px;
+        font-size: 16px;
+        padding: 5px 20px;
+        align-items: center;
+       
         select{
-            position: absolute;
-            
-              left: 0;
-              top: 0;
-              width: 100%;
+            width: auto;
+            padding: 0 2%;
+            margin: 0;
+            option{
+                text-align: center;
+            }
         }
        }
    }
 }
+
+.banner{
+    z-index: 1000;
+}
+
+.footer22{
+        height:110px;
+        width: 100%;
+        background: #fff;
+        padding-top:10px;
+        .logininfo{
+            height: 34px;
+            display:flex;
+            a{
+                flex:1;
+                border-top:1px solid #e6e6e6;
+                border-bottom:1px solid#e6e6e6;
+                display:flex;
+                justify-content: center;
+                align-items:center;
+                color:#333;
+                font-size: 14px;
+                &:nth-child(n+2){
+                    border-left:1px solid #e6e6e6;
+                }
+            }
+        }
+        .footerinfo{
+            height: 64px;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            a{
+                color:#333;
+            }
+            .appLogin{
+                color:$itemColor;
+                margin-right:5px;
+            }
+        }
+
+    }

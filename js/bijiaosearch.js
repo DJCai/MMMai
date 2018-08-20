@@ -1,62 +1,45 @@
 $(function(){
-    var data={};
-    // console.log(data);
-     
+        //一级菜单 渲染
         $.ajax({
             url:"http://mmb.ittun.com/api/getcategorytitle",
             type:"get",
             dataType:"json",
-            success:function(res){         
-                console.log(res);
-                   
-            var html=template("categorytitle",res);
-             $(".mui-card").html(html); 
-            }
+            success:function(res){        
+            var html=template("categorytitle",res); 
+            $(".table-view").html(html); 
+            
+            // console.log( res.result[1].titleId);
+            $(".itemlist").each(function(index,ele){
+                $.ajax({
+                    url:"http://mmb.ittun.com/api/getcategory",
+                    type:"get",
+                    dataType:"json",
+                    data:{titleid:res.result[index].titleId},
+                    success:function(res){
+                        // console.log(res)
+                        var html=template("getcategory",res);  
+                          $(ele).html(html);                   
+                    }
+                }) 
+             
+            })
+          // ul交互 fa fa-angle-up
+          $(".atitle").click(function(){
+            // alert("sss");
+            $(this).siblings(".itemlist").toggleClass("active");
+            // $(this).siblings(".itemlist").hasClass("active")
+            if( $(this).siblings().hasClass("active")){
+            $(this).find(".fa").addClass("fa-angle-down").removeClass("fa-angle-up");
+            }else{
+                $(this).find(".fa").addClass("fa-angle-up").removeClass("fa-angle-down");   
+             }         
+           });
+        
+         }
         });
+    $(".tab-content").on("click",".table-view .item",function(){
+       var categoryid=$(this).data("categoryid");
+        window.location.href="./bijiaoProlist.html?categoryid="+categoryid;
+     });  
 
-
-//    二级分类函数
-         // category(0);
-             //点击 主标题的时候 显示数据
-            //  $(".mui-card").on("click",".mui-collapse",function(){
-            //     var titleid= $(this).data("titleid");
-             
-            //     alert(titleid);
-         
-            // }); 
-            $("atitle").click(function(){
-                var titleid= $(this).data("titleid");
-             
-                alert(titleid);
-            });
-
-
-
-   }); 
-
-
-// _id
-// :
-// "5806e6ea48985cb016b082e8"
-// category
-// :
-// "电视"
-// categoryId
-// :
-// 0
-// titleId
-// :
-// 0
-
-// $.ajax({
-//     url:"http://mmb.ittun.com/api/getcategory",
-//     type:"get",
-//     dataType:"json",
-//     data:{titleid:titleid},
-//     success:function(param){
-//     //     var html=template("categorytitle",data);
-//     //  $(".mui-card").html(html);   
-//      data.param=param;
-//     //  console.log(data.param);
-//     }
-// })
+});

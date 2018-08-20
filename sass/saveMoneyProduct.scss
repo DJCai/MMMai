@@ -1,0 +1,64 @@
+@import "common1.scss";
+
+main{
+    .mui-scroll{
+        .details{
+            padding: 15px;
+            .title{
+                color:#5a5a5a;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .price{
+                color:$bgcolor;
+            }
+
+            .from{
+                color:#999;
+            }
+
+            .around{
+            overflow: hidden;
+                line-height: 160%;
+                img{
+                    width: 100px;
+                    height: 100px;
+                    float: right;
+                }
+            }
+
+            .img{
+                width: 200px;
+                height: 200px;
+                margin: 10px auto;
+                img{
+                    width: 100%;
+                }
+            }
+
+            .gobuy{
+                width: 100%;
+                height: 30px;
+                padding: 0 30px;
+                font-size:16px;
+                background-color:#ff9000;
+                margin-bottom: 10px;
+            }
+
+            .vcode {
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+
+            .tit{
+                margin-bottom: 10px;
+            }
+            .reply{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

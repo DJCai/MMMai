@@ -39,3 +39,11 @@
                     $('.left li.'+type).children(".text").text(arr[0]);
                     console.log(arr[0]);
                 }
+
+
+
+                <!-- 获得被选中元素进入时候添加被选中 -->
+                                //当再次点击下拉列表的时（没有刷新页面前提）把之前选中放在上面
+                // .addClass("active").siblings().removeClass("active");
+                var one=$('.changeList li[data-type='+type+']').eq(type+'Index');//被选中项元素
+                console.log(one);

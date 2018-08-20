@@ -1,0 +1,62 @@
+@import "common.scss";
+$bgcolor:#f1f1f1;
+$maincolor:#ff841d;
+
+
+.container{
+
+    .header{
+        width: 100%;
+        background-color: #ff841d;
+        height: 44px;
+        display: flex;
+        padding: 15px;
+        align-items: center;
+        justify-content: space-between;
+        color:#fff;
+        font-size: 20px;
+        transition: all 1s;
+
+        .title{
+            font-size: 20px;
+        }
+        .share{
+            height: 35px;
+            width: 35px;
+            background: url(../images/icon/header_app.png) 0px 0px /35px 35px; 
+        }
+
+        &.on{
+            position: fixed;
+            z-index: 60;
+            top: 0;
+            left: 0;
+        }
+    } 
+
+    // main
+    .main{
+
+        .linkList{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px 35px 0px 30px;
+
+            li{
+                border: 1px solid #ddd;
+                display: flex;
+                align-items: center;
+                padding: 7px 6px;
+                margin: 0px 8px 5px 0px;
+                background-color: #f4f4f4;
+                font-size: 14px;
+                color: #555;
+                img{
+                    margin-right: 7px;
+                }
+            }
+        }
+    }
+
+}

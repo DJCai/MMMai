@@ -31,6 +31,26 @@ body {
 
 a {
   color: #2d374b;
+<<<<<<< HEAD
+  text-decoration: none;
+}
+
+a:hover {
+  color: #cd0200;
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+i {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+=======
   text-decoration: none;
 }
 
@@ -63,26 +83,238 @@ table {
 
 p {
   word-wrap: break-word;
+>>>>>>> b472ab1502844d1a808c7d0ef90ebadf46edf9d7
 }
 
-main .listitem .item {
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+<<<<<<< HEAD
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p {
+  word-wrap: break-word;
+=======
+.container {
+  height: 100%;
+}
+.container .header {
+  background: #ff841d;
+  display: flex;
+  justify-content: space-between;
+}
+.container .header a {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.container .header a.logo {
+  height: 50px;
+  padding-left: 12px;
+}
+.container .header a.download {
+  height: 50px;
+  justify-content: center;
+}
+.container .header a img {
+  width: 70%;
+}
+.container .main .searchbox {
+  padding: 10px;
+  border-bottom: 2px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main .searchbox div {
+  position: relative;
+  height: 30px;
+  flex: 1;
+  border-radius: 15px;
+  background: #f1f1f1;
+}
+.container .main .searchbox div .search-text {
+  height: 100%;
+  flex: 1;
+  border-radius: 15px;
+  border-radius: 15px;
+  border: none;
+  background: #f1f1f1;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.container .main .searchbox div .historywordBox {
+  position: absolute;
+  top: 31px;
+  background: #fff;
+  width: 100%;
+  padding: 0;
+}
+.container .main .searchbox div .historywordBox li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  border-bottom: 1px solid #ccc;
+}
+.container .main .searchbox div .historywordBox li span {
+  font-size: 16px;
+}
+.container .main .searchbox div .historywordBox li span.delete-keyword {
+  width: 30px;
+}
+.container .main .searchbox div .historywordBox li span.keywords {
+  flex: 1;
+}
+.container .main .searchbox div .historywordBox li.active {
+  background: #ccc;
+}
+.container .main .searchbox .search {
+  width: 64px;
+  height: 100%;
+  border-radius: 15px;
+  background: #ff841d;
+  color: #fff;
+  border: none;
+}
+.container .footer {
+  height: 110px;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  bottom: 0;
+  padding-top: 10px;
+}
+.container .footer .logininfo {
+  height: 34px;
+  display: flex;
+}
+.container .footer .logininfo a {
+  flex: 1;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+}
+.container .footer .logininfo a:nth-child(n+2) {
+  border-left: 1px solid #e6e6e6;
+}
+.container .footer .footerinfo {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.container .footer .footerinfo a {
+  color: #333;
+}
+.container .footer .footerinfo .appLogin {
+  color: #ff841d;
+  margin-right: 5px;
+}
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+}
+.banner .left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.banner .left .close-banner {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: #fff;
+  background: #ccc;
+  line-height: 20px;
+  text-align: center;
+}
+.banner .left img {
+  width: 40px;
+  height: 40px;
+  margin: 0 12px;
+}
+.banner .left div p {
+  color: #999;
+}
+.banner .left div p:nth-child(1) {
+  font-size: 16px;
+}
+.banner .left div p:nth-child(2) {
+  font-size: 12px;
+}
+.banner .opennow {
+  height: 32px;
+  width: 74px;
+  text-align: center;
+  line-height: 32px;
+  background: #ff841d;
+  color: #fff;
+  box-shadow: 0px -1px 1px 0 red inset;
+  font-size: 12px;
+>>>>>>> b472ab1502844d1a808c7d0ef90ebadf46edf9d7
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  position: relative;
+}
+.main .nav {
+  height: 36px;
+  background-color: #ebebeb;
+  border-top: solid 1px #ebebeb;
+  border-bottom: 1px solid #ccc;
+  line-height: 36px;
+  padding-left: 8px;
+  font-size: 14px;
+}
+.main .nav a {
+  color: #5a5a5a;
+}
+.main .listitem .item {
   padding: 10px 8px;
   font-size: 12px;
   background-color: #FFFFFF;
   position: relative;
   display: flex;
 }
-main .listitem .item .pic {
+.main .listitem .item .pic {
   width: 120px;
   height: 120px;
   margin-right: 10px;
   overflow: hidden;
 }
-main .listitem .item .pic img {
+.main .listitem .item .pic img {
   width: 100%;
   height: 100%;
 }
-main .listitem .item .info .tit {
+.main .listitem .item .info .tit {
   color: #333333;
   word-break: break-all;
   font-size: 15px;
@@ -90,40 +322,88 @@ main .listitem .item .info .tit {
   height: 56px;
   overflow: hidden;
 }
-main .listitem .item .info .price {
+.main .listitem .item .info .price {
   color: #ed0000;
   font-size: 18px;
   margin-top: 6px;
 }
-main .listitem .item .info .other {
+.main .listitem .item .info .other {
   margin-top: 5px;
 }
-main .listitem .item .info .other .mall {
+.main .listitem .item .info .other .mall {
   color: #a1a1a1;
   line-height: 21px;
 }
-main .listitem .item .info .other .sales {
+.main .listitem .item .info .other .sales {
   text-align: right;
   color: #a1a1a1;
   line-height: 21px;
 }
-main .page {
+.main .page {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 36px;
   margin-top: 20px;
 }
-main .page .fenye {
-  height: 34px;
-  width: 40px;
-  position: relative;
+.main .page .fenye {
+  border: 1px solid #bababa;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 5px 20px;
+  align-items: center;
 }
-main .page .fenye select {
-  position: absolute;
-  left: 0;
-  top: 0;
+.main .page .fenye select {
+  width: auto;
+  padding: 0 2%;
+  margin: 0;
+}
+.main .page .fenye select option {
+  text-align: center;
+}
+
+.banner {
+  z-index: 1000;
+}
+
+.footer22 {
+  height: 110px;
   width: 100%;
+  background: #fff;
+  padding-top: 10px;
+}
+.footer22 .logininfo {
+  height: 34px;
+  display: flex;
+}
+.footer22 .logininfo a {
+  flex: 1;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+}
+.footer22 .logininfo a:nth-child(n+2) {
+  border-left: 1px solid #e6e6e6;
+}
+.footer22 .footerinfo {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.footer22 .footerinfo a {
+  color: #333;
+}
+.footer22 .footerinfo .appLogin {
+  color: #ff841d;
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=prolist.css.map */

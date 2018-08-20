@@ -1,0 +1,119 @@
+@import "./common.scss";
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .header {
+        flex-basis: 50px;
+        background: #f4483e;
+        display: flex;
+        justify-content: space-between;
+        a {
+            display: flex;
+            align-items: center;
+            &.back {
+                margin-left: 10px;
+                i {
+                    color: #fff;
+                    font-size: 28px;
+                }
+            }
+            &.youhui {
+                color: #fff;
+                font-size: 23px;
+            }
+            &.download {
+                justify-content: center;
+            }
+            img {
+                width: 70%;
+            }
+        }
+    }
+    .main {
+        flex: 1; // background-color: red;
+        position: relative;
+        .mui-scroll {
+            position: absolute;
+            .hot {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                padding: 10px 0px 0px 8px;
+                ;
+                li {
+                    width: 32%;
+                    height: 80px;
+                    border: 1px solid #ccc;
+                    margin-bottom: 8px;
+                    margin-right: 5px;
+                    &:nth-child(3n) {
+                        // justify-content: flex-start;
+                        margin-right: 0px;
+                    }
+                    a {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding-top: 5px;
+                        img {
+                            width: 50px;
+                            height: 50px;
+                        }
+                        .title {
+                            font-size: 18px;
+                            color: #5a5a5a;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        // height:110px;
+        flex-basis: 110px;
+        width: 100%; // position: fixed;
+        background: #fff;
+        bottom: 0;
+        padding-top: 10px;
+        .logininfo {
+            height: 34px;
+            display: flex;
+            a {
+                flex: 1;
+                border-top: 1px solid #e6e6e6;
+                border-bottom: 1px solid#e6e6e6;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #333;
+                font-size: 14px;
+                &:nth-child(n+2) {
+                    border-left: 1px solid #e6e6e6;
+                }
+            }
+        }
+        .footerinfo {
+            height: 64px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            a {
+                color: #333;
+            }
+            .appLogin {
+                color: $itemColor;
+                margin-right: 5px;
+            }
+        }
+    }
+}

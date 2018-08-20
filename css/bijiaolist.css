@@ -65,7 +65,195 @@ p {
   word-wrap: break-word;
 }
 
-main .nav {
+html, body {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+}
+.container .header {
+  background: #ff841d;
+  display: flex;
+  justify-content: space-between;
+}
+.container .header a {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.container .header a.logo {
+  height: 50px;
+  padding-left: 12px;
+}
+.container .header a.download {
+  height: 50px;
+  justify-content: center;
+}
+.container .header a img {
+  width: 70%;
+}
+.container .main .searchbox {
+  padding: 10px;
+  border-bottom: 2px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main .searchbox div {
+  position: relative;
+  height: 30px;
+  flex: 1;
+  border-radius: 15px;
+  background: #f1f1f1;
+}
+.container .main .searchbox div .search-text {
+  height: 100%;
+  flex: 1;
+  border-radius: 15px;
+  border-radius: 15px;
+  border: none;
+  background: #f1f1f1;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.container .main .searchbox div .historywordBox {
+  position: absolute;
+  top: 31px;
+  background: #fff;
+  width: 100%;
+  padding: 0;
+}
+.container .main .searchbox div .historywordBox li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  border-bottom: 1px solid #ccc;
+}
+.container .main .searchbox div .historywordBox li span {
+  font-size: 16px;
+}
+.container .main .searchbox div .historywordBox li span.delete-keyword {
+  width: 30px;
+}
+.container .main .searchbox div .historywordBox li span.keywords {
+  flex: 1;
+}
+.container .main .searchbox div .historywordBox li.active {
+  background: #ccc;
+}
+.container .main .searchbox .search {
+  width: 64px;
+  height: 100%;
+  border-radius: 15px;
+  background: #ff841d;
+  color: #fff;
+  border: none;
+}
+.container .footer {
+  height: 110px;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  bottom: 0;
+  padding-top: 10px;
+}
+.container .footer .logininfo {
+  height: 34px;
+  display: flex;
+}
+.container .footer .logininfo a {
+  flex: 1;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+}
+.container .footer .logininfo a:nth-child(n+2) {
+  border-left: 1px solid #e6e6e6;
+}
+.container .footer .footerinfo {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.container .footer .footerinfo a {
+  color: #333;
+}
+.container .footer .footerinfo .appLogin {
+  color: #ff841d;
+  margin-right: 5px;
+}
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+}
+.banner .left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.banner .left .close-banner {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: #fff;
+  background: #ccc;
+  line-height: 20px;
+  text-align: center;
+}
+.banner .left img {
+  width: 40px;
+  height: 40px;
+  margin: 0 12px;
+}
+.banner .left div p {
+  color: #999;
+}
+.banner .left div p:nth-child(1) {
+  font-size: 16px;
+}
+.banner .left div p:nth-child(2) {
+  font-size: 12px;
+}
+.banner .opennow {
+  height: 32px;
+  width: 74px;
+  text-align: center;
+  line-height: 32px;
+  background: #ff841d;
+  color: #fff;
+  box-shadow: 0px -1px 1px 0 red inset;
+  font-size: 12px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  position: relative;
+}
+.main .navbar {
   height: 36px;
   background-color: #ebebeb;
   border-top: solid 1px #ebebeb;
@@ -74,23 +262,23 @@ main .nav {
   padding-left: 8px;
   font-size: 14px;
 }
-main .nav a {
+.main .navbar a {
   color: #5a5a5a;
 }
-main .goodinfo .product {
+.main .goodinfo .product {
   background-color: #fff;
   margin: 0 auto;
   text-align: center;
   padding: 10px 10px 0px 10px;
 }
-main .goodinfo .product .title {
+.main .goodinfo .product .title {
   font-size: 16px;
   color: #000;
 }
-main .goodinfo .product .pic {
+.main .goodinfo .product .pic {
   padding: 10px 0;
 }
-main .goodinfo .do {
+.main .goodinfo .do {
   margin: 0px;
   margin-top: 20px;
   display: flex;
@@ -101,7 +289,7 @@ main .goodinfo .do {
   border-top: 1px solid orangered;
   height: 34px;
 }
-main .goodinfo .do a {
+.main .goodinfo .do a {
   flex: 1;
   height: 100%;
   display: flex;
@@ -110,13 +298,13 @@ main .goodinfo .do a {
   border-right: 1px solid orangered;
   color: #fff;
 }
-main .goodinfo .do a:last-child {
+.main .goodinfo .do a:last-child {
   border-right: none;
 }
-main .goodinfo .do a.active {
+.main .goodinfo .do a.active {
   background-color: orangered;
 }
-main .goodinfo .buyinfo .gobuy {
+.main .goodinfo .buyinfo .gobuy {
   margin: 10px 0px;
   display: flex;
   justify-content: space-between;
@@ -124,33 +312,33 @@ main .goodinfo .buyinfo .gobuy {
   height: 34px;
   line-height: 34px;
 }
-main .goodinfo .buyinfo .gobuy a {
+.main .goodinfo .buyinfo .gobuy a {
   color: #000;
   font-size: 16px;
 }
-main .goodinfo .buyinfo .gobuy .logo {
+.main .goodinfo .buyinfo .gobuy .logo {
   display: inline-block;
   width: 10px;
   height: 10px;
   background: url("../images/icon/1.png") no-repeat center center/15px 15px;
 }
-main .goodinfo .buyinfo .gobuy .price {
+.main .goodinfo .buyinfo .gobuy .price {
   color: red;
   font-size: 16px;
   line-height: 34px;
 }
-main .goodinfo .buyinfo .gobuy .buynow {
+.main .goodinfo .buyinfo .gobuy .buynow {
   background-color: orangered;
   height: 34px;
 }
-main .goodinfo .buyinfo .notice {
+.main .goodinfo .buyinfo .notice {
   border-top: 1px solid #5a5a5a;
   font-size: 12px;
   color: #888;
   padding: 8px 10px;
   line-height: 18px;
 }
-main .comment .title {
+.main .comment .title {
   height: 34px;
   line-height: 34px;
   background-color: #ccc;
@@ -159,22 +347,72 @@ main .comment .title {
   font-size: 16px;
   font-weight: bold;
 }
-main .comment .top {
+.main .comment .top {
   padding: 10px;
 }
-main .comment .top .usermessage {
+.main .comment .top .usermessage {
   display: flex;
   justify-content: space-between;
 }
-main .comment .bottom {
+.main .comment .bottom {
   padding: 10px;
 }
-main .comment .bottom .checkmore {
+.main .comment .bottom .text {
+  color: #000;
+  font-size: 14px;
+  line-height: 22px;
+  padding-top: 5px;
+}
+.main .comment .checkmore {
   margin: 10px  auto;
   width: 100%;
   display: block;
   height: 32px;
   background-color: #d4d4d4;
+}
+
+.banner {
+  z-index: 1000;
+}
+
+.footer22 {
+  height: 110px;
+  width: 100%;
+  background: #fff;
+  padding-top: 10px;
+}
+.footer22 .logininfo {
+  height: 34px;
+  display: flex;
+}
+.footer22 .logininfo a {
+  flex: 1;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+}
+.footer22 .logininfo a:nth-child(n+2) {
+  border-left: 1px solid #e6e6e6;
+}
+.footer22 .footerinfo {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.footer22 .footerinfo a {
+  color: #333;
+}
+.footer22 .footerinfo .appLogin {
+  color: #ff841d;
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=bijiaolist.css.map */

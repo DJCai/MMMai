@@ -59,9 +59,9 @@ function urlTool(urlStr) {
 //
 /**
  * url?key=value 
- * 将url中出现的中文重新编码,使得可以在跨页面传递中文数据时不会论码
+ * 将url中出现的中文重新编码,使得可以在跨页面传递中文数据时不会乱码
  * @param  key   //浏览器地址上的key值
- *  使用 http://www.163.com?name="小明",  跨页面传递时会轮码,在js中     getParams("name")就可获得"小明"
+ *  使用 http://www.163.com?name="小明",  跨页面传递时会乱码,在js中  getParams("name")就可获得"小明"
  */
 function getParams(key) {
     var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)"); 
@@ -83,7 +83,6 @@ function getKeysArr() {
     if (keysStr) {
         arr = JSON.parse(keysStr);
     }
-
     return arr;
 }
 //浏览器本地保存数据
@@ -115,86 +114,14 @@ $(function () {
     mui('.mui-slider').slider({
         interval: 5000 //自动轮播周期，若为0则不自动播放，默认为0；
     });
+<<<<<<< HEAD
+=======
 
-
-    // 搜索框的功能模块
-    ;(function () {
-        //搜索文本框事件,值变化事件
-        $(".search-text")[0].oninput = function () {
-            $(".historywordBox").show();
-            var arr = getKeysArr();
-            var keyword = $(".searchbox .search-text").val().trim();
-            if (keyword.length == 0) {
-                $(".historywordBox").hide();
-                return;
-            };
-            //遍历arr,看是是否包含关键字,若有,就显示出来
-            var newArr = [];
-            arr.forEach(function (v, index) {
-                if (v.indexOf(keyword) != -1) {
-                    newArr.push(v);
-                }
-            });
-            //渲染数据
-            renderHistory(newArr);
-        };
-
-        // 渲染搜索历史数据
-        function renderHistory(arr) {
-            var htmlStr = template("historyWords", {
-                list: arr
-            });
-            $(".historywordBox").html(htmlStr);
-        }
-
-        // 点击搜索查询数据
-        $(".searchbox .search").click(function () {
-            var arr = getKeysArr();
-            var keyword = $(".searchbox .search-text").val().trim();
-            if (keyword.length == 0) return;
-            arr.unshift(keyword);
-            // 进行数据去重处理
-            var newArr = arr.norepeat();
-            // 将数据存储到浏览器中
-            saveHistory(newArr);
-            //由于没有搜索功能,不进行跳转
-            // mui-toast("由于没有搜索功能,不进行跳转");
-            $(".searchbox .search-text").val("");
-            $(".historywordBox").hide();
-        });
-
-        //点击删除,删除某条搜索记录
-        $(".historywordBox").on("click", ".delete-keyword", function () {
-            // $(".historywordBox").show();
-            var arr = getKeysArr();
-            var index = $(this).data("index");
-            // 去除该数据
-            arr.splice(index, 1);
-            // 存储新的数组
-            saveHistory(arr)
-            //调用文本框值变化事件,动态渲染数据
-            $(".search-text")[0].oninput();
-
-        })
-
-        //页面滚动事件,隐藏历史搜索框
-        window.onscroll = function () {
-            var scroTop = $(this).scrollTop();
-            if (scroTop > 100) {
-                $(".historywordBox").hide();
-            }
-        }
-
-        //点击历史搜索数据,将值添加到文本框中
-        $(".historywordBox").on("tap", ".keywords", function () {
-            var word = $(this).text();
-            $(".searchbox .search-text").val(word);
-            $(".historywordBox").hide();
-        })
-    }());
-
+>>>>>>> ecd6a98ef6efe13c47e8df066025a17bf5e3fc6d
     //关闭底部广告栏
-    $(".banner .close-banner").click(function(){
+    $(".banner .close-banner").click(function(e){
+        e=e||widow.event;
+        e.preventDefault();
         // alert("a");
         $(".banner").remove();
     });

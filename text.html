@@ -16,3 +16,14 @@
     console.log(arr);
 
 </script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script>
+    $.get({
+        rul:'http://mmb.ittun.com/api/getmoneyctrl',
+        success:function (res){
+            console.log(res);
+            
+        }
+    })
+
+</script>

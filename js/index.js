@@ -12,7 +12,6 @@ $(function ($) {
                     setTimeout(function () {
                         mui(".mui-scroll-wrapper").pullRefresh().endPulldownToRefresh();
                     }, 500)
-
                 }
             }
         }

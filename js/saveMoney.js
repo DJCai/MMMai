@@ -21,32 +21,34 @@ $(function(){
                 $(".mui-table-view").html(html);
             }
         })
-        
     }
+
     getproductInfo(currentpage);
     
     $("#selectPage").on("change",function(){
         //console.log($("option:selected").val());
-        currentpage=$(this).val();       
+        currentpage=+$(this).val();       
         getproductInfo(currentpage);
+        console.log(currentpage);     
+        
     });
-
 
     $(".next").on("click",function(){
         currentpage+=1;
         $("#selectPage").val(currentpage);
-            if(currentpage<14){
+        if(currentpage<=14){
             getproductInfo(currentpage);      
        }else{
-           currentpage=14;
            getproductInfo(14);
             $("#selectPage").val(14);
-           
-       }          
+            currentpage=14;
+       }
+           console.log(currentpage);     
     });
+
     $(".previous").on("click",function(){
         currentpage-=1;
-        console.log(currentpage);
+    
         $("#selectPage").val(currentpage);
         if(currentpage>1){
             getproductInfo(currentpage);
@@ -54,8 +56,8 @@ $(function(){
             currentpage=1;
             getproductInfo(1);
             $("#selectPage").val(1);
-            
         }
+        console.log(currentpage);             
     })
 
  });

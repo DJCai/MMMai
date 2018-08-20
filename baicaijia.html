@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引用mui -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- 引用zepo.min.js -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 引入font-awesome字体图标 -->
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+
+    <!-- 引入公共js和css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/common.js"></script>
+
+    <link rel="stylesheet" href="./css/baicaijia.css">
+
+    <script src="./js/baicaijia.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="javascript:back()">
+                <span class="mui-icon mui-icon-arrowleft"></span>
+            </a>
+            <input type="text" class="searchinput" placeholder="好宝贝,等你搜">
+            <a href="#">
+                <img src="./images/icon/header_app.png" alt="">
+            </a>
+        </div>
+        <div class="main">
+            <!-- tab栏横向滚动 -->
+            <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted navbox">
+                <div class="mui-scroll navlist">
+                    <!-- 标题栏内容 -->
+                </div>
+            </div>
+            <div class="scrollcontain">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul class="productlist">
+                            <li class="priduct">
+                                <img src="https://img.alicdn.com/bao/uploaded/i3/TB16m88IXXXXXb.XFXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg">
+                                <div class="right">
+                                    <p class="productName">
+                                        <span class="b">[包邮]</span>【创彩】纯棉加厚全棉毛巾两条装</p>
+                                    <p class="productPrice">
+                                        <i>券后</i>
+                                        <em>¥</em>8.9
+                                        <del>¥19</del>
+                                    </p>
+                                    <div class="bar clearfix">
+                                        <a href="http://shop.m.taobao.com/shop/coupon.htm?seller_id=2213057944&amp;activity_id=8cfb336284b5436b9f2c7c9343fa85f1"
+                                            class="goquan" target="_blank"></a>
+                                        <i>
+                                            <em style="width:75%;"></em>
+                                            <span>75%</span>
+                                        </i>
+                                        <b>已领75117张</b>
+                                    </div>
+                                    <div class="discountlink">
+                                        <div class="discount">
+                                            <a href="http://shop.m.taobao.com/shop/coupon.htm?seller_id=2213057944&amp;activity_id=8cfb336284b5436b9f2c7c9343fa85f1"
+                                                target="_blank">点此领10元优惠券</a>
+                                        </div>
+                                        <div class="productHref">
+                                            <a biz-itemid="539735809040" isconvert="1" href="https://item.taobao.com/item.htm?id=539735809040" target="_blank">下单链接</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="logininfo">
+                <a href="./register.html" class="login">注册</a>
+                <a href="./login.html" class="register">登录</a>
+                <a href="#header" class="return-top">返回顶部</a>
+            </div>
+            <div class="footerinfo">
+                <div>
+                    <a class="appLogin" href="#">手机APP下载</a>
+                    <span>慢慢买手机版--掌上比价平台</span>
+                </div>
+                <a href="./index.html">m.manmanbuy.com</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- 标题内容模板 -->
+<script type="text/html" id="baicaijaiTitle">
+    {{each result v i}}
+    <a data-index={{i}} data-titleId="{{v.titleId}}" class="mui-control-item {{if i==0}}mui-active {{/if}} ">
+        {{v.title}}
+    </a>
+    {{/each}}
+</script>
+
+<!-- 产品列表 -->
+<script type="text/html" id="productlist">
+    {{each list v i}}
+    <li class="priduct">
+        {{#v.productImg}}
+        <div class="right">
+            <p class="productName">
+                {{#v.productName}}
+                <p class="productPrice">
+                    {{#v.productPrice}}
+                </p>
+                {{#v.productCouponRemain}}
+                <div class="discountlink">
+                    <div class="discount">
+                        {{#v.productCoupon}}
+                    </div>
+                    <div class="productHref">
+                        {{#v.productHref}}
+                    </div>
+                </div>
+        </div>
+    </li>
+    {{/each}}
+</script>

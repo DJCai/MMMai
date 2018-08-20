@@ -1,0 +1,176 @@
+@import "./common.scss";
+.container{
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    .header{
+        height:40px;
+        background: $itemColor;
+        display:flex;
+        align-items:center;
+        a{
+            width: 40px;
+            text-align: center;
+            img{
+                width:70%;
+            }
+        }
+        input{
+            flex:1;
+            height: 30px;
+            font-size: 16px;
+            border: none;
+            border-radius:15px;
+            margin-bottom: 0;
+        }
+    }
+    .main{
+        flex:1;
+        background:#fff;
+        display:flex;
+        flex-direction:column;
+        .navbox{
+            height:38px;
+            border-bottom:1px solid #ccc;
+            .mui-active{
+                border-bottom:none;
+                color:$itemColor;
+            }
+        }
+        .scrollcontain {
+            position: relative;
+            flex:1;
+            .productlist{
+                // display:flex;
+                padding:5px;
+                background: #eee;
+                .priduct{
+                    width: 100%;
+                    background: #fff;
+                    display:flex;
+                    margin-bottom:5px;
+                    img {
+                        width: 130px;
+                        height: 130px;
+                    }
+                    .right{
+                        width: 100%;
+                        flex:1;
+                        display:flex;
+                        flex-direction:column;
+                        justify-content:space-between;
+                        padding:5px;
+                        .productName {
+                            color:#333;
+                        }
+                        .productPrice {
+                            color:#fc353a;
+                            font-size: 18px;
+                            i {
+                                font-size: 16px;
+                               
+                            }
+                            em {
+                                font-size: 12px;
+                                margin-right:3px;
+                            }
+                            del {
+                                color:#aaa;
+                                font-size: 14px;
+                            }
+                        }
+                        .bar {
+                            i {
+                                display:inline-block;
+                                width: 82px;
+                                height: 14px;
+                                border-radius:7px;
+                                font-size: 14px;
+                                line-height: 14px;
+                                text-align: center;
+                                background:$itemColor;
+                                color:#fff;
+                            }
+                            b {
+                                color:red;
+                                font-size: 12px;
+                            }
+                        }
+                        .discountlink {
+                            display:flex;
+                            justify-content:space-between;
+                            .discount {
+                                width: 110px;
+                                height: 26px;
+                                border: 1px dotted $itemColor;
+                                display:flex;
+                                justify-content:center;
+                                align-items:center;
+                                a {
+                                   color:$itemColor;
+                                   font-size: 12px; 
+                                }
+                            }
+                            .productHref {
+                                width: 60px;
+                                height: 30px;
+                                a {
+                                    display:block;
+                                    width: 100%;
+                                    line-height: 30px;
+                                    text-align: center;
+                                    background: $itemColor;
+                                    color:#fff;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+     
+    }
+    .footer{
+        height:110px;
+        width: 100%;
+        // position: fixed;
+        background: #fff;
+        bottom:0;
+        padding-top:10px;
+        .logininfo{
+            height: 34px;
+            display:flex;
+            a{
+                flex:1;
+                border-top:1px solid #e6e6e6;
+                border-bottom:1px solid#e6e6e6;
+                display:flex;
+                justify-content: center;
+                align-items:center;
+                color:#333;
+                font-size: 14px;
+                &:nth-child(n+2){
+                    border-left:1px solid #e6e6e6;
+                }
+            }
+        }
+        .footerinfo{
+            height: 64px;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            a{
+                color:#333;
+            }
+            .appLogin{
+                color:$itemColor;
+                margin-right:5px;
+            }
+        }
+
+    }
+}

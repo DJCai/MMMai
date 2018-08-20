@@ -1,0 +1,242 @@
+@charset "UTF-8";
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 12px”宋体”, ”Arial Narrow”, HELVETICA;
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: #2d374b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #cd0200;
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+i {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  height: 40px;
+  background: #ff841d;
+  display: flex;
+  align-items: center;
+}
+.container .header a {
+  width: 40px;
+  text-align: center;
+}
+.container .header a img {
+  width: 70%;
+}
+.container .header input {
+  flex: 1;
+  height: 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 0;
+}
+.container .main {
+  flex: 1;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.container .main .navbox {
+  height: 38px;
+  border-bottom: 1px solid #ccc;
+}
+.container .main .navbox .mui-active {
+  border-bottom: none;
+  color: #ff841d;
+}
+.container .main .scrollcontain {
+  position: relative;
+  flex: 1;
+}
+.container .main .scrollcontain .productlist {
+  padding: 5px;
+  background: #eee;
+}
+.container .main .scrollcontain .productlist .priduct {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  margin-bottom: 5px;
+}
+.container .main .scrollcontain .productlist .priduct img {
+  width: 130px;
+  height: 130px;
+}
+.container .main .scrollcontain .productlist .priduct .right {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}
+.container .main .scrollcontain .productlist .priduct .right .productName {
+  color: #333;
+}
+.container .main .scrollcontain .productlist .priduct .right .productPrice {
+  color: #fc353a;
+  font-size: 18px;
+}
+.container .main .scrollcontain .productlist .priduct .right .productPrice i {
+  font-size: 16px;
+}
+.container .main .scrollcontain .productlist .priduct .right .productPrice em {
+  font-size: 12px;
+  margin-right: 3px;
+}
+.container .main .scrollcontain .productlist .priduct .right .productPrice del {
+  color: #aaa;
+  font-size: 14px;
+}
+.container .main .scrollcontain .productlist .priduct .right .bar i {
+  display: inline-block;
+  width: 82px;
+  height: 14px;
+  border-radius: 7px;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  background: #ff841d;
+  color: #fff;
+}
+.container .main .scrollcontain .productlist .priduct .right .bar b {
+  color: red;
+  font-size: 12px;
+}
+.container .main .scrollcontain .productlist .priduct .right .discountlink {
+  display: flex;
+  justify-content: space-between;
+}
+.container .main .scrollcontain .productlist .priduct .right .discountlink .discount {
+  width: 110px;
+  height: 26px;
+  border: 1px dotted #ff841d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .main .scrollcontain .productlist .priduct .right .discountlink .discount a {
+  color: #ff841d;
+  font-size: 12px;
+}
+.container .main .scrollcontain .productlist .priduct .right .discountlink .productHref {
+  width: 60px;
+  height: 30px;
+}
+.container .main .scrollcontain .productlist .priduct .right .discountlink .productHref a {
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  text-align: center;
+  background: #ff841d;
+  color: #fff;
+  font-size: 12px;
+}
+.container .footer {
+  height: 110px;
+  width: 100%;
+  background: #fff;
+  bottom: 0;
+  padding-top: 10px;
+}
+.container .footer .logininfo {
+  height: 34px;
+  display: flex;
+}
+.container .footer .logininfo a {
+  flex: 1;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+}
+.container .footer .logininfo a:nth-child(n+2) {
+  border-left: 1px solid #e6e6e6;
+}
+.container .footer .footerinfo {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.container .footer .footerinfo a {
+  color: #333;
+}
+.container .footer .footerinfo .appLogin {
+  color: #ff841d;
+  margin-right: 5px;
+}
+
+/*# sourceMappingURL=baicaijia.css.map */

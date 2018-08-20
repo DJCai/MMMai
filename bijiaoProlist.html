@@ -94,9 +94,9 @@
     
                     <div class="footer22">
                             <div class="logininfo">
-                                <a href="#" class="login">注册</a>
-                                <a href="#" class="register">登录</a>
-                                <a href="#" class="return-top">返回顶部</a>
+                                <a href="register.html" class="login">注册</a>
+                                <a href="login.html" class="register">登录</a>
+                                <a  class="return-top">返回顶部</a>
                             </div>
                             <div class="footerinfo">
                                 <div>
@@ -178,4 +178,9 @@
 
 
 
+<script>
+    $('.return-top').click(function(){
+        mui('.mui-scroll-wrapper').scroll().scrollTo(0,0,100);//100毫秒滚动到顶
+    })
+</script>
 

@@ -64,4 +64,8 @@ $(function(){
         // 发表成功后清空文本框
         $("textarea").val("");
     });
+
+    $('.scrollto').click(function(){
+        mui('.mui-scroll-wrapper').scroll().scrollTo(0,0,100);//100毫秒滚动到顶
+    })
 })

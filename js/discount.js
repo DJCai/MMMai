@@ -10,5 +10,9 @@ $(function(){
 
     $('.products').on('click','.jump',function(){
         location.href = "discountdetail.html?productid="+$(this).data('id');
+    });
+
+    $('.scrollto').click(function(){
+        mui('.mui-scroll-wrapper').scroll().scrollTo(0,0,100);//100毫秒滚动到顶
     })
 })

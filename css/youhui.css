@@ -1,0 +1,184 @@
+@charset "UTF-8";
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 12px”宋体”, ”Arial Narrow”, HELVETICA;
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: #2d374b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #cd0200;
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+i {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  flex-basis: 50px;
+  background: #f4483e;
+  display: flex;
+  justify-content: space-between;
+}
+.container .header a {
+  display: flex;
+  align-items: center;
+}
+.container .header a.back {
+  margin-left: 10px;
+}
+.container .header a.back i {
+  color: #fff;
+  font-size: 28px;
+}
+.container .header a.youhui {
+  color: #fff;
+  font-size: 23px;
+}
+.container .header a.download {
+  justify-content: center;
+}
+.container .header a img {
+  width: 70%;
+}
+.container .main {
+  flex: 1;
+  position: relative;
+}
+.container .main .mui-scroll {
+  position: absolute;
+}
+.container .main .mui-scroll .hot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 10px 0px 0px 8px;
+}
+.container .main .mui-scroll .hot li {
+  width: 32%;
+  height: 80px;
+  border: 1px solid #ccc;
+  margin-bottom: 8px;
+  margin-right: 5px;
+}
+.container .main .mui-scroll .hot li:nth-child(3n) {
+  margin-right: 0px;
+}
+.container .main .mui-scroll .hot li a {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+}
+.container .main .mui-scroll .hot li a img {
+  width: 50px;
+  height: 50px;
+}
+.container .main .mui-scroll .hot li a .title {
+  font-size: 18px;
+  color: #5a5a5a;
+}
+.container .footer {
+  flex-basis: 110px;
+  width: 100%;
+  background: #fff;
+  bottom: 0;
+  padding-top: 10px;
+}
+.container .footer .logininfo {
+  height: 34px;
+  display: flex;
+}
+.container .footer .logininfo a {
+  flex: 1;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+}
+.container .footer .logininfo a:nth-child(n+2) {
+  border-left: 1px solid #e6e6e6;
+}
+.container .footer .footerinfo {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.container .footer .footerinfo a {
+  color: #333;
+}
+.container .footer .footerinfo .appLogin {
+  color: #ff841d;
+  margin-right: 5px;
+}
+
+/*# sourceMappingURL=youhui.css.map */

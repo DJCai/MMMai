@@ -69,38 +69,29 @@
    }
    .page{
        display: flex;
-       position: relative;
        justify-content: space-around;
        align-items: center;
        height: 36px;
        margin-top: 20px;
-       .fenye{
-        // border: 1px solid #bababa;
-        // font-size: 16px;
-        height: 34px;
-        width: 40px;
-        position: relative;
-        // overflow: hidden;  
+      .fenye{
+        border: 1px solid #bababa;
+        border-radius: 3px;
+        font-size: 16px;
+        padding: 5px 20px;
+        align-items: center;
+       
         select{
-            position: absolute;
-            
-              left: 0;
-              top: 0;
-              width: 100%;
+            width: auto;
+            padding: 0 2%;
+            margin: 0;
+            option{
+                text-align: center;
+            }
         }
        }
    }
 }
 
-// .footer{
-//     height:94px;
-//     width: 100%;
-//     background: #fff;
-//     padding-top:10px;
-//     position: relative;
-//     // z-index: 1000;
-
-// }
 .banner{
     z-index: 1000;
 }

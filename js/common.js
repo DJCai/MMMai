@@ -116,8 +116,8 @@ $(function () {
     });
 
 
-    // 搜索框的功能模块
-    ;(function () {
+    // 搜索框功能模块
+    function searchFunction(){
         //搜索文本框事件,值变化事件
         $(".search-text")[0].oninput = function () {
             $(".historywordBox").show();
@@ -190,8 +190,8 @@ $(function () {
             $(".searchbox .search-text").val(word);
             $(".historywordBox").hide();
         })
-    }());
-
+    }
+   
     //关闭底部广告栏
     $(".banner .close-banner").click(function(e){
         e=e||widow.event;

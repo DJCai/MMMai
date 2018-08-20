@@ -43,12 +43,34 @@ $(function(){
     //     console.log(li);
     //     $('textarea').val("");
     // })
-
+    var keysArr = getKeysArr();
+    renderHistory(keysArr);
     function renderHistory(keysArr) {
         if (keysArr.length == 0) {
             $(".list ul").hide();
         } else {
             $(".list ul").show();
+            var datetime = new Date();
+            var month = datetime.getMonth() + 1;
+            var date = datetime.getDate();
+            // var hour = datetime.getHours();
+            // var minute = datetime.getMinutes();
+            if(month<10){
+                month = "0"+ month;
+            }
+            if(date<10){
+                date = "0" + date;
+            }
+            // if(hour<10){
+            //     hour = "0" +  hour;
+            // }
+            // if(minute<10){
+            //     minute = "0" + minute;
+            // }
+
+            // var timer = datetime.getFullYear()+"/" + month + "/"+ date + " " + hour + ":" + minute;
+            var timer = datetime.getFullYear()+"/" + month + "/"+ date;
+            keysArr.timer = timer;
             var htmstr =  template("historyWords", {keys: keysArr});
             $(".details ul").html(htmstr);
         }
@@ -58,7 +80,8 @@ $(function(){
         var keysArr = getKeysArr();
         var keyword = $("textarea").val();
         if (keyword.length == 0) return;
-        keysArr.push(keyword);
+        // keysArr.push(keyword);
+        keysArr.unshift(keyword);
         saveHistory(keysArr);
         renderHistory(keysArr);
         // 发表成功后清空文本框

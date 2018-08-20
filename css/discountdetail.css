@@ -45,7 +45,7 @@ html, body {
 .container header a.download {
   width: 34px;
   height: 34px;
-  background: url("../images/header_app.png") 0 0/34px 34px;
+  background: url("../images/icon/header_app.png") 0 0/34px 34px;
 }
 .container main {
   flex: 1;
@@ -178,6 +178,13 @@ main .mui-scroll .details .list ul li a p img {
   flex-basis: 60px;
   height: 60px;
   border-radius: 50%;
+}
+main .mui-scroll .details .list ul li a .comm {
+  flex: 1;
+}
+main .mui-scroll .details .list ul li a .time {
+  flex-basis: 150;
+  justify-content: flex-end;
 }
 
 /*# sourceMappingURL=discountdetail.css.map */

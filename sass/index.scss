@@ -13,6 +13,9 @@ li {
 img {
     display: block;
 }
+i {
+    font-style: normal;
+}
 $itemColor:#ff841d;
 .mui-scroll{
     .header{
@@ -20,7 +23,7 @@ $itemColor:#ff841d;
         background: $itemColor;
         display:flex;
         justify-content:space-between;
-        a{
+        a {
             display:flex;
             align-items: center;
             &.logo{

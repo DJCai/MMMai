@@ -80,6 +80,14 @@ main{
                                 }
                                 margin-right: 10px;
                             }
+
+                            .comm{
+                                flex:1;
+                            }
+                            .time{
+                                flex-basis:150;
+                                justify-content: flex-end;
+                            }
                         }
                     }
                 }

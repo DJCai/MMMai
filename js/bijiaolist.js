@@ -2,6 +2,7 @@ $(function(){
     var urlStr = location.href;
     var query = urlTool(urlStr);
     var productid = query.productId?query.productId:0;
+    var cid = query.categoryid;
 
     var data={};
     var  arr=[];
@@ -55,6 +56,9 @@ $(function(){
     });
 
 
-
-
+   // 点击导航栏 
+  $(".navbar").on("click",".categorynavgitar",function(){
+    
+    window.location.href = "./bijiaoProlist.html?categoryid=" + cid ;
+  });
 });

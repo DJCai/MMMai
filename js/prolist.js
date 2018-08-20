@@ -49,7 +49,7 @@ $(function () {
                     var brandname = $(this).data("name");
                     var productId = $(this).data("productid");
                     // console.log(brandname);
-                    window.location.href = "./bijiaolist.html?brandname=" + brandname + "&canme=" + data["cname"] + "&productId=" + productId;
+                    window.location.href = "./bijiaolist.html?brandname=" + brandname + "&canme=" + data["cname"] + "&productId=" + productId+"&categoryid="+cid;
                 });
             }
         });
@@ -64,7 +64,7 @@ $(function () {
     function creatPage(clicknum,num){
         var obj = {};
         obj.num = num;  //总页码
-        obj.clicknum=clicknum;
+        obj.clicknum=clicknum; //全局中的
         var numarr = [];
         for (var i = 1; i <= num; i++) {
             numarr.push(i);

@@ -324,6 +324,9 @@ html, body {
   justify-content: space-between;
   margin: 0px;
   padding: 0px;
+  width: 60px;
+  height: 33px;
+  padding: 1px;
   background-color: #fff;
   position: relative;
 }
@@ -332,7 +335,7 @@ html, body {
   padding: 0;
   padding-left: 10px;
   width: 50px;
-  height: 33px;
+  height: 30px;
   border: 0px;
 }
 .main .page .fenye .pagenum #selectPage {
@@ -354,10 +357,11 @@ html, body {
 }
 .main .page .fenye .sanjiao {
   font-size: 14px;
-  padding-right: 5px;
+  margin-left: 10px;
   line-height: 33px;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  display: block;
+  right: 0px;
 }
 
 .banner {

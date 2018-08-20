@@ -1,0 +1,269 @@
+@import "./common.scss";
+
+$discolor:#f4483e;
+i,
+em{
+    font-style: normal;
+}
+
+b {
+    font-weight: 400;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background-color: $discolor;
+
+    padding: 0 5px;
+    h4 {
+        font-size: 18px;
+        color: #fff;
+        float: left;
+        line-height: 40px;
+        margin-left: 80px;
+    }
+    .homebutton {
+        float: left;
+        height: 100%;
+        padding-top: 7px;
+        .mui-icon-back {
+            color: #fff;
+            font-size: 26px;
+        }
+    }
+    .download {
+        float: right;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        .mui-icon-download {
+            color: #fff;
+            padding-left: 12px;
+        }
+        .font {
+            color: #fff;
+            font-size: 12px;
+        }
+    }
+}
+
+#slider {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 90px;
+    #sliderSegmentedControl{
+        .mui-scroll {
+            height: 38px;
+            background-color: #fff;
+            line-height: 38px;
+            padding: 0 5px;
+                a {
+                    font-size: 14px;
+                    height: 100%;
+                    &.mui-active {
+                        padding: 0;
+                        margin: 0 20px;
+                        color: $discolor;
+                        border-bottom: 2px solid $discolor;
+                    }
+                }
+        }
+    }
+    .mui-slider-group {
+        width: 100%;
+        .mui-table-view {
+            display: flex;
+            flex-direction: column;
+            background-color: #f7f7f7;
+            .shangping {
+                display: flex;
+                width: 100%;
+                height: 130px;
+                background-color: #fff;
+                padding: 9px 3px;
+                margin-bottom: 5px;
+                .left {
+                    flex: 1;
+                    position: relative;
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        top: 0;
+                    }
+                }
+                .right {
+                    margin:0 2px;
+                    flex: 2;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 4px;
+                    .titele {
+                        width: 100%;
+                        height: 38px;
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                    .jiage {
+                        height: 26px;
+                        line-height: 26px;
+                        color: $discolor;
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                        i{
+                            font-size: 16px;
+                            margin-right: 4px;
+                        }
+                        em {
+                            font-size: 12px;
+                        }
+                        del {
+                            font-size: 12px;
+                            color: #ccc;
+                            margin-left: 5px;
+                        }
+
+
+                    }
+                    .jindutiao {
+                        height: 14px;
+                        .youhuijuan {
+                            color: $discolor;
+                            font-size: 12px;
+                            margin-left: 10px;
+                            line-height: 12px;
+                            i {
+                                float: left;
+                                width: 80px;
+                                height: 10px;
+                                background-color: #ffb7b7;
+                                border-radius: 6px;
+                                border: 1px solid $discolor;
+                                position: relative;
+                                margin-left: -10px;
+                                margin-right: 5px;
+                                em {
+                                    float: left;
+                                    height: 100%;
+                                    background-color: $discolor;
+                                }
+                                span {
+                                    position: absolute;
+                                    width: 100%;
+                                    line-height: 10px;
+                                    color: #fff;
+                                    top: 0;
+                                    left: 30px;
+                                }
+                            }
+                        }
+                    }
+                    .footer {
+                        height: 30px;
+                        margin-top: 6px;
+                        a:first-child {
+                            float: left;
+                            height: 24px;
+                            border: 1px dotted $discolor;
+                            font-size: 12px;
+                            text-align: center;
+                            line-height: 24px;
+                            color: $discolor;
+                            margin-top: 2px;
+                            padding: 0 4px;
+                        }
+                        a:last-child {
+                            float: right;
+                            height: 28px;
+                            width: 58px;
+                            background-color: $discolor;
+                            color: #ffffff;
+                            text-align: center;
+                            line-height: 30px;
+                            font-size: 12px;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            }
+        }   
+    }  
+}
+
+.foolter {
+    position: absolute;
+    bottom: 0;
+    height: 92px;
+    width: 100%;
+    background-color: #efefef;
+    border-top: 1px solid #ccc;
+    .user {
+        height: 32px;
+        border-bottom: 1px solid #ccc;
+        .denglu {
+            float: left;
+            width: 107px;
+            height: 32px;
+            border-right: 1px solid #ccc;
+            text-align: center;
+            line-height: 32px;
+            font-size: 14px;
+        }
+        .zhuce {
+            float: left;
+            width: 111px;
+            height: 32px;
+            border-right: 1px solid #ccc;
+            text-align: center;
+            line-height: 32px;
+            font-size: 14px;
+        }
+        .returntop {
+            float: left;
+            width: 149px;
+            height: 32px;
+            line-height: 32px;
+            font-size: 14px;
+            text-align: center;
+            .mui-icon-pulldown {
+                transform: rotateZ(180deg);
+                font-weight: 700;
+            }
+        }
+    }
+    .app {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 12px;
+        .red {
+            color: $discolor;
+        }
+        .huise {
+            color: #666666;
+        }
+        .wangzhi {
+            color: #666;
+            line-height: 12px;
+        }
+    }
+}
+
+.jiantou {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: black;
+    opacity: 0.6;
+    position: fixed;
+    bottom: 30px;
+    right: 0;
+    span {
+        color: #fff;
+        transform: rotateZ(180deg);
+        font-size: 20px;
+        margin-left: 10px;
+        line-height: 40px;
+    }
+}

@@ -42,8 +42,8 @@
                     <ul class="nav">
                         <script type="text/html" id="navlist">
                             {{each result v i}}
-                            <li>
-                                <a href="{{v.titlehref}}" data-indexmenuId="{{v.indexmenuId}}" {{if v.name =="更多"}} class='moreNav'{{/if}}>
+                            <li  data-href="{{v.titlehref}}" data-indexmenuId="{{v.indexmenuId}}" {{if v.name =="更多"}} class='moreNav'{{/if}}>
+                                <a>
                                     {{#v.img}}
                                     <span>{{v.name}}</span>
                                 </a>
@@ -60,8 +60,8 @@
                     <ul class="products">
                         <script type="text/html" id="productlist">
                             {{each result v i}}
-                            <li class="product">
-                                <a href="discountdetail.html?productid={{v.productId}}">
+                            <li class="product" data-href="discountdetail.html?productid={{v.productId}}">
+                                <a>
                                     <div class="pic">
                                         <!-- <img src="./images/icon/ic_search.png"> -->
                                         {{#v.productImgSm}}

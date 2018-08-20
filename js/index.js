@@ -62,6 +62,11 @@ $(function ($) {
         data.pagesize = 3;
         mui(".mui-scroll-wrapper").pullRefresh().pulldownLoading(); //手动触发下拉刷新
     })
+    // 导航菜单的点击事件
+      $('.main .nav').on('tap', 'li', function (e) {
+        var href = $(this).data('href');
+        location = href;
+    });
 
     // 导航菜单栏的更多部分
     $('.main .nav').on('tap', '.moreNav', function (e) {
@@ -73,4 +78,10 @@ $(function ($) {
         }
         getnavlist();
     });
+
+    //折扣产品点击事件
+    $('.products').on('tap', '.product', function () {
+        var href = $(this).data('href');
+        location = href;
+    })
 });

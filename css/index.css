@@ -17,6 +17,10 @@ img {
   display: block;
 }
 
+i {
+  font-style: normal;
+}
+
 .mui-scroll .header {
   height: 50px;
   background: #ff841d;

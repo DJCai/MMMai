@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引用mui -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- 引用zepo.min.js -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 引入font-awesome字体图标 -->
+    <!-- <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css"> -->
+
+    <!-- 引入公共js和css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/common.js"></script>
+
+
+    <link rel="stylesheet" href="./css/saveMoney.css">
+    <script src="./js/saveMoney.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="./index.html" class="logo">
+                <img src="./images/icon/header_logo.png" alt="">
+            </a>
+            <a href="#" class="download">
+                <img src="./images/icon/header_app.png" alt="">
+            </a>
+        </div>
+        <div class="main">
+            <div class="searchbox">
+                <div>
+                    <input type="text" name="" class="search-text" placeholder="请输入您想比价的商品">
+                    <ul class="historywordBox">
+                        <!-- <li>
+                            <span>电视</span>
+                            <span class="mui-icon mui-icon-trash mui-pull-right">
+                            </span>
+                        </li> -->
+                    </ul>
+                </div>
+                <button class="search">搜索</button>
+            </div>
+            <div class="nav">
+                <ul class="mui-table-view">
+                    <!-- 模板渲染 -->
+                </ul>
+                <div class="page">
+                    <table width="100%">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <button>上一页</button>
+                                </td>
+                                <td>
+                                    <select id="selectPage">▼
+                                        <option value="1">1/14</option>
+                                        <option value="2">2/14</option>
+                                        <option value="3">3/14</option>
+                                        <option value="4">4/14</option>
+                                        <option value="5">5/14</option>
+                                        <option value="6">6/14</option>
+                                        <option value="7">7/14</option>
+                                        <option value="8">8/14</option>
+                                        <option value="9">9/14</option>
+                                        <option value="10">10/14</option>
+                                        <option value="11">11/14</option>
+                                        <option value="12">12/14</option>
+                                        <option value="13">13/14</option>
+                                        <option value="14">14/14</option>
+                                </td>
+                                <td>
+                                    <button>下一页</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="logininfo">
+                <a href="#" class="login">注册</a>
+                <a href="#" class="register">登录</a>
+                <a href="#" class="return-top">返回顶部</a>
+            </div>
+            <div class="footerinfo">
+                <div>
+                    <a class="appLogin" href="#">手机APP下载</a>
+                    <span>慢慢买手机版--掌上比价平台</span>
+                </div>
+                <a href="./index.html">m.manmanbuy.com</a>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="left">
+            <a href="#" class="close-banner">X</a>
+            <img src="./images/icon/man.jpg" alt="">
+            <div>
+                <p>慢慢买</p>
+                <p>全网比价,查历史价格</p>
+            </div>
+        </div>
+        <a href="#" class="opennow ">立即打开</a>
+    </div>
+    <!-- <div class="gotop">
+        s
+    </div> -->
+</body>
+
+</html>
+<script type="text/html" id="productslist">
+    {{each result v i}}
+    <li class="mui-table-view-cell">
+        <a href="./saveMoneyProduct.html?productid={{v.productId}}" data-id="{{v.productId}}">
+            <div class="left">
+                {{#v.productImgSm}}
+            </div>
+            <div class="right">
+                <p class="name">{{v.productName}}
+                    <span class="price">{{v.productPinkage}}</span>
+                </p>
+                <p class="ly">
+                    <span class="ad">{{v.productFrom}}&nbsp|</span>
+                    <span class="time">{{v.productTime}}</span>
+                    <span class="mui-pull-right">{{v.productComCount}}</span>
+                </p>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>

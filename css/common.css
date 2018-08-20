@@ -63,6 +63,8 @@ table {
 
 p {
   word-wrap: break-word;
+<<<<<<< HEAD
+=======
 }
 
 html, body {
@@ -242,6 +244,7 @@ html, body {
   color: #fff;
   box-shadow: 0px -1px 1px 0 red inset;
   font-size: 12px;
+>>>>>>> b472ab1502844d1a808c7d0ef90ebadf46edf9d7
 }
 
 /*# sourceMappingURL=common.css.map */

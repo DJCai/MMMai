@@ -26,15 +26,38 @@ $(function(){
     getproductInfo(currentpage);
     
     $("#selectPage").on("change",function(){
-        // console.log($("option:selected",this).val());
-        // if($("option:selected",this).val()=="10")
-        currentpage=$("option:selected",this).val();       
+        //console.log($("option:selected").val());
+        currentpage=$(this).val();       
         getproductInfo(currentpage);
     });
+
+
     $(".next").on("click",function(){
-        getproductInfo(currentpage+1);
-        console.log(currentpage);        
+        currentpage+=1;
+        $("#selectPage").val(currentpage);
+            if(currentpage<14){
+            getproductInfo(currentpage);      
+       }else{
+           currentpage=14;
+           getproductInfo(14);
+            $("#selectPage").val(14);
+           
+       }          
+    });
+    $(".previous").on("click",function(){
+        currentpage-=1;
+        console.log(currentpage);
+        $("#selectPage").val(currentpage);
+        if(currentpage>1){
+            getproductInfo(currentpage);
+        }else{
+            currentpage=1;
+            getproductInfo(1);
+            $("#selectPage").val(1);
+            
+        }
     })
+
  });
 
 

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买比价网-手机版</title>
+    <link rel="stylesheet" href="./fontsss/base.css">
+    <link rel="stylesheet" href="./css/shengqian.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <a class="logo" href="index.html">
+            <i class="iconfont">&#xe645;</i>
+        </a>
+        <div class="title">
+            <h3>省钱控-最新优惠</h3>
+        </div>
+        <a class="download" href="#">
+        </a>
+    </header>
+
+    <section class="money-section">
+        <div class="section-top">
+            
+        </div>
+        <div class="section-bottom">
+            <div class="money-page">
+                <a href="javascript:;" class="pre-page">上一页</a>
+                <select name="bb" class="mony-select" autocomplete="off">
+                    </select>
+                <a href="javascript:;" class="nex-page">下一页</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部部分开始 -->
+    <footer>
+        <div class="foot_user">
+            <a href="#" class="foot_login">登录</a>
+            <a href="#" class="foot_register">注册</a>
+            <a href="#" class="foot_return">
+                <i class="iconfont">&#xe795;</i> 返回顶部
+            </a>
+        </div>
+        <div class="foot_text">
+            <div class="text_box">
+                <span class="text_sp">手机APP下载</span>
+                <span class="text_sp">慢慢买手机版</span>
+                <span class="text_sp">--掌上比价平台</span>
+            </div>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 底部部分结束 -->
+</body>
+
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./js/shengqian.js"></script>
+
+<!-- 内容部分模板 -->
+<script type="text/template" id="money">
+    {{each data.result value index}}
+    <div class="money-product">
+        <a href="sqxqy.html?productid={{value.productId}}">
+            <div class="money-img">
+                {{@value.productImgSm}}
+            </div>
+            <div class="money-content">
+                <h3>{{value.productName}}</h3>
+                <p>{{value.productPinkage}}</p>
+                <p>
+                    <span>{{value.productFrom}} | {{value.productTime}}</span>
+                    <span>
+<i class="iconfont">&#xe609;</i> {{value.productComCount.slice(1,2)}}</span>
+                </p>
+            </div>
+        </a>
+    </div>
+    {{/each}}
+
+</script>
+
+</html>

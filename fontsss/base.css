@@ -1,0 +1,292 @@
+@charset "UTF-8";
+/*css 初始化 */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img {
+  margin: 0;
+  padding: 0;
+  /*清除元素的内外边距*/
+}
+
+fieldset,
+img,
+input,
+button,
+textarea {
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline-style: none;
+  /*外面环绕线*/
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/*去掉原样式中的小黑点*/
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "Microsoft YaHei", "微软雅黑";
+  /*字体的自动识别*/
+}
+
+select,
+input {
+  vertical-align: middle;
+}
+
+/*输入字居中显示*/
+select,
+input,
+textarea {
+  font-size: 12px;
+  margin: 0;
+}
+
+/**/
+textarea {
+  resize: none;
+  /*不可以随意拖动*/
+}
+
+/*防止拖动*/
+img {
+  display: block;
+  width: 100%;
+  border: 0;
+  /*  去掉图片底部默认的3像素空白缝隙*/
+}
+
+table {
+  border-collapse: collapse;
+  /*合并外连线*/
+}
+
+body {
+  font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+  /*unitedCode的写法，宋体的写法*/
+  color: #666;
+  /*150%基于当前字体尺寸的百分比行间距*/
+  background: #ffffff;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+  /*IE/7/6*/
+  /*兼容IE6下的写法*/
+}
+
+a {
+  /*  继承父元素 */
+  color: inherit;
+  color: #666;
+  /*a 标签是不继承颜色 的*/
+  text-decoration: none;
+}
+
+a:hover {
+  color: #C81623;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+
+s,
+i,
+em {
+  /*一般是起装饰作用*/
+  font-style: normal;
+  /*去掉原有的样式*/
+  text-decoration: none;
+  /*去掉下划线或是删除线*/
+}
+
+.col-red {
+  color: #f10215 !important;
+  /*京东主色调*/
+}
+
+/*公共类*/
+.w {
+  /*版心 提取 */
+  width: 1190px;
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.al {
+  text-align: left;
+}
+
+.ac {
+  text-align: center;
+}
+
+.ar {
+  text-align: right;
+}
+
+.hide {
+  display: none;
+}
+
+.pr {
+  position: relative;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("../fontsss/font/iconfont.eot");
+  src: url("../fontsss/font/iconfont.eot?#iefix") format("embedded-opentype"), url("../fontsss/font/iconfont.woff") format("woff"), url("../fontsss/font/iconfont.ttf") format("truetype"), url("../fontsss/font/iconfont.svg#iconfont") format("svg");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*css初始化完成*/
+@font-face {
+  font-family: 'iconfont';
+  src: url("../fontsss/font_r/ficonfont.eot");
+  src: url("../fontsss/font_r/iconfont.eot?#iefix") format("embedded-opentype"), url("../fontsss/font_r/iconfont.woff") format("woff"), url("../fontsss/font_r/iconfont.ttf") format("truetype"), url("../fontsss/font_r/iconfont.svg#iconfont") format("svg");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("../fontsss/font_f/iconfont.eot");
+  src: url("../fontsss/font_f/iconfont.eot?#iefix") format("embedded-opentype"), url("../fontsss/font_f/iconfont.woff") format("woff"), url("../fontsss/font_f/iconfont.ttf") format("truetype"), url("../fontsss/font_f/iconfont.svg#iconfont") format("svg");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("../fontsss/font_m/iconfont.eot");
+  src: url("../fontsss/font_m/iconfont.eot?#iefix") format("embedded-opentype"), url("../fontsss/font_m/iconfont.woff") format("woff"), url("../fontsss/font_m/iconfont.ttf") format("truetype"), url("../fontsss/font_m/iconfont.svg#iconfont") format("svg");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("../fontsss/font_v/iconfont.eot");
+  src: url("../fontsss/font_v/iconfont.eot?#iefix") format("embedded-opentype"), url("../fontsss/font_v/iconfont.woff") format("woff"), url("../fontsss/font_v/iconfont.ttf") format("truetype"), url("../fontsss/font_v/iconfont.svg#iconfont") format("svg");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("../fontsss/font_d/iconfont.eot");
+  src: url("../fontsss/font_d/iconfont.eot?#iefix") format("embedded-opentype"), url("../fontsss/font_d/iconfont.woff") format("woff"), url("../fontsss/font_d/iconfont.ttf") format("truetype"), url("../fontsss/font_d/iconfont.svg#iconfont") format("svg");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("../fontsss/font_0i/ficonfont.eot");
+  src: url("../fontsss/font_0i/iconfont.eot?#iefix") format("embedded-opentype"), url("../fontsss/font_0i/iconfont.woff") format("woff"), url("../fontsss/font_0i/iconfont.ttf") format("truetype"), url("../fontsss/font_0i/iconfont.svg#iconfont") format("svg");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*# sourceMappingURL=base.css.map */

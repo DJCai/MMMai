@@ -49,6 +49,26 @@ $(function(){
             $(".list ul").hide();
         } else {
             $(".list ul").show();
+            var datetime = new Date();
+            var month = datetime.getMonth() + 1;
+            var date = datetime.getDate();
+            var hour = datetime.getHours()
+            var minute = datetime.getHours()
+            if(month<10){
+                month = month + "";
+            }
+            if(date<10){
+                date = date + "";
+            }
+            if(hour<10){
+                hour = hour + "";
+            }
+            if(minute<10){
+                minute = minute + "";
+            }
+
+            var timer = datetime.getFullYear()+"/" + month + "/"+ date + " " + hour + ":" + minute;
+            keysArr.timer = timer;
             var htmstr =  template("historyWords", {keys: keysArr});
             $(".details ul").html(htmstr);
         }

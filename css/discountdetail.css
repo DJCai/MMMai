@@ -179,5 +179,12 @@ main .mui-scroll .details .list ul li a p img {
   height: 60px;
   border-radius: 50%;
 }
+main .mui-scroll .details .list ul li a .comm {
+  flex: 1;
+}
+main .mui-scroll .details .list ul li a .time {
+  flex-basis: 150;
+  justify-content: flex-end;
+}
 
 /*# sourceMappingURL=discountdetail.css.map */

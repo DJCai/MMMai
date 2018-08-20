@@ -43,6 +43,10 @@ em {
   font-style: normal;
 }
 
+i {
+  font-style: normal;
+}
+
 li {
   list-style: none;
 }
@@ -59,6 +63,185 @@ table {
 
 p {
   word-wrap: break-word;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+}
+.container .header {
+  background: #ff841d;
+  display: flex;
+  justify-content: space-between;
+}
+.container .header a {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.container .header a.logo {
+  height: 50px;
+  padding-left: 12px;
+}
+.container .header a.download {
+  height: 50px;
+  justify-content: center;
+}
+.container .header a img {
+  width: 70%;
+}
+.container .main .searchbox {
+  padding: 10px;
+  border-bottom: 2px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main .searchbox div {
+  position: relative;
+  height: 30px;
+  flex: 1;
+  border-radius: 15px;
+  background: #f1f1f1;
+}
+.container .main .searchbox div .search-text {
+  height: 100%;
+  flex: 1;
+  border-radius: 15px;
+  border-radius: 15px;
+  border: none;
+  background: #f1f1f1;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.container .main .searchbox div .historywordBox {
+  position: absolute;
+  top: 31px;
+  background: #fff;
+  width: 100%;
+  padding: 0;
+}
+.container .main .searchbox div .historywordBox li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  border-bottom: 1px solid #ccc;
+}
+.container .main .searchbox div .historywordBox li span {
+  font-size: 16px;
+}
+.container .main .searchbox div .historywordBox li span.delete-keyword {
+  width: 30px;
+}
+.container .main .searchbox div .historywordBox li span.keywords {
+  flex: 1;
+}
+.container .main .searchbox div .historywordBox li.active {
+  background: #ccc;
+}
+.container .main .searchbox .search {
+  width: 64px;
+  height: 100%;
+  border-radius: 15px;
+  background: #ff841d;
+  color: #fff;
+  border: none;
+}
+.container .footer {
+  height: 110px;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  bottom: 0;
+  padding-top: 10px;
+}
+.container .footer .logininfo {
+  height: 34px;
+  display: flex;
+}
+.container .footer .logininfo a {
+  flex: 1;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+}
+.container .footer .logininfo a:nth-child(n+2) {
+  border-left: 1px solid #e6e6e6;
+}
+.container .footer .footerinfo {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.container .footer .footerinfo a {
+  color: #333;
+}
+.container .footer .footerinfo .appLogin {
+  color: #ff841d;
+  margin-right: 5px;
+}
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+}
+.banner .left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.banner .left .close-banner {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: #fff;
+  background: #ccc;
+  line-height: 20px;
+  text-align: center;
+}
+.banner .left img {
+  width: 40px;
+  height: 40px;
+  margin: 0 12px;
+}
+.banner .left div p {
+  color: #999;
+}
+.banner .left div p:nth-child(1) {
+  font-size: 16px;
+}
+.banner .left div p:nth-child(2) {
+  font-size: 12px;
+}
+.banner .opennow {
+  height: 32px;
+  width: 74px;
+  text-align: center;
+  line-height: 32px;
+  background: #ff841d;
+  color: #fff;
+  box-shadow: 0px -1px 1px 0 red inset;
+  font-size: 12px;
 }
 
 i,
@@ -96,18 +279,9 @@ b {
 }
 .header .download {
   float: right;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 .header .download .mui-icon-download {
   color: #fff;
@@ -143,21 +317,11 @@ b {
   width: 100%;
 }
 #slider .mui-slider-group .mui-table-view {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background-color: #f7f7f7;
 }
 #slider .mui-slider-group .mui-table-view .shangping {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 130px;
@@ -166,10 +330,7 @@ b {
   margin-bottom: 5px;
 }
 #slider .mui-slider-group .mui-table-view .shangping .left {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   position: relative;
 }
 #slider .mui-slider-group .mui-table-view .shangping .left img {
@@ -179,19 +340,9 @@ b {
 }
 #slider .mui-slider-group .mui-table-view .shangping .right {
   margin: 0 2px;
-  -webkit-box-flex: 2;
-  -webkit-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  flex: 2;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 0 4px;
 }
 #slider .mui-slider-group .mui-table-view .shangping .right .titele {
@@ -318,8 +469,7 @@ b {
   text-align: center;
 }
 .foolter .user .returntop .mui-icon-pulldown {
-  -webkit-transform: rotateZ(180deg);
-          transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
   font-weight: 700;
 }
 .foolter .app {
@@ -350,11 +500,10 @@ b {
 }
 .jiantou span {
   color: #fff;
-  -webkit-transform: rotateZ(180deg);
-          transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
   font-size: 20px;
   margin-left: 10px;
   line-height: 40px;
 }
 
-/*# sourceMappingURL=discount.css.map */
+/*# sourceMappingURL=baicaijia.css.map */

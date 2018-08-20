@@ -1,19 +1,21 @@
 $(function(){
-    $(".loginbutton").click(function(){
-        var username = $(".username").val().trim();
-        var password = $(".mui-input-password").val().trim();
-        if(username.length==0) {
-            mui.toast("请输入用户名/手机号") ;
-            return;
-        }
-        if(password.length==0) {
-            mui.toast("请输入密码") ;
-            return;
-        }
-        mui.toast("正在登录");
-    });
-     // 调用搜索功能
-     searchFunction();
+    //品牌大全数据获取
+    function renderBrand(){
+        $.ajax({
+            url:"http://mmb.ittun.com/api/getbrandtitle",
+            type:"get",
+            dataType:"json",
+            success:function(res){
+                console.log(res);
+                var htmlStr=template("brand-title-list",{list:res.result});
+                $(".brand-title-list").html(htmlStr);
+            }
+        })
+    }
+    renderBrand();
+
+    // 调用搜索功能
+    searchFunction();
      // 搜索框功能模块
      function searchFunction(){
         //搜索文本框事件,值变化事件
@@ -89,4 +91,5 @@ $(function(){
             $(".historywordBox").hide();
         })
     }
+   
 })

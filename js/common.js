@@ -114,6 +114,10 @@ $(function () {
     mui('.mui-slider').slider({
         interval: 5000 //自动轮播周期，若为0则不自动播放，默认为0；
     });
+<<<<<<< HEAD
+=======
+
+>>>>>>> ecd6a98ef6efe13c47e8df066025a17bf5e3fc6d
     //关闭底部广告栏
     $(".banner .close-banner").click(function(e){
         e=e||widow.event;

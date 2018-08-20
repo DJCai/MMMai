@@ -63,7 +63,7 @@
                                     <button>上一页</button>
                                 </td>
                                 <td>
-                                    <select id="selectPage">
+                                    <select id="selectPage">▼
                                         <option value="1">1/14</option>
                                         <option value="2">2/14</option>
                                         <option value="3">3/14</option>
@@ -123,7 +123,7 @@
 <script type="text/html" id="productslist">
     {{each result v i}}
     <li class="mui-table-view-cell">
-        <a href="./discountdetail.html?productid={{v.productId}}" data-id="{{productId}}">
+        <a href="./saveMoneyProduct.html?productid={{v.productId}}" data-id="{{v.productId}}">
             <div class="left">
                 {{#v.productImgSm}}
             </div>

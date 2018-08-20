@@ -3,15 +3,39 @@ $(function(){
     var query = urlTool(urlStr);
 
 
-    var data=[];
+    var data={};
+    var  arr=[];
+    if(getParams("brandname")){
+        data.brandname= getParams("brandname");
+    }else{
+        data.brandname="电视";
+    }
+    if(data.cname=getParams("canme")){
+        data.brandname= getParams("brandname");
+    }else{
+        data.brandname="乐视";
+    }
+
+
+    
     data.brandname= getParams("brandname");
     data.cname=getParams("canme");
-    // console.log(data.brandname);  
-     var productid=query.productId;
-     console.log(productid); 
+    arr.push(data);
+    // console.log(data.brandname); 
+    
+     if(query.productId){
+        var productid=query.productId;
+     }else{
+        var productid=0;
+     }
+     console.log(data); 
+     console.log(arr); 
+    
+     
 
-    var htmlStr= template("categorynav",{list:data});
+    var htmlStr= template("catenav",{list:arr});
     $(".navbar").html(htmlStr);
+
     
     $.ajax({
         url:"http://mmb.ittun.com/api/getproduct",
@@ -35,5 +59,8 @@ $(function(){
             $(".content").html(html);
         }
     });
+
+
+
 
 });

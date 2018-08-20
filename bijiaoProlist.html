@@ -73,16 +73,16 @@
                     </ul>
         
                     <div class="page">
-                        <button>上一页</button>
+                        <button class="leftbtn">上一页</button>
                         <div class="fenye">
-                            <select id="selectPage">
+                            <!-- <select id="selectPage">
                                 <option value="1">1/12</option>
                                 <option value="1">2/12</option>
                                 <option value="1">3/12</option>
                                 <option value="1">4/12</option>
-                            </select>
+                            </select> -->
                         </div>
-                        <button>下一页</button>
+                        <button class="rightbtn">下一页</button>
                     </div>
                     <div class="footer22">
                             <div class="logininfo">
@@ -117,13 +117,13 @@
     </div>
 </body>
 </html>
-<script type="text/html" id="categorynav">
+<script type="text/html" id="categorynav"> 
     {{each result v i}}
     <a href="">首页
-            <span>&gt</span>
+            <span>&gt;</span>
         </a>
         <a href="brand_all.html">全部分类
-            <span>&gt</span>
+            <span>&gt;</span>
         </a>
         <a href="">{{v.category}}</a>
         {{/each}}
@@ -146,6 +146,14 @@
            </div>
     </li>
     {{/each}}
+</script>
+
+<script type="text/html" id="selectnav">
+    <select id="selectPage">
+          {{each numarr v i}}
+            <option value="{{i+1}}">{{i+1}}/{{num}}</option>
+            {{/each}}
+        </select>
 </script>
 
 

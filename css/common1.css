@@ -45,7 +45,7 @@ html, body {
 .container header a.download {
   width: 34px;
   height: 34px;
-  background: url("../images/header_app.png") 0 0/34px 34px;
+  background: url("../images/icon/header_app.png") 0 0/34px 34px;
 }
 .container main {
   flex: 1;

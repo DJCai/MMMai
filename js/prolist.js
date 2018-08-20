@@ -112,9 +112,13 @@ $(function () {
     $(".page").on("click", ".livalue", function () {
         clicknum = $(this).index();
         //    console.log(clicknum); 
+       
+        var listr=$(this).text();
+        var linum=listr.split("/")[0];
+        $(".inputvalue").val(listr);
+        clicknum=linum;
         categorylist(cid, clicknum);
-        $(".inputvalue").val($(".livalue").eq(clicknum).text());
-        $("#selectPage").hide();
+        $("#selectPage").removeClass("active");
 
     });
 

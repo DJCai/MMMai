@@ -37,20 +37,6 @@ a {
 a:hover {
   color: #cd0200;
   text-decoration: none;
-<<<<<<< HEAD
-}
-
-em {
-  font-style: normal;
-}
-
-i {
-  font-style: normal;
-}
-
-li {
-  list-style: none;
-=======
 }
 
 em {
@@ -77,23 +63,12 @@ table {
 
 p {
   word-wrap: break-word;
->>>>>>> b472ab1502844d1a808c7d0ef90ebadf46edf9d7
 }
 
-img {
-  border: 0;
-  vertical-align: middle;
+html, body {
+  height: 100%;
 }
 
-<<<<<<< HEAD
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-p {
-  word-wrap: break-word;
-=======
 .container {
   height: 100%;
 }
@@ -217,7 +192,6 @@ p {
 .container .footer .footerinfo .appLogin {
   color: #ff841d;
   margin-right: 5px;
->>>>>>> b472ab1502844d1a808c7d0ef90ebadf46edf9d7
 }
 
 .banner {

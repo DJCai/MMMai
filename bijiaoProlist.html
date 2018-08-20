@@ -94,8 +94,8 @@
     
                     <div class="footer22">
                             <div class="logininfo">
-                                <a href="#" class="login">注册</a>
-                                <a href="#" class="register">登录</a>
+                                <a href="register.html" class="login">注册</a>
+                                <a href="login.html" class="register">登录</a>
                                 <a href="#" class="return-top">返回顶部</a>
                             </div>
                             <div class="footerinfo">
@@ -130,7 +130,7 @@
     <a href="">首页
             <span>&gt;</span>
         </a>
-        <a href="brandTitle.html">全部分类
+        <a href="category.html">全部分类
             <span>&gt;</span>
         </a>
         <a href="">{{v.category}}</a>
@@ -175,7 +175,11 @@
 <button class="rightbtn">下一页</button>
 
 </script>
-
+<script>
+    $('.return-top').click(function(){
+        mui('.mui-scroll-wrapper').scroll().scrollTo(0,0,100);//100毫秒滚动到顶
+    })
+</script>
 
 
 

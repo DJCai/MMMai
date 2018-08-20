@@ -63,8 +63,8 @@
         </div>
         <div class="footer">
             <div class="logininfo">
-                <a href="#" class="login">注册</a>
-                <a href="#" class="register">登录</a>
+                <a href="register.html" class="login">注册</a>
+                <a href="login.html" class="register">登录</a>
                 <a href="#" class="return-top">返回顶部</a>
             </div>
             <div class="footerinfo">
@@ -104,7 +104,21 @@
      {{/each}}
 </script>
 <script type="text/html" id="getcategory">
-   {{each result v }}
-  <a data-categoryId="{{v.categoryId}}" class="item">{{v.category}}</a>
+   {{each result v i}}
+     {{if v==""}}
+     <a href="javascript:void(0)" class="item"></a> 
+     {{else }}
+   <a data-categoryId="{{v.categoryId}}" class="item">{{v.category}}</a> 
+   {{/if}}
+
    {{/each}}
+   
+
 </script>
+<script>
+    $('.return-top').click(function(){
+        mui('.mui-scroll-wrapper').scroll().scrollTo(0,0,100);//100毫秒滚动到顶
+    })
+</script>
+
+

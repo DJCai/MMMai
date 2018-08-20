@@ -16,7 +16,12 @@ $(function(){
                     dataType:"json",
                     data:{titleid:res.result[index].titleId},
                     success:function(res){
-                        // console.log(res)
+                            // console.log(res.result.length);
+                        var morenum=(res.result.length)%3==0?"":3-(res.result.length)%3;
+                        for(var i=0;i<morenum;i++){
+                            res.result.push("");
+                        }
+                        console.log(res.result);
                         var html=template("getcategory",res);  
                           $(ele).html(html);                   
                     }

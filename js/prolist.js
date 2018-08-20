@@ -54,11 +54,13 @@ $(function () {
             }
         });
     }
-
+    
     /**
      * 生成页码的函数，自动生成页码列表
      * @param {*} num 总页码数
      */
+
+     
     function creatPage(clicknum,num){
         var obj = {};
         obj.num = num;  //总页码

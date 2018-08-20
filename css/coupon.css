@@ -253,7 +253,6 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 .container .header {
   flex-basis: 50px;
@@ -283,75 +282,82 @@ body {
   width: 70%;
 }
 .container .main {
+  flex: 1;
   position: relative;
-  flex: 1;
 }
-.container .main .mui-scroll p {
-  font-size: 14px;
-  text-align: center;
-  height: 28px;
-  line-height: 28px;
+.container .main .mui-scroll {
+  position: absolute;
 }
-.container .main .mui-scroll .list li {
+.container .main .mui-scroll .hot {
   display: flex;
-  justify-content: space-around;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0px 10px 6px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 10px 0px 0px 8px;
 }
-.container .main .mui-scroll .list li img {
-  flex: 1;
-  width: 150px;
-  height: 100px;
+.container .main .mui-scroll .hot li {
+  width: 32%;
+  height: 80px;
+  border: 1px solid #ccc;
+  margin-bottom: 8px;
+  margin-right: 5px;
 }
-.container .main .mui-scroll .list li .right {
-  flex: 2;
+.container .main .mui-scroll .hot li:nth-child(3n) {
+  margin-right: 0px;
+}
+.container .main .mui-scroll .hot li a {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-left: 10px;
+  align-items: center;
+  padding-top: 5px;
 }
-.container .main .mui-scroll .list li .right .name {
-  color: #333333;
-  font-size: 16px;
+.container .main .mui-scroll .hot li a img {
+  width: 50px;
+  height: 50px;
 }
-.container .main .mui-scroll .list li .right .price {
-  color: #5f5a5a;
-  font-size: 14px;
+.container .main .mui-scroll .hot li a .title {
+  font-size: 18px;
+  color: #5a5a5a;
 }
-.container .main .mui-scroll .list li .right .time {
+.container .footer {
+  flex-basis: 110px;
+  width: 100%;
+  background: #fff;
+  bottom: 0;
+  padding-top: 10px;
+}
+.container .footer .logininfo {
+  height: 34px;
   display: flex;
-  justify-content: flex-start;
-  color: #ee7700;
-  font-size: 14px;
 }
-.container .main .mui-scroll .list li .mui-icon {
-  flex-basis: 18px;
+.container .footer .logininfo a {
+  flex: 1;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
-  color: #a5a5a5;
+  color: #333;
+  font-size: 14px;
+}
+.container .footer .logininfo a:nth-child(n+2) {
+  border-left: 1px solid #e6e6e6;
+}
+.container .footer .footerinfo {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.container .footer .footerinfo a {
+  color: #333;
+}
+.container .footer .footerinfo .appLogin {
+  color: #ff841d;
+  margin-right: 5px;
 }
 
-.mui-backdrop {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 900;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-}
-.mui-backdrop .mui-slider {
-  position: absolute;
-  z-index: 999;
-  width: 200px;
-  height: 160px;
-  background-color: yellow;
-  top: 38%;
-  left: 25%;
-}
-.mui-backdrop .mui-slider .mui-slider-groupr img {
-  width: 100%;
-}
-
-/*# sourceMappingURL=couponproduct.css.map */
+/*# sourceMappingURL=coupon.css.map */

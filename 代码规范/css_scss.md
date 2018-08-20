@@ -60,13 +60,14 @@
 
 /* good */
 .element {
-    color: red !important;
+    color: red !important; 
     background-color: rgba(0, 0, 0, .5);
 }
 
+
 /* not good */
-.element ,
-.dialog{
+.element ,   
+.dialog{    
     ...
 }
 
@@ -85,6 +86,7 @@
 .element > .dialog{
     ...
 }
+
 
 /* not good */
 .element{
@@ -109,6 +111,7 @@
 } @else {
     ...
 }
+
 
 ```
 
@@ -146,6 +149,10 @@
 }
 
 ```
+.element {
+
+}
+
 
 ## 换行
 
@@ -182,6 +189,7 @@
 }
 
 ```
+
 
 ## 注释
 
@@ -244,6 +252,7 @@ li[data-type="single"] {
 .element-content {
     ...
 }
+
 
 /* id */
 #myDialog {

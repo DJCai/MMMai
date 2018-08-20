@@ -186,7 +186,7 @@
 <script type="text/html" id="brand-product-list">
     {{each list v i}}
     <li>
-        <a href="./productdetail.html?productId={{v.productId}}">
+        <a href="./discountdetail.html?productid={{v.productId}}">
             <div class="productImg">{{#v.productImg}}</div>
             <div class="product-info">
                 <p class="productName">{{v.productName}}</p>
@@ -205,7 +205,7 @@
 <script type="text/html" id="product-commentlist">
     {{each list v i}}
     <li>
-        <a class="productcoment{{v.productId}}" href="{{v.productId}}">
+        <a class="productcoment{{v.productId}}" href="./discountdetail.html?productid={{v.productId}}">
             <!-- <div><img src="./images/img/产品评论.jpg" alt=""></div>
                 <p class="productName">客户撒覅第三季度首付款很放得开</p> -->
         </a>

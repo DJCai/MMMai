@@ -115,8 +115,6 @@ $(function () {
         interval: 5000 //自动轮播周期，若为0则不自动播放，默认为0；
     });
 
-
-   
     //关闭底部广告栏
     $(".banner .close-banner").click(function(e){
         e=e||widow.event;

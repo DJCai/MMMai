@@ -135,15 +135,15 @@
     </div>
 </body>
 </html>
-<script type="text/html" id="categorynav">
+<script type="text/html" id="catenav">
     {{each list v i}}
-    <a href="">首页
+    <a href="index.html">首页
             <span>&gt;</span>
         </a>
         <a href="#">{{v.cname}}
             <span>&gt;</span>
         </a>
-        <a href="">{{v.brandname}}</a>
+        <a href="">{{v["brandname"]}}</a>
         {{/each}}
 </script> 
 
@@ -166,7 +166,7 @@
            <span class="name mui-pull-left">{{v.comName}}</span>
            <span class="time mui-pull-right">{{v.comTime}}</span>
        </p>
-       <p class="whereshop">{{v.comFrom}}</p>
+       <p class="whereshop">111{{v.comFrom}}</p>
    </div>
    <div class="bottom">
        <div class="text">

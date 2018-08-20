@@ -244,134 +244,50 @@ html, body {
   font-size: 12px;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-}
-
-.main {
-  flex: 1;
-  position: relative;
-}
-.main .nav {
-  height: 36px;
-  background-color: #ebebeb;
-  border-top: solid 1px #ebebeb;
-  border-bottom: 1px solid #ccc;
-  line-height: 36px;
-  padding-left: 8px;
-  font-size: 14px;
-}
-.main .nav a {
-  color: #5a5a5a;
-}
-.main .listitem .item {
-  padding: 10px 8px;
-  font-size: 12px;
-  background-color: #FFFFFF;
-  position: relative;
-  display: flex;
-}
-.main .listitem .item .pic {
-  width: 120px;
-  height: 120px;
-  margin-right: 10px;
-  overflow: hidden;
-}
-.main .listitem .item .pic img {
+.container .header {
   width: 100%;
-  height: 100%;
-}
-.main .listitem .item .info .tit {
-  color: #333333;
-  word-break: break-all;
-  font-size: 15px;
-  line-height: 28px;
-  height: 56px;
-  overflow: hidden;
-}
-.main .listitem .item .info .price {
-  color: #ed0000;
-  font-size: 18px;
-  margin-top: 6px;
-}
-.main .listitem .item .info .other {
-  margin-top: 5px;
-}
-.main .listitem .item .info .other .mall {
-  color: #a1a1a1;
-  line-height: 21px;
-}
-.main .listitem .item .info .other .sales {
-  text-align: right;
-  color: #a1a1a1;
-  line-height: 21px;
-}
-.main .page {
+  background-color: #ff841d;
+  height: 44px;
   display: flex;
-  justify-content: space-around;
+  padding: 15px;
   align-items: center;
-  height: 36px;
-  margin-top: 20px;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 20px;
+  transition: all 1s;
 }
-.main .page .fenye {
-  border: 1px solid #bababa;
-  border-radius: 3px;
-  font-size: 16px;
-  padding: 5px 20px;
-  align-items: center;
+.container .header .title {
+  font-size: 20px;
 }
-.main .page .fenye select {
-  width: auto;
-  padding: 0 2%;
-  margin: 0;
+.container .header .share {
+  height: 35px;
+  width: 35px;
+  background: url(../images/icon/header_app.png) 0px 0px/35px 35px;
 }
-.main .page .fenye select option {
-  text-align: center;
+.container .header.on {
+  position: fixed;
+  z-index: 60;
+  top: 0;
+  left: 0;
 }
-
-.banner {
-  z-index: 1000;
-}
-
-.footer22 {
-  height: 110px;
-  width: 100%;
-  background: #fff;
-  padding-top: 10px;
-}
-.footer22 .logininfo {
-  height: 34px;
+.container .main .linkList {
   display: flex;
-}
-.footer22 .logininfo a {
-  flex: 1;
-  border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
-  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  padding: 10px 35px 0px 30px;
+}
+.container .main .linkList li {
+  border: 1px solid #ddd;
+  display: flex;
   align-items: center;
-  color: #333;
+  padding: 7px 6px;
+  margin: 0px 8px 5px 0px;
+  background-color: #f4f4f4;
   font-size: 14px;
+  color: #555;
 }
-.footer22 .logininfo a:nth-child(n+2) {
-  border-left: 1px solid #e6e6e6;
-}
-.footer22 .footerinfo {
-  height: 64px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid #ccc;
-  font-size: 12px;
-}
-.footer22 .footerinfo a {
-  color: #333;
-}
-.footer22 .footerinfo .appLogin {
-  color: #ff841d;
-  margin-right: 5px;
+.container .main .linkList li img {
+  margin-right: 7px;
 }
 
-/*# sourceMappingURL=prolist.css.map */
+/*# sourceMappingURL=sitenav.css.map */

@@ -1,6 +1,6 @@
 $(function ($) {
     var data = { page: 1, pagesize: 10 };
-      mui.init({
+    mui.init({
         pullRefresh: {
             container: ".mui-scroll-wrapper",
             down: {
@@ -9,28 +9,32 @@ $(function ($) {
                 callback: function () { //下拉刷新执行函数
                     getnavlist();
                     renderproductslist(data);
-                    setTimeout(function(){
+                    setTimeout(function () {
                         mui(".mui-scroll-wrapper").pullRefresh().endPulldownToRefresh();
-                    },500)
-                    
+                    }, 500)
+
                 }
             }
         }
     });
-    // 获取首页菜单栏数据并渲染
+    // 获取首页菜单的数据
     function getnavlist() {
         $.ajax({
             url: "http://mmb.ittun.com/api/getindexmenu",
             type: 'GET',
             dataType: 'json',
             success: function (res) {
-                console.log(res);
-
+                if (moreLength) {
+                    res.result.splice(8, res.result.length - 1);
+                }
                 var html = template('navlist', res);
                 $('.nav').html(html);
             }
         })
     }
+    // 先记录导航菜单栏是否有更多，true表示没有，false表示有更多
+    var moreLength = true;
+
     // 获取折扣列表
     function renderproductslist(data) {
         $.ajax({
@@ -55,4 +59,23 @@ $(function ($) {
         data.pagesize = 3;
         mui(".mui-scroll-wrapper").pullRefresh().pulldownLoading(); //手动触发下拉刷新
     })
+
+    // 导航菜单栏的更多部分
+    $('.main .nav').on('tap', '.moreNav', function (e) {
+        e.preventDefault();
+        if (moreLength) {
+            moreLength = false;
+        } else {
+            moreLength = true;
+        }
+        getnavlist();
+    });
+    
+        function renderHistory(arr) {
+            var htmlStr = template("historyWords", {
+                list: arr
+            });
+            $(".historywordBox").html(htmlStr);
+        }
+    
 });

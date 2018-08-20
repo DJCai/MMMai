@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+    <link rel="stylesheet" href="./fontsss/base.css">
+    <link rel="stylesheet" href="./css/sqxqy.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <a class="logo" href="shengqian.html">
+            <i class="iconfont">&#xe645;</i>
+        </a>
+        <div class="title">
+            <h3>国内折扣</h3>
+        </div>
+        <a class="download" href="#">
+        </a>
+    </header>
+    <dvi class="big">
+    </dvi>
+    <div class="golick">
+        <a class="a-gobuy" href="javascript:;">
+            <i class="iconfont i">&#xe628;</i>前往购买
+        </a>
+    </div>
+
+    <!--发表评论 -->
+    <div class="cu-content-pl ui-border-t">
+        <div class="tit">发表评论</div>
+        <div class="reply">
+            <div class="form">
+                <textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" rows="3"></textarea>
+                <input name="ctl00$ContentBody$lbl_fbr" id="ctl00_ContentBody_lbl_fbr" value="手机端网友14***154" type="hidden">
+                <input name="ctl00$ContentBody$hid_name" id="ctl00_ContentBody_hid_name" value="双11预售：日本进口尤妮佳/Moony婴儿纸尿裤M64*3包" type="hidden">
+                <div class="ctrl">
+                    <input name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1" class="tjdp" type="submit">
+                </div>
+            </div>
+        </div>
+        <div class="tit" id="newcomment">最新评论</div>
+        <div class="list">
+            <ul>
+                <li class="ui-border-b">
+                    <div class="userimg"><img src="http://home.manmanbuy.com/upface/face/1466230634_162.jpg"></div>
+                    <div class="con">
+                        <div class="name clearfix">
+                            <div class="username">赶鸭子上架</div>
+                            <div class="time">2016/10/25 14:13:53</div>
+                        </div>
+                        <div class="content">预定了</div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- 底部部分开始 -->
+    <footer>
+        <div class="foot_user">
+            <a href="#" class="foot_login">登录</a>
+            <a href="#" class="foot_register">注册</a>
+            <a href="#" class="foot_return">
+                <i class="iconfont">&#xe795;</i> 返回顶部
+            </a>
+        </div>
+        <div class="foot_text">
+            <div class="text_box">
+                <span class="text_sp">手机APP下载</span>
+                <span class="text_sp">慢慢买手机版</span>
+                <span class="text_sp">--掌上比价平台</span>
+            </div>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 底部部分结束 -->
+
+
+</body>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./js/sqxqy.js"></script>
+<!-- 模板 -->
+<script type="text/template" id="moneyId">
+    {{each data value}}
+    <div class="content_top">
+        <h3>{{value.productName}}</h3>
+        <h4>{{value.productPinkage}}元包邮(需用券)</h4>
+        <div class="info">
+            <span class="mall">{{value.productFrom}}</span>
+            <span class="addtime">{{value.productTime}}</span>
+            <span class="author">{{value.productTips}}</span>
+        </div>
+
+        <div class="content_c clearfix">
+            <div class="pic">
+                {{@value.productImgSm}}
+            </div>
+            <div class="conn">
+                {{if value.productInfo == ''}}
+                <p>{{value.productInfo2}}</p>
+                {{else}}
+                <p>{{value.productInfo}}</p>
+                {{/if}}
+                <p>{{value.productInfo1}}</p>
+                <p class="description">
+                    {{if value.productImgLg ==''}} {{@value.productImg2}} {{else}} {{@value.productImgLg}} {{/if}}
+                </p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+
+<!-- 最新评论模板 -->
+<script type="text/template" id="newList">
+    {{each data value }}{{@value.productComment}} {{/each}}
+
+</script>
+
+</html>

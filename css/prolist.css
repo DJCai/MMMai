@@ -31,6 +31,26 @@ body {
 
 a {
   color: #2d374b;
+<<<<<<< HEAD
+  text-decoration: none;
+}
+
+a:hover {
+  color: #cd0200;
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+i {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+=======
   text-decoration: none;
 }
 
@@ -63,12 +83,23 @@ table {
 
 p {
   word-wrap: break-word;
+>>>>>>> b472ab1502844d1a808c7d0ef90ebadf46edf9d7
 }
 
-html, body {
-  height: 100%;
+img {
+  border: 0;
+  vertical-align: middle;
 }
 
+<<<<<<< HEAD
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p {
+  word-wrap: break-word;
+=======
 .container {
   height: 100%;
 }
@@ -242,6 +273,7 @@ html, body {
   color: #fff;
   box-shadow: 0px -1px 1px 0 red inset;
   font-size: 12px;
+>>>>>>> b472ab1502844d1a808c7d0ef90ebadf46edf9d7
 }
 
 .container {

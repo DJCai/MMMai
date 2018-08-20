@@ -2,7 +2,7 @@ $(function () {
 
     var urlStr = location.href;
     var query = urlTool(urlStr);
-    var cid = query.categoryid;
+    var cid = query.categoryid?query.categoryid:0;
     //   console.log(cid);
     var cname;
     var data = {};
@@ -33,6 +33,36 @@ $(function () {
                 var html = template("goodlist", res);
                 $(".listitem").html(html);
 
+                var pagesize= res.pagesize;
+                var total=res.totalCount;
+                var num= Number(Math.ceil(total/pagesize));
+
+                var obj={};
+                obj.num=num;
+           
+                var numarr=[];
+                for(var i=1;i<=num;i++){
+                   numarr.push(i);
+                }
+                // console.log(numarr);
+                obj.numarr=numarr;
+                // console.log(arr);
+                var html1 = template("selectnav",obj); 
+                $(".fenye").html(html1); 
+                
+                // console.log(num);
+                //点击事件山下页
+                // $(".leftbtn").click(function(){
+                //     $(".page").find("option")
+                    
+                // });
+                  
+                // $("#selectPage").change(function(){
+
+                //     alert($(this).val());
+                    
+                //     });
+
                 $(".item").click(function () {
                     var brandname = $(this).data("name");
                     var productId = $(this).data("productid");
@@ -44,6 +74,6 @@ $(function () {
         });
     }
 
-
+     
 
 });

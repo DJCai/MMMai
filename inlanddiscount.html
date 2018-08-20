@@ -23,9 +23,9 @@
     <script src="./js/common.js"></script>
 
 
-    <link rel="stylesheet" href="./css/discountdetail.css">
+    <link rel="stylesheet" href="./css/discount.css">
 
-    <script src="./js/discountdetail.js"></script>
+    <script src="./js/discount.js"></script>
 </head>
 
 <body>
@@ -38,7 +38,7 @@
         <main>
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
-                    <div class="details">
+                    <div class="products">
                     </div>
                 </div>
             </div>
@@ -63,37 +63,22 @@
 </body>
 
 </html>
-<script id="detail" type="text/html">
+<script id="products" type="text/html">
     {{each result v i}}
-    <p class="title">{{v.productName}}</p>
-    <p class="price">{{v.productPrice}}</p>
-    <p class="from">
-        <span>{{v.productFrom}}</span>
-        <span>{{v.productTime}}</span>
-        <span>{{v.productTips}}</span>
-    </p>
-    <p class="around">
-        {{#v.productImg}}{{v.productInfo}}
-    </p>
-    <p class="img">{{#v.productImg}}</p>
-    <button type="button" class="mui-btn mui-btn-warning gobuy">前往购买</button>
-    <p class="vcode">
-        <img src="./images/img/mmbweixin2.png" alt="">
-    </p>
-    {{#v.productComment}}
-    {{/each}} 
-</script>
-
-<script id="historyWords" type="text/html">
-    {{each keys v i}}
-    <li>
-        <a>
-            <p>
-                <img src="images/下载.jpg" alt="">
-                <span>发哥点烟</span>
-            </p>
-            <span>{{v}}</span>
-        </a>
-    </li>
+    <div class="product">
+        <div class="box">
+            <a class="jump" data-id="{{v.productId}}">
+                {{#v.productImg}}
+                <p class="mui-ellipsis-2">{{v.productName}}</p>
+                <p class="price">
+                    {{v.productPrice}}
+                </p>
+                <p>
+                    <span>{{v.productFrom}} |</span>
+                    <span>{{v.productTime}}</span>
+                </p>
+            </a>
+        </div>
+    </div>
     {{/each}}
 </script>

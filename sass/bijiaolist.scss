@@ -1,0 +1,190 @@
+@import "common.scss";
+.container{
+    display: flex;
+    flex-direction: column;
+ }
+ .main{
+    flex: 1;
+    position: relative;
+     .navbar{
+        height: 36px;
+        background-color: #ebebeb;
+        border-top: solid 1px #ebebeb;
+        border-bottom: 1px solid #ccc;
+        line-height: 36px;
+        padding-left: 8px;
+        font-size: 14px;
+        a{
+           color: #5a5a5a;
+        }
+     }
+     .goodinfo{
+        
+         .product{
+             background-color: #fff;
+             margin: 0 auto;
+             text-align:center;
+             padding: 10px 10px 0px 10px ;
+             .title{
+                 font-size: 16px;
+                 color: #000;
+                //  text-align: left;
+             }
+           .pic{
+               padding: 10px 0;
+           }
+         }
+         .do{
+            margin:0px;
+             margin-top: 20px;
+             display: flex;
+             justify-content: space-around;
+             align-items: center;
+             background-color: orange;
+             border-bottom: 1px solid orangered;
+             border-top: 1px solid orangered;
+             height: 34px;
+             a{
+                flex: 1;   
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content:center;
+                border-right: 1px solid orangered;
+                color: #fff; 
+                &:last-child{
+                border-right: none;  
+                }   
+                &.active{
+                    background-color: orangered;   
+                }       
+             }
+
+         }   
+         .buyinfo{
+           .gobuy{
+               margin: 10px 0px;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+                height: 34px;
+                line-height: 34px;
+                a{
+                    color: #000;
+                    font-size: 16px;
+                    
+                }
+               .logo{
+                   display:inline-block;
+                   width: 10px;
+                   height: 10px;
+                  
+                   background: url("../images/icon/1.png")no-repeat center center/15px 15px;
+               }
+               .price{
+                   color: red;
+                   font-size: 16px;
+                   line-height: 34px;
+               }
+               .buynow{
+                   background-color:orangered;
+                   height: 34px; 
+                //    display:inline-block;
+               }
+
+           }  
+           .notice{
+            border-top: 1px solid #5a5a5a;
+            font-size: 12px;
+            color: #888;
+            padding: 8px 10px;
+            line-height: 18px;
+           } 
+         }
+
+     }
+     .comment{
+         .title{
+             height: 34px;
+             line-height: 34px;
+             background-color: #ccc;
+             text-align: center;
+             color: #888;
+             font-size: 16px;
+             font-weight: bold;
+         }
+         .top{
+             padding: 10px;
+             .usermessage{
+               display: flex;
+               justify-content: space-between;
+               
+             } 
+         }
+         .bottom{
+            padding: 10px;
+ 
+           .text{
+            color: #000;
+            font-size: 14px;
+            line-height: 22px;
+            padding-top: 5px;
+           }
+         }
+         .checkmore{
+            margin:10px  auto;
+          
+            width:100%;
+         
+            display: block;
+            height: 32px;
+            background-color: #d4d4d4;
+        }
+     }
+ }
+
+
+.banner{
+    z-index: 1000;
+}
+
+.footer22{
+    height:110px;
+    width: 100%;
+    background: #fff;
+    padding-top:10px;
+    .logininfo{
+        height: 34px;
+        display:flex;
+        a{
+            flex:1;
+            border-top:1px solid #e6e6e6;
+            border-bottom:1px solid#e6e6e6;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            color:#333;
+            font-size: 14px;
+            &:nth-child(n+2){
+                border-left:1px solid #e6e6e6;
+            }
+        }
+    }
+    .footerinfo{
+        height: 64px;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        border-bottom: 1px solid #ccc;
+        font-size: 12px;
+        a{
+            color:#333;
+        }
+        .appLogin{
+            color:$itemColor;
+            margin-right:5px;
+        }
+    }
+
+}

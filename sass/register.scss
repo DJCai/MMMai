@@ -1,0 +1,31 @@
+@import "./common.scss";
+
+.main{
+    form{
+        margin-top:10px;
+        padding:0 20px;
+        input{
+            height: 35px;
+             font-size:14px;
+             margin-bottom:10px;
+        }
+        .yangzhengma{
+            display:flex;
+            .getyzm{
+                width: 120px;
+                height: 35px;
+                margin-bottom: 15px;
+                font-size: 14px;
+            }
+            .yangzhengma-text{
+                flex:1;
+            }
+        }
+        .registerbutton{
+            width: 100%;
+        }
+    }
+    .footer{
+        position: static;
+    }
+ }

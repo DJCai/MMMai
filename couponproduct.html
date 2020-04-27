@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优惠券列表</title>
+    <!-- 引用mui -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- 引用zepo.min.js -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+
+    <!-- 引用轮播图的插件 -->
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+
+    <!-- 引入公共js和css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/common.js"></script>
+
+    <link rel="stylesheet" href="./css/couponproduct.css">
+    <script src="./js/couponproduct.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="./coupon.html" class="back">
+                <i class="mui-icon mui-icon-arrowleft"></i>
+            </a>
+            <a class="youhui">肯德基优惠券</a>
+            <a href="#" class="download">
+                <img src="./images/icon/header_app.png" alt="">
+            </a>
+        </div>
+        <div class="main">
+
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <p>--点餐前出示手机中的优惠券,即可享受优惠--</p>
+                    <ul class="list">
+                        <!-- 模版生成的代码 -->
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mui-backdrop">
+
+    </div>
+
+</body>
+
+</html>
+<script type="text/html" id="youhuiList">
+    {{ each result v i }}
+    <li>
+        {{#v.couponProductImg}}
+        <a class="right">
+            <span class="name">{{ v.couponProductName }}</span>
+            <span class="price">{{ v.couponProductPrice }}</span>
+            <span class="time">{{ v.couponProductTime }}</span>
+        </a>
+        <span class="mui-icon mui-icon-arrowright"></span>
+    </li>
+    {{ /each }}
+</script>
+
+<script type="text/html" id="carousel">
+
+    <div class="mui-slider">
+        <div class="mui-slider-group mui-slider-loop">
+            {{ each result v i }}
+            <div class="mui-slider-item">
+                <a href="#">{{#v.couponProductImg}}</a>
+            </div>
+            {{ /each}}
+        </div>
+    </div>
+
+</script>

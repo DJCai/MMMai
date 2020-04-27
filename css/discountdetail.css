@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container header {
+  height: 48px;
+  background-color: #ff841d;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  justify-content: space-between;
+}
+.container header a {
+  font-size: 20px;
+  color: #fff;
+}
+.container header h4 {
+  color: #fff;
+}
+.container header a.download {
+  width: 34px;
+  height: 34px;
+  background: url("../images/icon/header_app.png") 0 0/34px 34px;
+}
+.container main {
+  flex: 1;
+  position: relative;
+  background-color: #fff;
+}
+.container footer {
+  height: 90px;
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+}
+.container footer .foottop {
+  flex-basis: 30px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+}
+.container footer .foottop a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 16px;
+}
+.container footer .foottop a:nth-child(2) {
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+.container footer .foottop a img {
+  height: 16px;
+}
+.container footer .footbottom {
+  flex-basis: 60px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container footer .footbottom p {
+  margin: 0;
+}
+.container footer .footbottom .start {
+  display: flex;
+  align-items: flex-end;
+}
+.container footer .footbottom .start .app {
+  color: #f00;
+}
+.container footer .footbottom .start .shouji {
+  margin: 0 5px;
+  font-weight: bold;
+  color: #000;
+}
+.container footer .footbottom .start .zhangshang {
+  color: #aaa;
+}
+.container footer .footbottom .finnal {
+  color: #aaa;
+}
+
+main .mui-scroll .details {
+  padding: 15px;
+}
+main .mui-scroll .details .title {
+  color: #5a5a5a;
+  font-size: 20px;
+  font-weight: bold;
+}
+main .mui-scroll .details .price {
+  color: #ff841d;
+}
+main .mui-scroll .details .from {
+  color: #999;
+}
+main .mui-scroll .details .around {
+  overflow: hidden;
+  line-height: 160%;
+}
+main .mui-scroll .details .around img {
+  width: 100px;
+  height: 100px;
+  float: right;
+}
+main .mui-scroll .details .img {
+  width: 200px;
+  height: 200px;
+  margin: 10px auto;
+}
+main .mui-scroll .details .img img {
+  width: 100%;
+}
+main .mui-scroll .details .gobuy {
+  width: 100%;
+  height: 30px;
+  padding: 0 30px;
+  font-size: 16px;
+  background-color: #ff9000;
+  margin-bottom: 10px;
+}
+main .mui-scroll .details .vcode {
+  width: 100%;
+}
+main .mui-scroll .details .vcode img {
+  width: 100%;
+}
+main .mui-scroll .details .tit {
+  margin-bottom: 10px;
+}
+main .mui-scroll .details .reply {
+  margin-bottom: 10px;
+}
+main .mui-scroll .details .list ul li {
+  border-bottom: 1px solid #eee;
+  padding: 5px;
+}
+main .mui-scroll .details .list ul li a {
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+main .mui-scroll .details .list ul li a p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+main .mui-scroll .details .list ul li a p img {
+  flex-basis: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+main .mui-scroll .details .list ul li a .comm {
+  flex: 1;
+}
+main .mui-scroll .details .list ul li a .time {
+  flex-basis: 150;
+  justify-content: flex-end;
+}
+
+/*# sourceMappingURL=discountdetail.css.map */

@@ -1,0 +1,31 @@
+{
+  "name": "verify",
+  "version": "0.0.1",
+  "title": "Verify.js",
+  "description": "A jQuery plugin to provide fully customisable asynchronous client-side validations.",
+  "author": {
+    "name": "Jaime Pillora"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "keywords": [
+    "async",
+    "asynchronous",
+    "validator",
+    "validation",
+    "verify",
+    "check",
+    "customisable"
+  ],
+  "bugs": "https://github.com/jpillora/verify/issues",
+  "homepage": "http://jpillora.github.com/verify/",
+  "docs": "http://jpillora.github.com/verify/",
+  "download": "http://jpillora.github.com/verify/#Usage",
+  "dependencies": {
+    "jquery": ">=1.8"
+  }
+}

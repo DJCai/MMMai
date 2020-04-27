@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #2d374b;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+i {
+  font-style: normal;
+}
+
+.mui-scroll .header {
+  height: 50px;
+  background: #ff841d;
+  display: flex;
+  justify-content: space-between;
+}
+.mui-scroll .header a {
+  display: flex;
+  align-items: center;
+}
+.mui-scroll .header a.logo {
+  padding-left: 12px;
+}
+.mui-scroll .header a.download {
+  justify-content: center;
+}
+.mui-scroll .header a img {
+  width: 70%;
+}
+.mui-scroll .main {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+.mui-scroll .main .search {
+  padding: 10px;
+  display: flex;
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+  justify-items: center;
+  position: relative;
+}
+.mui-scroll .main .search input {
+  flex: 1;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #f1f1f1;
+}
+.mui-scroll .main .search button {
+  height: 30px;
+  width: 62px;
+  border-radius: 15px;
+  position: absolute;
+  background-color: #ff841d;
+  color: #fff;
+  right: 10px;
+}
+.mui-scroll .main .nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 19px;
+}
+.mui-scroll .main .nav li {
+  width: 25%;
+}
+.mui-scroll .main .nav li a {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.mui-scroll .main .nav li a img {
+  width: 50px;
+  height: 50px;
+}
+.mui-scroll .main .nav li a span {
+  margin-top: 14px;
+  margin-bottom: 16px;
+}
+.mui-scroll .main .Recommend {
+  height: 35px;
+  background-color: #ff841d;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+  color: #fff;
+}
+.mui-scroll .main .Recommend span {
+  height: 30px;
+}
+.mui-scroll .main .Recommend span img {
+  height: 100%;
+}
+.mui-scroll .main .products .product {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding: 0 10px;
+}
+.mui-scroll .main .products .product a {
+  display: flex;
+  align-items: center;
+  height: 128px;
+}
+.mui-scroll .main .products .product a .pic {
+  flex-basis: 102px;
+  margin-right: 10px;
+}
+.mui-scroll .main .products .product a .pic img {
+  width: 100%;
+}
+.mui-scroll .main .products .product a .info {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+}
+.mui-scroll .main .products .product a .info .title {
+  margin-top: 6px;
+}
+.mui-scroll .main .products .product a .info .title span {
+  color: #ff841d;
+}
+.mui-scroll .main .products .product a .info .other {
+  color: #666;
+}
+.mui-scroll .main .products .product a .info .other .mui-icon-chat {
+  margin-right: 3px;
+}
+.mui-scroll .main .products .remore {
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid #dddddd;
+  margin: 20px;
+  text-align: center;
+  border-radius: 4px;
+}
+.mui-scroll .footer {
+  height: 110px;
+  background-color: #fff;
+  padding-top: 10px;
+}
+.mui-scroll .footer .logininfo {
+  height: 34px;
+  display: flex;
+}
+.mui-scroll .footer .logininfo a {
+  flex: 1;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+}
+.mui-scroll .footer .logininfo a:nth-child(n+2) {
+  border-left: 1px solid #e6e6e6;
+}
+.mui-scroll .footer .footerinfo {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.mui-scroll .footer .footerinfo a {
+  color: #333;
+}
+.mui-scroll .footer .footerinfo .appLogin {
+  color: #ff841d;
+  margin-right: 5px;
+}
+
+/*# sourceMappingURL=index.css.map */

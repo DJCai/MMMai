@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- zepto -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- jquery -->
+    <script src="./lib/jQuery/jquery-1.12.4.min.js"></script>
+    <!-- mui -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- template -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- fa -->
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css">
+    <!-- js -->
+    <!-- <script src="./js/common.js"></script> -->
+    <script src="./js/sitenav.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/sitenav.css">
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <div class="header">
+            <span class="back fa fa-chevron-left"></span>
+            <span class="title">商场导航</span>
+            <div class="share">
+            </div>
+        </div>
+
+        <!-- main -->
+        <div class="main">
+            <ul class="linkList">
+                <li>
+                    <img src="./images/icon/newegg.png" alt="">
+                    <span>新蛋网</span>
+                </li>
+                <!-- <li>
+                    <img src="./images/icon/newegg.png" alt="">
+                    <span>新蛋网</span>
+                </li>
+                <li>
+                    <img src="./images/icon/newegg.png" alt="">
+                    <span>新蛋网</span>
+                </li>
+                <li>
+                    <img src="./images/icon/newegg.png" alt="">
+                    <span>新蛋网</span>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- 模板 -->
+    <script type="text/html" id="tpllinkList">
+        {{each result v i}}
+        <li>
+            <a href="{{v.navHref}}">
+                <img src="{{v.navImg}}" alt="">
+                <span>{{v.navTitle}}</span>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+</body>
+</html>

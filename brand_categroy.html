@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引用mui -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- 引用zepo.min.js -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 引入font-awesome字体图标 -->
+    <!-- <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css"> -->
+
+    <!-- 引入公共js和css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/common.js"></script>
+
+
+    <link rel="stylesheet" href="./css/brand_categroy.css">
+
+    <script src="./js/brand_categroy.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header" id="header">
+            <a href="./index.html" class="logo">
+                <img src="./images/icon/header_logo.png" alt="">
+            </a>
+            <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile" class="download">
+                <img src="./images/icon/header_app.png" alt="">
+            </a>
+        </div>
+        <div class="main">
+            <div class="searchbox">
+                <div>
+                    <input type="text" name="" class="search-text" placeholder="请输入您想比价的商品">
+                    <ul class="historywordBox">
+                        <!-- <li>
+                            <span>电视</span>
+                            <span class="mui-icon mui-icon-trash mui-pull-right">
+                            </span>
+                        </li> -->
+                    </ul>
+                </div>
+                <button class="search">搜索</button>
+            </div>
+            <div class="navbar">
+                <a href="./index.html">首页</a>
+                <span>&gt;</span>
+                <a href="./brandTitle.html">品牌大全</a>
+                <span>&gt;</span>
+                <a>
+                    <span class="brandTitle">液晶电视</span>哪个品牌好
+                </a>
+            </div>
+            <div class="brand-category-list">
+                <div class="title">
+                    <a>
+                        <span class="brandTitle">液晶电视</span>哪个品牌好
+                    </a>
+                </div>
+                <ul class="brand-title-list ">
+                    <li>
+                        <a href="./brand_single.html?brandId=30">
+                            <div class="left">
+                                <span class="index">1</span>
+                                <div>
+                                    <p class="brandName">海信平板电视</p>
+                                    <p class="brandInfo">30天全网销量1178332件</p>
+                                </div>
+                            </div>
+                            <span class="mui-icon mui-icon-forward mui-pull-right"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="brand-product-list">
+                <div class="title">
+                    <a>
+                        <span class="brandTitle">液晶电视</span>产品销量排名
+                    </a>
+                </div>
+                <ul class="product-list">
+                    <li>
+                        <a href="">
+                            <img src="./images/img/2016040016521576785.jpg" alt="">
+                            <div class="product-info">
+                                <p class="productName">乐视TV3还打飞机撒旦挥了挥手覅呼叫你付款了很快就和罚款收到回复</p>
+                                <p class="productPrice">¥1999.00</p>
+                                <p class="desc">
+                                    <span class="productQuote">报价(6)</span>
+                                    <span class="productCom">评论(2286)</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="product-commentlist">
+                <div class="title">
+                    <a>
+                        <span class="brandTitle">液晶电视</span>最有用的用户评论
+                    </a>
+                </div>
+                <ul class="commentlist">
+                    <!-- <li>
+                        <a href="">
+                            <img src="./images/img/产品评论.jpg" alt="">
+                            <p class="productName">客户撒覅第三季度首付款很放得开</p>
+                        </a>
+                        <div class="commenttext">
+                            <p class="commentAuthor">
+                                <span class="comName">呆***菜</span>
+                                <span class="comTime mui-pull-right">2015/10/14</span>
+                            </p>
+                            <p class="Content">刚使用的时候，总感觉卫星音响音量低，这个不能怪音响呢，摆放的位置，使用的模式，还有你解码的设备与类型都很重要，这个款音响的音质是非常不错的，原谅我懒得去煲了，慢慢用就行。家里乱，还没有好好整理，使用效果很棒，升级音响也方便，收到的已经是最新的，目前是用的电脑主机解码播放蓝光3D电影，搞笑的是，陪我弟看熊出没，爸妈也在，视频里的呼噜声老妈以为是我爸的，哈哈，笑死了，当时用的电影环绕音模式，用了好几天了，平时自己就是看些蓝光电影，窗帘一拉，音响一按，影院模式呀，使用的</p>
+                            
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="logininfo">
+                <a href="./register.html" class="login">注册</a>
+                <a href="./login.html" class="register">登录</a>
+                <a href="#header" class="return-top">返回顶部</a>
+            </div>
+            <div class="footerinfo">
+                <div>
+                    <a class="appLogin" href="#">手机APP下载</a>
+                    <span>慢慢买手机版--掌上比价平台</span>
+                </div>
+                <a href="./index.html">m.manmanbuy.com</a>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="left">
+            <a href="#" class="close-banner">X</a>
+            <img src="./images/icon/man.jpg" alt="">
+            <div>
+                <p>慢慢买</p>
+                <p>全网比价,查历史价格</p>
+            </div>
+        </div>
+        <a href="#" class="opennow ">立即打开</a>
+    </div>
+</body>
+
+</html>
+<!-- 该品牌标题下的十大品牌列表模板 -->
+<script type="text/html" id="brand-category-list">
+    {{each list v i}}
+    <li>
+        <a>
+            <div class="left">
+                {{if i==0}}
+                <span class="index red">{{i+1}}</span>
+                {{else if i==1}}
+                <span class="index yellow">{{i+1}}</span>
+                {{else if i==2}}
+                <span class="index green">{{i+1}}</span>
+                {{else}}
+                <span class="index">{{i+1}}</span>
+                {{/if}}
+                <div>
+                    <p class="brandName">{{v.brandName}}</p>
+                    <p class="brandInfo">{{v.brandInfo}}</p>
+                </div>
+            </div>
+            <span class="mui-icon mui-icon-forward mui-pull-right"></span>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<!-- 销量排行商品列表模板 -->
+<script type="text/html" id="brand-product-list">
+    {{each list v i}}
+    <li>
+        <a href="./discountdetail.html?productid={{v.productId}}">
+            <div class="productImg">{{#v.productImg}}</div>
+            <div class="product-info">
+                <p class="productName">{{v.productName}}</p>
+                <p class="productPrice">{{v.productPrice}}</p>
+                <p class="desc">
+                    <span class="productQuote">{{v.productQuote}}</span>
+                    <span class="productCom">{{v.productCom}}</span>
+                </p>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<!-- 商品的评论信息 -->
+<script type="text/html" id="product-commentlist">
+    {{each list v i}}
+    <li>
+        <a class="productcoment{{v.productId}}" href="./discountdetail.html?productid={{v.productId}}">
+            <!-- <div><img src="./images/img/产品评论.jpg" alt=""></div>
+                <p class="productName">客户撒覅第三季度首付款很放得开</p> -->
+        </a>
+        <div class="commenttext">
+            <p class="commentAuthor">
+                <span class="comName">{{v.comName}}</span>
+                <span class="comTime mui-pull-right">{{v.comTime}}</span>
+            </p>
+            <p class="Content">{{v.comContent}}</p>
+
+        </div>
+    </li>
+    {{/each}}
+
+</script>
+
+
+<!-- 搜索历史数据的模板 -->
+<script type="text/html" id="historyWords">
+    {{each list v i}}
+    <li>
+        <a href="./brand_single.html?brandId={{v.brandId}}">
+            <div class="left">
+                {{if i==0}}
+                <span class="index red">{{i+1}}</span>
+                {{else if i==1}}
+                <span class="index yellow">{{i+1}}</span>
+                {{else if i==2}}
+                <span class="index green">{{i+1}}</span>
+                {{else}}
+                <span class="index">{{i+1}}</span>
+                {{/if}}
+                <div>
+                    <p class="brandName">{{v.brandName}}</p>
+                    <p class="brandInfo">{{v.brandInfo}}</p>
+                </div>
+            </div>
+            <span class="mui-icon mui-icon-forward mui-pull-right"></span>
+        </a>
+    </li>
+    {{/each}}
+</script>

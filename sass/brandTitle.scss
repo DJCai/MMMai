@@ -1,0 +1,39 @@
+@import "./common.scss";
+.container{
+    .main{
+        .navbar{
+            padding:10px;
+            font-size: 14px;
+            border-bottom:1px solid #ccc;
+        }
+        .brandlist{
+            .title{
+                height: 40px;
+                font-size: 16px;
+                margin-bottom: 2px;
+                border-bottom:1px solid #bbb;
+                a {
+                    display:block;
+                    height: 100%;
+                    padding-left:10px;
+                    line-height:40px;
+                    color: #874604;
+                }
+            }
+            .brand-title-list{
+                li{
+                    padding-left: 10px;
+                    line-height: 40px;
+                    border-bottom:1px solid #e6e6e6;
+                    a{
+                        height: 100%;
+                        display:flex;
+                        justify-content:space-between;
+                        align-items:center;
+                    }
+                }
+            }
+        }
+    }
+}
+
